@@ -1,0 +1,1765 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- FONT AWESOME KA LINK -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR START -->
+
+      
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="main-navbar">
+
+    <div class="navbar-container">
+
+
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
+
+        <a href="#" class="brand-logo">
+
+            <img
+                src="https://www.bushirt.in/cdn/shop/files/Bushirt_Logo.jpg?v=1678700481&width=360"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+
+        <!-- ==================================================
+             DESKTOP MENU
+             EXACT CENTER
+        ================================================== -->
+
+        <nav class="desktop-menu desktop-menu-center">
+
+            <a href="#">HOME</a>
+
+            <a href="#">WOMENS</a>
+
+             <a href="#">MENS</a>
+
+            <a href="#">KIDS</a>
+
+            <a href="#">INDOWESTERN</a>
+
+            <a href="#">WEDDING</a>
+
+             <a href="#">BRA</a>
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             DESKTOP ACTIONS
+        ================================================== -->
+
+        <div class="desktop-actions">
+
+
+            <!-- ==================================================
+                 SEARCH
+                 NO POPUP
+            ================================================== -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 INFORMATION POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="infoPopup"
+                aria-label="Information"
+            >
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 WISHLIST POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="wishlistPopup"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 CART POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon cart-icon"
+                type="button"
+                data-popup="cartPopup"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 PROFILE POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="profilePopup"
+                aria-label="Profile"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HAMBURGER
+             ONLY 320px - 768px
+        ================================================== -->
+
+        <button
+            class="hamburger"
+            id="openMenu"
+            type="button"
+            aria-label="Open Menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MOBILE / TABLET MENU
+     ONLY 320px - 768px
+================================================== -->
+
+<aside
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+
+    <!-- ==================================================
+         MOBILE HEADER
+    ================================================== -->
+
+    <div class="mobile-menu-header">
+
+
+        <a href="#" class="mobile-logo">
+
+            <img
+                src="https://getlogo.net/wp-content/uploads/2020/11/end-clothing-logo-vector.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MOBILE NAV
+    ================================================== -->
+
+    <nav class="mobile-nav">
+
+       <a href="#">HOME</a>
+
+            <a href="#">WOMENS</a>
+
+             <a href="#">MENS</a>
+
+            <a href="#">KIDS</a>
+
+            <a href="#">INDOWESTERN</a>
+
+            <a href="#">WEDDING</a>
+
+             <a href="#">BRA</a>
+        
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MOBILE ACTIONS
+    ================================================== -->
+
+    <div class="mobile-actions">
+
+
+        <!-- ==================================================
+             MOBILE SEARCH
+             NO POPUP
+        ================================================== -->
+
+        <div class="mobile-search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             INFORMATION
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="infoPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </span>
+
+            <span>Information</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             WISHLIST
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="wishlistPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </span>
+
+            <span>Wishlist</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             CART
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="cartPopup"
+        >
+
+            <span class="mobile-action-icon mobile-cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="mobile-cart-count">0</span>
+
+            </span>
+
+            <span>Cart</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             PROFILE
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="profilePopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </span>
+
+            <span>Profile</span>
+
+        </button>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     POPUP OVERLAY
+================================================== -->
+
+<div
+    class="popup-overlay"
+    id="popupOverlay"
+></div>
+
+
+
+<!-- ==================================================
+     INFORMATION POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="infoPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-circle-question"></i>
+
+    </div>
+
+
+
+    <h2>Information</h2>
+
+
+
+    <p>
+        Discover premium watches, elegant designs and
+        timeless collections made for every occasion.
+    </p>
+
+
+
+    <div class="popup-content-list">
+
+
+        <div>
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span>Fast Delivery</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Secure Payment</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>Easy Returns</span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     WISHLIST POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="wishlistPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+
+
+    <h2>Your Wishlist</h2>
+
+
+
+    <p>
+        Your wishlist is currently empty.
+        Add your favourite watches here.
+    </p>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Explore Watches
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     CART POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="cartPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+    </div>
+
+
+
+    <h2>Your Cart</h2>
+
+
+
+    <p>
+        Your shopping bag is currently empty.
+    </p>
+
+
+
+    <div class="empty-cart">
+
+        <span class="cart-number">0</span>
+
+        <span>Items in your cart</span>
+
+    </div>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Continue Shopping
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     PROFILE POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="profilePopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-user"></i>
+
+    </div>
+
+
+
+    <h2>My Account</h2>
+
+
+
+    <p>
+        Login to manage your account, orders and
+        favourite watches.
+    </p>
+
+
+
+    <div class="profile-buttons">
+
+
+        <button
+            class="popup-main-btn"
+            type="button"
+        >
+
+            Login
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            Create Account
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            My Orders
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- NAVBAR END -->
+
+ 
+
+    <!-- ==================================================
+CAROUSEL BANNER START
+================================================== -->
+
+<section class="fashion-banner-slider">
+
+
+    <!-- ==================================================
+         SLIDE 1
+    ================================================== -->
+
+    <div class="fashion-banner-slide active">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="image-folder/first-phone-img.png"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="image-folder/second-img.png"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="image-folder/first-cloth-img.webp"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="image-folder/large-screen-img.png"
+            >
+
+            <img
+                src="image-folder/timeless-mens-img.webp"
+                alt="Premium Fashion Collection"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <h1>
+                TIMELESS ELEGANCE
+            </h1>
+
+            <p>
+                Discover refined styles crafted for modern moments.<br>
+                Experience fashion that feels effortlessly timeless.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                SHOP NOW
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 2
+    ================================================== -->
+
+    <div class="fashion-banner-slide">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="image-folder/women-saree-small.png"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="images/banner-2-tablet.jpg"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="https://www.manyavar.com/on/demandware.static/-/Library-Sites-ManyavarSharedLibrary/default/dw982e135f/manyavar%20images%20m/51937/Mohey%20Apparel%20-%20How%20to%20Style%20a%20Black%20Saree%20for%20Evening%20Events_D.jpg"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="images/banner-2-large.jpg"
+            >
+
+            <img
+                src="images/banner-2-laptop.jpg"
+                alt="Luxury Fashion"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <h1>
+                MODERN SOPHISTICATION
+            </h1>
+
+            <p>
+                Elevate your everyday wardrobe with effortless style.<br>
+                Designed with elegance, confidence and comfort in mind.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                EXPLORE NOW
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 3
+    ================================================== -->
+
+    <div class="fashion-banner-slide">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="images/banner-3-phone.jpg"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="images/banner-3-tablet.jpg"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="https://www.manyavar.com/on/demandware.static/-/Library-Sites-ManyavarSharedLibrary/default/dw3abda3f4/manyavar%20images%20m/51937/Manyavar%20Apparel%20-%20Top%20Indo%20Western%20Sherwani%20Styles%20for%20Kids%20This%20Wedding%20Season_D%20copy.jpg"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="images/banner-3-large.jpg"
+            >
+
+            <img
+                src="images/banner-3-laptop.jpg"
+                alt="Elegant Collection"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <h1>
+                ELEVATE YOUR STYLE
+            </h1>
+
+            <p>
+                Discover carefully designed pieces made for every occasion.<br>
+                Make every moment memorable with effortless sophistication.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                VIEW COLLECTION
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 4
+    ================================================== -->
+
+    <div class="fashion-banner-slide">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="images/banner-4-phone.jpg"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="images/banner-4-tablet.jpg"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="https://mirasl.com/cdn/shop/collections/mirasl-3-piece-stitched-printed-lawn-suit-ready-to-wear-banner.jpg?v=1783604667"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="images/banner-4-large.jpg"
+            >
+
+            <img
+                src="images/banner-4-laptop.jpg"
+                alt="New Season Collection"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <h1>
+                DEFINE YOUR MOMENT
+            </h1>
+
+            <p>
+                A fresh collection created for confident modern living.<br>
+                Find pieces that bring elegance into every occasion.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                DISCOVER MORE
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 5
+    ================================================== -->
+
+    <div class="fashion-banner-slide">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="images/banner-5-phone.jpg"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="images/banner-5-tablet.jpg"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="https://cdn.shopify.com/s/files/1/0725/0558/9951/files/banner_slide1_e1e304b7-ef44-4b58-979d-31a90650404d.png?v=1781167418"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="images/banner-5-large.jpg"
+            >
+
+            <img
+                src="images/banner-5-laptop.jpg"
+                alt="Premium Style Collection"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <!--
+            <h1>
+                EFFORTLESSLY CHIC
+            </h1>
+
+            <p>
+                Step into a world of refined fashion and modern elegance.<br>
+                Create your signature look with confidence.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                SHOP COLLECTION
+            </a>
+            -->
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 6
+    ================================================== -->
+
+    <div class="fashion-banner-slide">
+
+        <picture>
+
+            <!-- 320 - 767 PHONE -->
+            <source
+                media="(max-width: 767px)"
+                srcset="images/banner-6-phone.jpg"
+            >
+
+            <!-- 768 - 1024 TABLET -->
+            <source
+                media="(min-width: 768px) and (max-width: 1024px)"
+                srcset="images/banner-6-tablet.jpg"
+            >
+
+            <!-- 1025 - 1599 LAPTOP / DESKTOP -->
+            <source
+                media="(min-width: 1025px) and (max-width: 1599px)"
+                srcset="https://cdn.shopify.com/s/files/1/0271/4314/3495/files/web_banner_title_invisible-02.jpg?v=1787305012"
+            >
+
+            <!-- 1600 - 2560 LARGE SCREEN -->
+            <source
+                media="(min-width: 1600px)"
+                srcset="images/banner-6-large.jpg"
+            >
+
+            <img
+                src="images/banner-6-laptop.jpg"
+                alt="Latest Fashion Collection"
+            >
+
+        </picture>
+
+
+        <!-- CONTENT -->
+
+        <div class="fashion-banner-content">
+
+            <!--
+            <h1>
+                NEW SEASON STYLE
+            </h1>
+
+            <p>
+                Discover the latest collection designed for modern elegance.<br>
+                Create your perfect look with effortless confidence.
+            </p>
+
+            <a href="#" class="fashion-banner-button">
+                SHOP NOW
+            </a>
+            -->
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SLIDER DOTS
+    ================================================== -->
+
+    <div class="fashion-banner-dots">
+
+        <button
+            class="fashion-banner-dot active"
+            data-slide="0"
+            aria-label="Slide 1"
+        ></button>
+
+        <button
+            class="fashion-banner-dot"
+            data-slide="1"
+            aria-label="Slide 2"
+        ></button>
+
+        <button
+            class="fashion-banner-dot"
+            data-slide="2"
+            aria-label="Slide 3"
+        ></button>
+
+        <button
+            class="fashion-banner-dot"
+            data-slide="3"
+            aria-label="Slide 4"
+        ></button>
+
+        <button
+            class="fashion-banner-dot"
+            data-slide="4"
+            aria-label="Slide 5"
+        ></button>
+
+        <button
+            class="fashion-banner-dot"
+            data-slide="5"
+            aria-label="Slide 6"
+        ></button>
+
+    </div>
+
+
+</section>
+
+<!-- ==================================================
+CAROUSEL BANNER END
+================================================== -->
+
+
+
+
+
+<!-- BESTSELLER ON SALE CAROUSEL START -->
+
+
+<section class="bestseller-section">
+
+    <h2 class="bestseller-heading">
+       SHOP BY CATEGORY
+    </h2>
+
+
+    <div class="bestseller-carousel">
+
+        <!-- LEFT ARROW -->
+        <button class="bestseller-arrow bestseller-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <!-- VIEWPORT -->
+        <div class="bestseller-viewport">
+
+            <div class="bestseller-track">
+
+
+                <!-- PRODUCT 1 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://i.pinimg.com/originals/ee/64/9d/ee649d0a368837a952dd536da9dd2b9c.jpg"
+                             alt="Yellow Kota Doria Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Indowestern For Wedding cloth boy & girls</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹8,499
+                        </span>
+
+                        <span class="new-price">
+                            ₹5,949
+                        </span>
+
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 2 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://img.tatacliq.com/images/i29/1348Wx2000H/MP000000029729175_1348Wx2000H_202601101632055.jpeg"
+                             alt="Purple Embroidered Suit Set">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Cornflower Blue Solid velvet shirt</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹9,990
+                        </span>
+
+                        <span class="new-price">
+                            ₹5,999
+                        </span>
+
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 3 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://urbanstree.com/cdn/shop/files/DSC_6692.jpg?v=1756462278"
+                             alt="Blue Embroidered Chanderi Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3> Magan Sharara Red Suits For girls</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹11,560
+                        </span>
+
+                        <span class="new-price">
+                            ₹5,780
+                        </span>
+
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 4 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://m.media-amazon.com/images/I/71W8eWHrl0L._AC_UY1100_.jpg"
+                             alt="Bottle Green Suit Set">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Baal leela ethnic wear for Only Kida</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹19,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹10,999
+                        </span>
+
+                        <span class="discount">
+                            (45% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 5 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://g3fashion.com/cdn/shop/files/red_silk_bridal_lehenga_choli_with_sequina_and_resham_shine_1759994156aa_163_2.jpg?v=1786066604&width=1214"
+                             alt="Pink Embroidered Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Red Silk elephant with bridal lehenga</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹12,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹7,799
+                        </span>
+
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 6 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://i.pinimg.com/736x/39/40/e6/3940e60de5385bcd57e3c5f9aae30762.jpg"
+                             alt="Maroon Designer Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Cutfit Classic jeans & Top For girls</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹14,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹8,499
+                        </span>
+
+                        <span class="discount">
+                            (43% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 7 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="https://s.alicdn.com/@sc04/kf/H219a24a11c814c9b849d7c44b22961b4L.jpg"
+                             alt="Green Festive Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>Lycra padded bra combo Black</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹16,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹9,999
+                        </span>
+
+                        <span class="discount">
+                            (41% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT ARROW -->
+        <button class="bestseller-arrow bestseller-next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- BESTSELLER ON SALE CAROUSEL END -->
+
+
+
+
+<!-- ==================================================
+     DESIGNERS IN THE SPOTLIGHT START
+================================================== -->
+
+<section class="designer-section">
+
+    <h2 class="designer-heading">
+        Designers In The Spotlight
+    </h2>
+
+    <div class="designer-carousel">
+
+        <!-- LEFT ARROW -->
+        <button class="designer-arrow designer-prev" type="button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <!-- CAROUSEL VIEW -->
+        <div class="designer-slider">
+
+            <div class="designer-track">
+
+                <!-- IMAGE 1 -->
+                <div class="designer-card">
+                    <img src="https://www.vishalprints.in/cdn/shop/files/ARISSA-72609-02_c49a9515-22d7-4501-b9bc-bec461a64e2e.jpg?v=1757180693&width=800" alt="Payal Singhal">
+                    <div class="designer-overlay"></div>
+                    <h3>Sarees</h3>
+                </div>
+
+
+                <!-- IMAGE 2 -->
+                <div class="designer-card">
+                    <img src="https://images.pexels.com/photos/30184676/pexels-photo-30184676/free-photo-of-traditional-indian-wedding-couple-portrait.jpeg" alt="Rishi And Vibhuti">
+                    <div class="designer-overlay"></div>
+                    <h3>Wedding</h3>
+                </div>
+
+
+                <!-- IMAGE 3 -->
+                <div class="designer-card">
+                    <img src="https://images.meesho.com/images/products/914311161/tfmak_1080.webp" alt="Punit Balana">
+                    <div class="designer-overlay"></div>
+                    <h3>Kids</h3>
+                </div>
+
+
+                <!-- IMAGE 4 -->
+                <div class="designer-card">
+                    <img src="https://www.anantexports.in/cdn/shop/files/30-06-2025_BNY1051_1000x1000_652792fc-8fc3-469f-9d19-71facad07012.webp?v=1775916014&width=1500" alt="Aseem Kapoor">
+                    <div class="designer-overlay"></div>
+                    <h3>Lehengas</h3>
+                </div>
+
+
+                <!-- IMAGE 5 -->
+                <div class="designer-card">
+                    <img src="https://www.ottostore.com/cdn/shop/files/ChatGPTImageSep24_2026_12_14_37PM_500x.png?v=1790235035" alt="Itrh">
+                    <div class="designer-overlay"></div>
+                    <h3>Shirts</h3>
+                </div>
+
+
+                <!-- IMAGE 6 -->
+                <div class="designer-card">
+                    <img src="https://images.jdmagicbox.com/quickquotes/images_main/-hdfuh8wp.jpg" alt="Sabyasachi">
+                    <div class="designer-overlay"></div>
+                    <h3>Suits</h3>
+                </div>
+
+
+                <!-- IMAGE 7 -->
+                <div class="designer-card">
+                    <img src="https://images.jdmagicbox.com/quickquotes/images_main/enamor-f089-lace-bra-medium-coverage-padded-wirefree-red-chilli-pepper-36d-164535341-24xqr.jpg" alt="Tarun Tahiliani">
+                    <div class="designer-overlay"></div>
+                    <h3>Bras</h3>
+                </div>
+
+
+                <!-- IMAGE 8 -->
+                <div class="designer-card">
+                    <img src="https://i.pinimg.com/736x/c7/55/28/c75528c17a80b409941ab1e96c309d62.jpg" alt="Anita Dongre">
+                    <div class="designer-overlay"></div>
+                    <h3>Indo-Western</h3>
+                </div>
+
+
+                <!-- IMAGE 9 -->
+                <!-- <div class="designer-card">
+                    <img src="https://i.pinimg.com/originals/ee/64/9d/ee649d0a368837a952dd536da9dd2b9c.jpg" alt="Manish Malhotra">
+                    <div class="designer-overlay"></div>
+                    <h3>Manish Malhotra</h3>
+                </div> -->
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT ARROW -->
+        <button class="designer-arrow designer-next" type="button">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     DESIGNERS IN THE SPOTLIGHT END
+================================================== -->
+    
+   
+ <!-- ==================================================
+     SHOP BY OCCASION START
+================================================== -->
+
+<section class="occasion-section">
+
+    <div class="occasion-container">
+
+        <h2 class="occasion-heading">
+            Shop By Occasion
+        </h2>
+
+
+        <div class="occasion-grid">
+
+
+            <!-- ==================================================
+                 1. CELEBRATION SUITS
+            ================================================== -->
+
+            <a href="#" class="occasion-card occasion-celebration">
+
+                <img
+                    src="https://bandhanipalace.co.in/images/product/2026/08/mukesh-chahat-silk-with-embroidery-work-ready-made-ladies-suit-2026-08-31_18_04_25.jpeg"
+                    alt="Celebration Suits"
+                >
+
+                <div class="occasion-overlay"></div>
+
+                <h3 class="occasion-title">
+                    Celebration Suits
+                </h3>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 2. BRIDESMAID
+            ================================================== -->
+
+            <a href="#" class="occasion-card occasion-bridesmaid">
+
+                <img
+                    src="https://thenodmag.com/_next/image?url=https%3A%2F%2Fassets.thenodmag.com%2Fwebsite-assets%2FBanner_Image_1_b31591a7b5.jpg&w=3840&q=95"
+                    alt="The Bridesmaid Collective"
+                >
+
+                <div class="occasion-overlay"></div>
+
+                <h3 class="occasion-title">
+                    The Bridesmaid Collective
+                </h3>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 3. SHADES OF CELEBRATION
+            ================================================== -->
+
+            <a href="#" class="occasion-card occasion-shades">
+
+                <img
+                    src="https://www.royalshaadi.co.in/blogs/mehendi-ceremony-guide/mehendi-bride-outfit.webp"
+                    alt="The Shades of Celebration"
+                >
+
+                <div class="occasion-overlay"></div>
+
+                <h3 class="occasion-title">
+                    The Shades of Celebration
+                </h3>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 4. WEDDING
+            ================================================== -->
+
+            <a href="#" class="occasion-card occasion-wedding">
+
+                <img
+                    src="https://www.manyavar.com/on/demandware.static/-/Library-Sites-ManyavarSharedLibrary/default/dw56504f46/Manyavar%20images%20July/54399/Mohey%20Apparel%20-%20Trending%20Indian%20Outfits%20to%20Complete%20your%20Sangeet%20Look%20!_D%20copy.jpg"
+                    alt="Wedding"
+                >
+
+                <div class="occasion-overlay"></div>
+
+                <h3 class="occasion-title">
+                    Wedding
+                </h3>
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 RIGHT BOTTOM TWO CARDS
+            ================================================== -->
+
+            <div class="occasion-right-bottom">
+
+
+                <!-- RECEPTION -->
+
+                <a href="#" class="occasion-card occasion-reception">
+
+                    <img
+                        src="https://i.pinimg.com/736x/38/17/1e/38171e51e05fbfbea512902ba028c738.jpg"
+                        alt="Reception"
+                    >
+
+                    <div class="occasion-overlay"></div>
+
+                    <h3 class="occasion-title">
+                        Reception
+                    </h3>
+
+                </a>
+
+
+
+                <!-- SANGEET -->
+
+                <a href="#" class="occasion-card occasion-sangeet">
+
+                    <img
+                        src="https://i.pinimg.com/736x/e4/36/42/e43642696c084ede74b17f2a2b36a378.jpg"
+                        alt="Sangeet"
+                    >
+
+                    <div class="occasion-overlay"></div>
+
+                    <h3 class="occasion-title">
+                        Sangeet
+                    </h3>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SHOP BY OCCASION END
+================================================== -->
+
+
+
+
+     <!-- FOOTER START  -->
+
+       <footer class="main-footer"> 
+ 
+    <!-- FOOTER TOP --> 
+    <div class="footer-top"> 
+ 
+        <!-- SOCIAL ICONS --> 
+        <div class="footer-social"> 
+ 
+            <a href="#" class="social-icon" aria-label="Facebook"> 
+                <i class="fa-brands fa-facebook-f"></i> 
+            </a> 
+ 
+            <a href="#" class="social-icon" aria-label="Instagram"> 
+                <i class="fa-brands fa-instagram"></i> 
+            </a> 
+ 
+            <a href="#" class="social-icon" aria-label="Twitter"> 
+                <i class="fa-brands fa-twitter"></i> 
+            </a> 
+ 
+            <!-- PHONE ICON -->
+            <a href="tel:+919999999999" class="social-icon" aria-label="Phone"> 
+                <i class="fa-solid fa-phone"></i> 
+            </a> 
+ 
+            <!-- WHATSAPP ICON -->
+            <a href="https://wa.me/919999999999" class="social-icon" aria-label="WhatsApp"> 
+                <i class="fa-brands fa-whatsapp"></i> 
+            </a> 
+ 
+        </div> 
+ 
+ 
+        <!-- FOOTER MENU --> 
+        <nav class="footer-menu"> 
+ 
+            <a href="#">HOME</a> 
+            <a href="#">WOMENS</a> 
+            <a href="#">MENS</a> 
+            <a href="#">KIDS</a> 
+            <a href="#">INDOWESTERN</a> 
+            <a href="#">WEDDING</a> 
+            <a href="#">BRA</a> 
+ 
+        </nav> 
+ 
+    </div> 
+ 
+ 
+    <!-- COPYRIGHT --> 
+    <div class="footer-bottom"> 
+ 
+        <p> 
+            Copyright © 2026; Designed by 
+            <a href="#">SACHIN-RAJPUT</a> 
+        </p> 
+ 
+    </div> 
+ 
+</footer>
+
+     <!-- FOOTER END -->
+
+
+
+
+  <script src="index.js">
+     
+  </script>
+
+   
+    
+</body>
+</html>

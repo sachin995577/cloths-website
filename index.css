@@ -1,0 +1,3983 @@
+/* NAVBAR START */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   HTML / BODY
+================================================== */
+
+html {
+    min-width: 320px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    padding-top: 72px;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.main-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    background: whitesmoke;
+    border-bottom: 1px solid #eeeeee;
+    z-index: 5000;
+}
+
+
+/* ==================================================
+   NAVBAR CONTAINER
+================================================== */
+
+.navbar-container {
+    width: 100%;
+    height: 100%;
+    padding: 0 clamp(22px, 3vw, 55px);
+    display: grid;
+    /*
+       LEFT  = LOGO
+       CENTER = MENU
+       RIGHT = ACTIONS
+    */
+
+    grid-template-columns:
+        minmax(150px, 1fr)
+        auto
+        minmax(320px, 1fr);
+
+    align-items: center;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.brand-logo {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.brand-logo:hover img {
+    transform: scale(1.01);
+}
+
+
+/* ==================================================
+   DESKTOP MENU
+================================================== */
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 6.7vw, 48px);
+    white-space: nowrap;
+}
+
+
+.desktop-menu a {
+    position: relative;
+    padding: 8px 0;
+    color: #222222;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* UNDERLINE */
+
+.desktop-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    height: 1px;
+    background: #111111;
+    transition: width 0.35s ease;
+}
+
+.desktop-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   DESKTOP ACTIONS
+================================================== */
+
+.desktop-actions {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   SEARCH BOX
+   NO POPUP
+================================================== */
+
+.search-box {
+    width: clamp(190px, 18vw, 285px);
+    height: 46px;
+    margin-right: 6px;
+    border-radius: 25px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-box:focus-within {
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #dddddd;
+}
+
+.search-box i {
+    flex-shrink: 0;
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.search-box:hover i {
+    transform: scale(1.04);
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 15px;
+    color: #222222;
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: #111111;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.search-box input:focus::placeholder {
+    opacity: 0;
+}
+
+
+/* ==================================================
+   NAV ICON
+================================================== */
+
+.nav-icon {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-icon i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon:hover i {
+    transform: scale(1.02);
+}
+
+
+/* ==================================================
+   CART COUNT
+================================================== */
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   HAMBURGER
+   DEFAULT HIDDEN
+================================================== */
+
+.hamburger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: #111111;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover i {
+    transform: scale(1.12);
+}
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(430px, 100%);
+    height: 100vh;
+    background: #ffffff;
+    z-index: 7000;
+    transform: translateX(100%);
+    transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+
+/* ==================================================
+   MOBILE MENU HEADER
+================================================== */
+
+.mobile-menu-header {
+    width: 100%;
+    height: 72px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.mobile-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mobile-logo img {
+    width: 125px;
+    height: auto;
+    display: block;
+}
+
+
+/* ==================================================
+   MOBILE CLOSE
+================================================== */
+
+.mobile-close {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mobile-close i {
+    font-size: 21px;
+    transition: transform 0.35s ease;
+}
+
+.mobile-close:hover i {
+    transform: rotate(90deg) scale(1.08);
+}
+
+
+/* ==================================================
+   MOBILE NAV
+================================================== */
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 25px 10px;
+}
+
+.mobile-nav a {
+    position: relative;
+    width: max-content;
+    padding: 14px 0;
+    color: #222222;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+/* MOBILE UNDERLINE */
+
+.mobile-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    width: 0;
+    height: 1px;
+    background: #111111;
+    transition: width 0.35s ease;
+}
+
+.mobile-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   MOBILE ACTIONS
+================================================== */
+
+.mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 25px 35px;
+}
+
+
+/* ==================================================
+   MOBILE SEARCH
+   NO POPUP
+================================================== */
+
+.mobile-search-box {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 12px;
+    border-radius: 24px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mobile-search-box:focus-within {
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #dddddd;
+}
+
+.mobile-search-box i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-search-box:hover i {
+    transform: scale(1.04);
+}
+
+.mobile-search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.mobile-search-box input::placeholder {
+    color: #111111;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-search-box input:focus::placeholder {
+    opacity: 0;
+}
+
+
+/* ==================================================
+   MOBILE ACTION
+================================================== */
+
+.mobile-action {
+    width: 100%;
+    min-height: 54px;
+    border: none;
+    background: transparent;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 4px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+}
+
+.mobile-action-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.mobile-action:hover .mobile-action-icon {
+    transform: scale(1.02);
+    background: #f5f5f5;
+}
+
+
+/* MOBILE CART */
+
+.mobile-cart-icon {
+    position: relative;
+}
+
+.mobile-cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   POPUP OVERLAY
+================================================== */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 8000;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==================================================
+   POPUP
+================================================== */
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: min(460px, calc(100% - 28px));
+    min-height: 300px;
+    padding: 45px 35px 35px;
+    background: #ffffff;
+    z-index: 9000;
+    opacity: 0;
+    visibility: hidden;
+    transform:
+    translate(-50%, -47%)
+    scale(0.92);
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.4s cubic-bezier(.22, 1, .36, 1);
+}
+
+.popup-box.active {
+    opacity: 1;
+    visibility: visible;
+    transform:
+     translate(-50%, -50%)
+    scale(1);
+}
+
+
+/* ==================================================
+   POPUP CLOSE
+================================================== */
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popup-close i {
+    font-size: 15px;
+    transition: transform 0.35s ease;
+}
+
+.popup-close:hover i {
+    transform: rotate(90deg);
+}
+
+
+/* ==================================================
+   POPUP ICON
+================================================== */
+
+.popup-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-icon i {
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   POPUP TEXT
+================================================== */
+
+.popup-box h2 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.popup-box p {
+    max-width: 360px;
+    margin: 0 auto 22px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 13px;
+    color: #666666;
+}
+
+
+/* ==================================================
+   POPUP LIST
+================================================== */
+
+.popup-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-content-list div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 13px;
+    background: #f7f7f7;
+    font-size: 13px;
+}
+
+.popup-content-list i {
+    width: 20px;
+    text-align: center;
+}
+
+
+/* ==================================================
+   EMPTY CART
+================================================== */
+
+.empty-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: #555555;
+    font-size: 13px;
+}
+
+.cart-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   POPUP BUTTONS
+================================================== */
+
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-main-btn,
+.popup-secondary-btn {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #111111;
+    cursor: pointer;
+    font-size: 13px;
+    transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.popup-main-btn {
+    background: #111111;
+    color: #ffffff;
+}
+
+.popup-main-btn:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+.popup-secondary-btn {
+    background: #ffffff;
+    color: #111111;
+}
+
+.popup-secondary-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+.popup-main-btn:active,
+.popup-secondary-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* ==================================================
+   320px - 768px
+   MOBILE + TABLET
+================================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 64px;
+    }
+
+    .main-navbar {
+        height: 64px;
+    }
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+    }
+
+    /* DESKTOP HIDE */
+
+    .desktop-menu,
+    .desktop-actions {
+        display: none;
+    }
+
+    /* LOGO */
+
+    .brand-logo {
+        display: flex;
+    }
+
+    .brand-logo img {
+        width: 115px;
+    }
+
+    /* HAMBURGER */
+
+    .hamburger {
+        display: flex;
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger i {
+        font-size: 21px;
+    }
+
+    /* MOBILE MENU */
+
+    .mobile-menu-header {
+        height: 64px;
+        padding: 0 18px;
+    }
+
+    .mobile-logo img {
+        width: 115px;
+    }
+
+    .mobile-close {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-nav {
+        padding: 20px 20px 10px;
+    }
+
+    .mobile-actions {
+        padding:
+            18px
+            20px
+            30px;
+    }
+
+    /* POPUP */
+
+    .popup-box {
+        width: calc(100% - 24px);
+        padding:
+            42px
+            22px
+            25px;
+    }
+
+    .popup-box h2 {
+        font-size: 21px;
+    }
+
+    .popup-box p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==================================================
+   320px - 400px
+================================================== */
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+    .navbar-container {
+        padding: 0 15px;
+    }
+
+    .brand-logo img {
+        width: 108px;
+    }
+
+    .mobile-menu {
+        width: 100%;
+    }
+
+    .mobile-nav a {
+        font-size: 14px;
+    }
+
+    .popup-box {
+        width: calc(100% - 20px);
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}
+
+
+/* ==================================================
+   769px - 1199px
+   DESKTOP
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    .main-navbar {
+        height: 72px;
+    }
+
+    body {
+        padding-top: 72px;
+    }
+
+
+    .navbar-container {
+        padding: 0 20px;
+        grid-template-columns:
+         minmax(120px, 1fr)
+         auto
+         minmax(330px, 1fr);
+    }
+
+
+    .brand-logo img {
+        width: 115px;
+    }
+
+    .desktop-menu {
+        gap: 20px;
+    }
+
+    .desktop-menu a {
+        font-size: 12px;
+    }
+
+    .desktop-actions {
+        gap: 4px;
+    }
+
+    .search-box {
+        width: 190px;
+        height: 44px;
+        margin-right: 2px;
+    }
+
+
+    .nav-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .nav-icon i {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ==================================================
+   1200px - 1599px
+================================================== */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    .navbar-container {
+        padding: 0 35px;
+        grid-template-columns:
+        minmax(160px, 1fr)
+         auto
+        minmax(400px, 1fr);
+    }
+
+
+    .brand-logo img {
+        width: 125px;
+    }
+
+
+    .desktop-menu {
+        gap: 30px;
+    }
+
+
+    .desktop-menu a {
+        font-size: 13px;
+    }
+
+
+    .desktop-actions {
+        gap: 8px;
+    }
+
+
+    .search-box {
+        width: 250px;
+    }
+
+}
+
+
+/* ==================================================
+   1600px - 2560px
+================================================== */
+
+@media (min-width: 1600px) {
+
+    .main-navbar {
+        height: 82px;
+    }
+
+
+    body {
+        padding-top: 82px;
+    }
+
+
+    .navbar-container {
+        padding: 0 55px;
+
+        grid-template-columns:
+            minmax(220px, 1fr)
+            auto
+            minmax(500px, 1fr);
+    }
+
+
+    .brand-logo img {
+        width: 145px;
+    }
+
+
+    .desktop-menu {
+        gap: 55px;
+    }
+
+
+    .desktop-menu a {
+        font-size: 14px;
+    }
+
+
+    .desktop-actions {
+        gap: 12px;
+    }
+
+
+    .search-box {
+        width: 310px;
+        height: 48px;
+
+        margin-right: 8px;
+    }
+
+
+    .nav-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+}
+
+
+/* ==================================================
+   2200px - 2560px
+================================================== */
+
+@media (min-width: 2200px) {
+
+    .navbar-container {
+        padding: 0 75px;
+    }
+
+
+    .brand-logo img {
+        width: 155px;
+    }
+
+
+    .desktop-menu {
+        gap: 65px;
+    }
+
+
+    .desktop-menu a {
+        font-size: 15px;
+    }
+
+
+    .search-box {
+        width: 340px;
+        height: 50px;
+    }
+
+}
+
+/* =========================================================
+   FINAL NAVBAR RESPONSIVE FIX
+   320px - 2560px
+========================================================= */
+
+
+/* =========================================================
+   320px - 768px
+   ONLY LOGO + HAMBURGER
+========================================================= */
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .main-navbar {
+        height: 64px;
+    }
+
+    body {
+        padding-top: 64px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 115px;
+        height: auto;
+        max-width: 115px;
+    }
+
+    .desktop-menu,
+    .desktop-actions {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   320px - 400px
+========================================================= */
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+    .navbar-container {
+        padding: 0 14px;
+    }
+
+    .brand-logo img {
+        width: 105px;
+        max-width: 105px;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   769px - 1024px
+   PROPER COMPACT DESKTOP
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .main-navbar {
+        height: 72px;
+    }
+
+    body {
+        padding-top: 72px;
+    }
+
+    /* MAIN CONTAINER */
+
+    .navbar-container {
+        width: 100%;
+        height: 72px;
+        padding: 0 18px;
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+
+
+    /* LOGO */
+
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        flex: 0 0 105px;
+        width: 105px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 105px;
+        max-width: 105px;
+        height: auto;
+        white-space: nowrap;
+    }
+
+
+    /* MENU */
+
+    .desktop-menu {
+        display: flex !important;
+        flex: 1 1 auto;
+        min-width: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 10px;
+        overflow: hidden;
+    }
+
+    .desktop-menu a {
+        flex: 0 0 auto;
+        padding: 7px 0;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    /* ACTIONS */
+
+    .desktop-actions {
+        display: flex !important;
+        flex: 0 0 auto;
+        width: auto;
+        align-items: center;
+        gap: 2px;
+        white-space: nowrap;
+    }
+
+
+    /* SEARCH */
+
+    .search-box {
+        width: 145px;
+        height: 42px;
+        flex: 0 0 145px;
+        margin-right: 3px;
+        padding: 0 13px;
+    }
+
+    .search-box input {
+        min-width: 0;
+        padding-left: 9px;
+        font-size: 12px;
+    }
+
+    .search-box i {
+        font-size: 15px;
+    }
+
+
+    /* ICONS */
+
+    .nav-icon {
+        width: 34px;
+        height: 38px;
+        flex: 0 0 34px;
+    }
+
+    .nav-icon i {
+        font-size: 16px;
+    }
+
+    .cart-count {
+        top: 0;
+        right: -1px;
+        min-width: 15px;
+        height: 15px;
+        font-size: 8px;
+    }
+
+
+    /* NO HAMBURGER */
+
+    .hamburger {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   1025px - 1199px
+   NORMAL DESKTOP
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+    .main-navbar {
+        height: 72px;
+    }
+
+    body {
+        padding-top: 72px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        padding: 0 22px;
+        display: grid;
+        grid-template-columns:
+            120px
+            minmax(0, 1fr)
+            380px;
+        align-items: center;
+    }
+
+
+    /* LOGO */
+
+    .brand-logo {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 115px;
+        max-width: 115px;
+        height: auto;
+    }
+
+
+    /* MENU */
+
+    .desktop-menu {
+        display: flex !important;
+        min-width: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+
+    .desktop-menu a {
+        font-size: 12px;
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+
+    /* ACTIONS */
+
+    .desktop-actions {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+    }
+
+
+    .search-box {
+        width: 160px;
+        flex: 0 0 160px;
+        margin-right: 4px;
+    }
+
+    .nav-icon {
+        width: 37px;
+        height: 40px;
+        flex: 0 0 37px;
+    }
+
+
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   1200px - 1599px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    .navbar-container {
+        width: 100%;
+        padding: 0 35px;
+        display: grid;
+        grid-template-columns:
+         150px
+        minmax(0, 1fr)
+        430px;
+        align-items: center;
+    }
+
+
+    .brand-logo {
+        display: flex;
+        width: 150px;
+        white-space: nowrap;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 125px;
+        max-width: 125px;
+    }
+
+
+    .desktop-menu {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        min-width: 0;
+    }
+
+    .desktop-menu a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    .desktop-actions {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+    }
+
+
+    .search-box {
+        width: 235px;
+        flex: 0 0 235px;
+    }
+
+
+    .nav-icon {
+        width: 40px;
+        height: 42px;
+        flex: 0 0 40px;
+    }
+
+
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   1600px - 2199px
+========================================================= */
+
+@media (min-width: 1600px) and (max-width: 2199px) {
+
+    .main-navbar {
+        height: 82px;
+    }
+
+    body {
+        padding-top: 82px;
+    }
+
+    .navbar-container {
+        height: 82px;
+        padding: 0 55px;
+        display: grid;
+        grid-template-columns:
+            180px
+            minmax(0, 1fr)
+            520px;
+        align-items: center;
+    }
+
+
+    .brand-logo {
+        width: 180px;
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 145px;
+        max-width: 145px;
+    }
+
+
+    .desktop-menu {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        min-width: 0;
+    }
+
+
+    .desktop-menu a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    .desktop-actions {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+
+
+    .search-box {
+        width: 300px;
+        height: 48px;
+        flex: 0 0 300px;
+    }
+
+
+    .nav-icon {
+        width: 43px;
+        height: 45px;
+        flex: 0 0 43px;
+    }
+
+
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   2200px - 2560px
+========================================================= */
+
+@media (min-width: 2200px) and (max-width: 2560px) {
+
+    .main-navbar {
+        height: 84px;
+    }
+
+    body {
+        padding-top: 84px;
+    }
+
+    .navbar-container {
+        height: 84px;
+        padding: 0 75px;
+        display: grid;
+        grid-template-columns:
+            210px
+            minmax(0, 1fr)
+            580px;
+        align-items: center;
+    }
+
+
+    .brand-logo {
+        width: 210px;
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .brand-logo img {
+        display: block;
+        width: 155px;
+        max-width: 155px;
+    }
+
+
+    .desktop-menu {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        min-width: 0;
+    }
+
+
+    .desktop-menu a {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+
+    .desktop-actions {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .search-box {
+        width: 330px;
+        height: 50px;
+        flex: 0 0 330px;
+    }
+
+
+    .nav-icon {
+        width: 46px;
+        height: 48px;
+        flex: 0 0 46px;
+    }
+
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+
+/* NAVBAR END */
+
+
+/* CAROUSEL BANNER START */
+
+
+
+.fashion-banner-slider {
+    width: 100%;
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+
+/* ==================================================
+   EACH SLIDE
+================================================== */
+
+.fashion-banner-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.fashion-banner-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.fashion-banner-slide picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.fashion-banner-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==================================================
+   DARK OVERLAY
+================================================== */
+
+.fashion-banner-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.12);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.fashion-banner-content {
+    position: absolute;
+    z-index: 3;
+
+    top: 50%;
+    left: 50%;
+
+    width: min(90%, 900px);
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.fashion-banner-content h1 {
+    margin-bottom: 18px;
+
+    font-size: clamp(34px, 4vw, 72px);
+
+    line-height: 1.1;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   PARAGRAPH
+================================================== */
+
+.fashion-banner-content p {
+    margin-bottom: 28px;
+
+    font-size: clamp(15px, 1.4vw, 21px);
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.fashion-banner-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 170px;
+
+    padding: 14px 30px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #ffffff;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   DOTS
+================================================== */
+
+.fashion-banner-dots {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transform: translateX(-50%);
+}
+
+
+.fashion-banner-dot {
+    width: 34px;
+    height: 3px;
+
+    border: 0;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+.fashion-banner-dot.active {
+    background: #ffffff;
+}
+
+
+/* ==================================================
+   320 - 767 PHONE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .fashion-banner-slider {
+        height: 560px;
+    }
+
+
+    .fashion-banner-content {
+        display: none;
+    }
+
+
+    .fashion-banner-slide img {
+        object-position: center;
+    }
+
+
+    .fashion-banner-dots {
+        bottom: 18px;
+    }
+
+
+    .fashion-banner-dot {
+        width: 25px;
+        height: 3px;
+    }
+
+}
+
+
+/* ==================================================
+   768 - 1024 TABLET
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .fashion-banner-slider {
+        height: 620px;
+    }
+
+
+    .fashion-banner-content {
+        width: 82%;
+    }
+
+
+    .fashion-banner-content h1 {
+        font-size: 42px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+
+    .fashion-banner-content p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+
+    .fashion-banner-button {
+        min-width: 160px;
+        padding: 13px 25px;
+    }
+
+}
+
+
+/* ==================================================
+   1025 - 1599 LAPTOP / DESKTOP
+================================================== */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+    .fashion-banner-slider {
+        height: 680px;
+    }
+
+
+    .fashion-banner-content {
+        width: 75%;
+        max-width: 900px;
+    }
+
+
+    .fashion-banner-content h1 {
+        font-size: 58px;
+        letter-spacing: 4px;
+        margin-bottom: 17px;
+    }
+
+
+    .fashion-banner-content p {
+        font-size: 19px;
+        line-height: 1.7;
+        margin-bottom: 27px;
+    }
+
+
+    .fashion-banner-button {
+        min-width: 175px;
+        padding: 14px 30px;
+    }
+
+}
+
+
+/* ==================================================
+   1600 - 2560 LARGE SCREEN
+================================================== */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .fashion-banner-slider {
+        height: 780px;
+    }
+
+
+    .fashion-banner-content {
+        width: 70%;
+        max-width: 1050px;
+    }
+
+
+    .fashion-banner-content h1 {
+        font-size: 72px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+
+
+    .fashion-banner-content p {
+        font-size: 21px;
+        line-height: 1.75;
+        margin-bottom: 30px;
+    }
+
+
+    .fashion-banner-button {
+        min-width: 190px;
+        padding: 15px 32px;
+        font-size: 16px;
+    }
+
+}
+/* TABLET - CONTENT HIDE */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .fashion-banner-content {
+        display: none;
+    }
+
+
+}
+
+/* CAROUSEL BANNER END */
+
+
+/* BESTSELLER ON SALE CAROUSEL START */
+
+
+.bestseller-section {
+    width: 100%;
+    padding: 10px 15px 30px;
+    overflow: hidden;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.bestseller-heading {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    color: #111111;
+    padding: 6px;
+}
+
+
+/* ==================================================
+   CAROUSEL
+================================================== */
+
+.bestseller-carousel {
+    width: 100%;
+    position: relative;
+}
+
+
+/* ==================================================
+   VIEWPORT
+================================================== */
+
+.bestseller-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   TRACK
+================================================== */
+
+.bestseller-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.bestseller-card {
+    flex: 0 0 25%;
+    min-width: 0;
+    padding: 0 7px;
+}
+
+
+/* ==================================================
+   IMAGE BOX
+================================================== */
+
+.bestseller-image-box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.bestseller-image-box img {
+    width: 100%;
+    height: 490px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+/* ==================================================
+   IMAGE HOVER
+================================================== */
+
+.bestseller-image-box:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ==================================================
+   SHOP NOW BUTTON
+================================================== */
+
+.bestseller-shop-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+}
+
+
+/* SHOW BUTTON ON IMAGE HOVER */
+
+.bestseller-image-box:hover .bestseller-shop-btn {
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   PRODUCT TITLE
+================================================== */
+
+.bestseller-card h3 {
+    margin: 14px 0 7px;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #222222;
+}
+
+
+/* ==================================================
+   PRICE
+================================================== */
+
+.bestseller-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* OLD PRICE */
+
+.old-price {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+
+/* NEW PRICE */
+
+.new-price {
+    color: #222222;
+    font-size: 14px;
+}
+
+
+/* DISCOUNT */
+
+.discount {
+    color: #ff4d24;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   ARROWS
+================================================== */
+
+.bestseller-arrow {
+    position: absolute;
+    top: 43%;
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #222222;
+    transition: 0.25s ease;
+}
+
+
+/* .bestseller-arrow:hover {
+    background: #000000;
+    color: #ffffff;
+} */
+
+
+.bestseller-prev {
+    left: 0;
+}
+
+
+.bestseller-next {
+    right: 0;
+}
+
+
+/* ==================================================
+   TABLET
+   768 - 1024
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .bestseller-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .bestseller-heading {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .bestseller-card {
+        flex: 0 0 33.333333%;
+        padding: 0 6px;
+    }
+
+    .bestseller-image-box img {
+        height: 390px;
+    }
+
+    .bestseller-card h3 {
+        font-size: 14px;
+    }
+
+    .bestseller-price {
+        gap: 7px;
+    }
+
+    .bestseller-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+
+/* ==================================================
+   PHONE
+   320 - 767
+================================================== */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .bestseller-section {
+        padding: 8px 10px 25px;
+    }
+
+    .bestseller-heading {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .bestseller-card {
+        flex: 0 0 100%;
+        padding: 0 5px;
+    }
+
+    .bestseller-image-box img {
+        width: 100%;
+        height: 460px;
+    }
+
+    .bestseller-card h3 {
+        font-size: 14px;
+        margin-top: 11px;
+    }
+
+    .bestseller-price {
+        gap: 7px;
+    }
+
+    .old-price,
+    .new-price,
+    .discount {
+        font-size: 13px;
+    }
+
+    .bestseller-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .bestseller-prev {
+        left: 2px;
+    }
+
+    .bestseller-next {
+        right: 2px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL PHONE
+   320 - 400
+================================================== */
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+    .bestseller-heading {
+        font-size: 19px;
+    }
+
+    .bestseller-image-box img {
+        height: 490px;
+    }
+
+    .bestseller-shop-btn {
+        height: 44px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==================================================
+   LARGE SCREENS
+   1600 - 2560
+================================================== */
+
+@media (min-width: 1600px) {
+
+    .bestseller-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .bestseller-image-box img {
+        height: 560px;
+    }
+
+    .bestseller-heading {
+        font-size: 30px;
+    }
+
+    .bestseller-card h3 {
+        font-size: 16px;
+    }
+
+}
+
+/* BESTSELLER ON SALE CAROUSEL END */
+
+
+
+
+/* ==================================================
+   DESIGNERS IN THE SPOTLIGHT START
+================================================== */
+
+.designer-section {
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 15px 4.8% 55px;
+    overflow: hidden;
+}
+
+.designer-heading {
+    margin: 0 0 34px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.designer-carousel {
+    position: relative;
+    width: 100%;
+}
+
+.designer-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.designer-track {
+    display: flex;
+    gap: 30px;
+    transform: translateX(0);
+    transition: transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: transform;
+}
+
+.designer-card {
+    position: relative;
+    flex: 0 0 calc((100% - 120px) / 5);
+    aspect-ratio: 0.725;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #ddd;
+}
+
+.designer-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.designer-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 42%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+}
+
+.designer-card h3 {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 30px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+
+/* ==================================================
+   ARROWS
+================================================== */
+
+.designer-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+}
+
+.designer-prev {
+    left: -25px;
+}
+
+.designer-next {
+    right: -25px;
+}
+
+
+/* ==================================================
+   768 - 1024 TABLET
+   3 IMAGES
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .designer-section {
+        padding: 15px 5.5% 45px;
+    }
+
+    .designer-heading {
+        font-size: 34px;
+        margin-bottom: 28px;
+    }
+
+    .designer-track {
+        gap: 24px;
+    }
+
+    .designer-card {
+        flex: 0 0 calc((100% - 48px) / 3);
+        border-radius: 26px;
+    }
+
+    .designer-card h3 {
+        font-size: 20px;
+        bottom: 25px;
+    }
+
+    .designer-arrow {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .designer-prev {
+        left: -24px;
+    }
+
+    .designer-next {
+        right: -24px;
+    }
+}
+
+
+/* ==================================================
+   320 - 767 PHONE
+   1 IMAGE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .designer-section {
+        padding: 15px 9% 40px;
+    }
+
+    .designer-heading {
+        margin-bottom: 25px;
+        font-size: 28px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .designer-track {
+        gap: 0;
+    }
+
+    .designer-card {
+        flex: 0 0 100%;
+        aspect-ratio: 0.725;
+        border-radius: 24px;
+    }
+
+    .designer-card h3 {
+        left: 10px;
+        right: 10px;
+        bottom: 22px;
+        font-size: 20px;
+    }
+
+    .designer-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .designer-prev {
+        left: -22px;
+    }
+
+    .designer-next {
+        right: -22px;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONE
+================================================== */
+
+@media (max-width: 380px) {
+
+    .designer-section {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .designer-heading {
+        font-size: 25px;
+    }
+
+    .designer-card h3 {
+        font-size: 18px;
+    }
+
+    .designer-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .designer-prev {
+        left: -20px;
+    }
+
+    .designer-next {
+        right: -20px;
+    }
+}
+
+
+/* ==================================================
+   DESIGNERS IN THE SPOTLIGHT
+   PREMIUM HOVER SHINE
+================================================== */
+
+.designer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.designer-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   SHINE LIGHT
+================================================== */
+
+.designer-card::after {
+    content: "";
+    position: absolute;
+
+    top: -8%;
+    left: -110%;
+
+    width: 62%;
+    height: 116%;
+
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.10) 38%,
+        rgba(255, 255, 255, 0.58) 50%,
+        rgba(255, 255, 255, 0.10) 62%,
+        transparent 80%
+    );
+
+    transform: skewX(-18deg);
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+
+/* ==================================================
+   HOVER PAR HI ANIMATION
+================================================== */
+
+.designer-card:hover::after {
+    opacity: 1;
+    animation: designerShine 0.7s ease-out;
+}
+
+
+/* ==================================================
+   SHINE ANIMATION
+================================================== */
+
+@keyframes designerShine {
+
+    0% {
+        left: -110%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+/* ==================================================
+   DESIGNERS IN THE SPOTLIGHT
+   IMAGE + HOVER TEXT + SHINE
+================================================== */
+
+.designer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.designer-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   DARK BOTTOM OVERLAY
+================================================== */
+
+.designer-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0)
+    );
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* ==================================================
+   TEXT - START HIDDEN
+================================================== */
+
+.designer-card h3 {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 25px;
+
+    margin: 0;
+
+    color: #ffffff;
+    text-align: center;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s ease;
+
+    z-index: 4;
+}
+
+
+/* ==================================================
+   HOVER PAR TEXT AAYEGA
+================================================== */
+
+.designer-card:hover .designer-overlay {
+    opacity: 1;
+}
+
+.designer-card:hover h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   PREMIUM SHINE
+================================================== */
+
+.designer-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: -8%;
+    left: -110%;
+
+    width: 62%;
+    height: 116%;
+
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.10) 38%,
+        rgba(255, 255, 255, 0.58) 50%,
+        rgba(255, 255, 255, 0.10) 62%,
+        transparent 80%
+    );
+
+    transform: skewX(-18deg);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* SHINE ONLY ON HOVER */
+
+.designer-card:hover::after {
+    opacity: 1;
+    animation: designerShine 0.7s ease-out;
+}
+
+
+@keyframes designerShine {
+
+    0% {
+        left: -110%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .designer-card h3 {
+        font-size: 20px;
+        bottom: 25px;
+    }
+
+}
+
+
+/* ==================================================
+   PHONE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .designer-card h3 {
+        left: 10px;
+        right: 10px;
+        bottom: 22px;
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL PHONE
+================================================== */
+
+@media (max-width: 380px) {
+
+    .designer-card h3 {
+        font-size: 18px;
+    }
+
+}
+/* ==================================================
+   DESIGNERS IN THE SPOTLIGHT END
+================================================== */
+
+
+
+
+
+/* ==================================================
+   SHOP BY OCCASION START
+================================================== */
+
+.occasion-section {
+    width: 100%;
+    padding: 25px 0 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.occasion-container {
+    width: calc(100% - 9%);
+    max-width: 1340px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.occasion-heading {
+    margin: 0 0 25px;
+    color: #202733;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+
+/* ==================================================
+   MAIN GRID
+================================================== */
+
+.occasion-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    grid-template-rows:
+        250px
+        250px;
+
+    gap: 19px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   ALL CARDS
+================================================== */
+
+.occasion-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 21px;
+
+    text-decoration: none;
+
+    background: #eeeeee;
+
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.occasion-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* ==================================================
+   IMAGE HOVER
+================================================== */
+
+.occasion-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ==================================================
+   GRADIENT
+================================================== */
+
+.occasion-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0)
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CARD TITLE
+================================================== */
+
+.occasion-title {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 23px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 1.2;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+/* ==================================================
+   1. CELEBRATION
+================================================== */
+
+.occasion-celebration {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+
+/* ==================================================
+   2. BRIDESMAID
+================================================== */
+
+.occasion-bridesmaid {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* ==================================================
+   3. SHADES
+================================================== */
+
+.occasion-shades {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+/* ==================================================
+   4. WEDDING
+================================================== */
+
+.occasion-wedding {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* ==================================================
+   RIGHT BOTTOM WRAPPER
+================================================== */
+
+.occasion-right-bottom {
+    grid-column: 3;
+    grid-row: 2;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 19px;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+
+/* ==================================================
+   RECEPTION + SANGEET
+================================================== */
+
+.occasion-reception,
+.occasion-sangeet {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==================================================
+   LARGE SCREEN
+   1600 - 2560
+================================================== */
+
+@media (min-width: 1600px) {
+
+    .occasion-section {
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+
+    .occasion-container {
+        width: calc(100% - 8%);
+        max-width: 1500px;
+    }
+
+    .occasion-heading {
+        margin-bottom: 28px;
+        font-size: 35px;
+    }
+
+    .occasion-grid {
+        grid-template-rows:
+            275px
+            275px;
+
+        gap: 20px;
+    }
+
+    .occasion-right-bottom {
+        gap: 20px;
+    }
+
+    .occasion-title {
+        bottom: 25px;
+        font-size: 20px;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   768 - 1024
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .occasion-section {
+        padding: 25px 0 30px;
+    }
+
+    .occasion-container {
+        width: calc(100% - 6%);
+        max-width: none;
+    }
+
+    .occasion-heading {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+
+    .occasion-grid {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        grid-template-rows:
+            320px
+            230px
+            230px;
+
+        gap: 15px;
+    }
+
+
+    /* Celebration */
+
+    .occasion-celebration {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+
+    /* Bridesmaid */
+
+    .occasion-bridesmaid {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+    /* Shades */
+
+    .occasion-shades {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
+    /* Wedding */
+
+    .occasion-wedding {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+
+    /* Right bottom wrapper */
+
+    .occasion-right-bottom {
+        grid-column: 1 / 3;
+        grid-row: 4;
+
+        grid-template-columns: 1fr 1fr;
+
+        height: 230px;
+
+        gap: 15px;
+    }
+
+
+    .occasion-grid {
+        grid-template-rows:
+            320px
+            230px
+            230px
+            230px;
+    }
+
+
+    .occasion-title {
+        bottom: 18px;
+        font-size: 17px;
+    }
+
+}
+
+
+/* ==================================================
+   PHONE
+   320 - 767
+================================================== */
+
+@media (max-width: 767px) {
+
+    .occasion-section {
+        padding: 20px 0 25px;
+    }
+
+    .occasion-container {
+        width: calc(100% - 24px);
+        max-width: none;
+    }
+
+
+    .occasion-heading {
+        margin-bottom: 17px;
+        font-size: 25px;
+    }
+
+
+    .occasion-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows:
+            350px
+            210px
+            210px
+            190px;
+
+        gap: 12px;
+    }
+
+
+    /* ==================================================
+       CELEBRATION
+    ================================================== */
+
+    .occasion-celebration {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+
+    /* ==================================================
+       BRIDESMAID
+    ================================================== */
+
+    .occasion-bridesmaid {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+
+    /* ==================================================
+       SHADES
+    ================================================== */
+
+    .occasion-shades {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+
+    /* ==================================================
+       WEDDING
+    ================================================== */
+
+    .occasion-wedding {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+
+
+    /* ==================================================
+       RIGHT BOTTOM
+    ================================================== */
+
+    .occasion-right-bottom {
+        grid-column: 1 / 3;
+        grid-row: 5;
+
+        width: 100%;
+        height: 190px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .occasion-grid {
+        grid-template-rows:
+            350px
+            210px
+            210px
+            210px
+            190px;
+    }
+
+
+    .occasion-title {
+        left: 8px;
+        right: 8px;
+        bottom: 15px;
+
+        font-size: 15px;
+    }
+
+
+    .occasion-overlay {
+        height: 48%;
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONE
+   320 - 380
+================================================== */
+
+@media (max-width: 380px) {
+
+    .occasion-container {
+        width: calc(100% - 20px);
+    }
+
+    .occasion-heading {
+        margin-bottom: 14px;
+        font-size: 23px;
+    }
+
+
+    .occasion-grid {
+        gap: 10px;
+
+        grid-template-rows:
+            330px
+            195px
+            195px
+            195px
+            175px;
+    }
+
+
+    .occasion-right-bottom {
+        gap: 10px;
+        height: 175px;
+    }
+
+
+    .occasion-title {
+        bottom: 13px;
+        font-size: 14px;
+    }
+
+}
+
+/* ==================================================
+   FAST + SMOOTH IMAGE ZOOM
+================================================== */
+
+.occasion-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1);
+
+    transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    will-change: transform;
+}
+
+
+/* ==================================================
+   STRONG HOVER ZOOM
+================================================== */
+
+.occasion-card:hover img {
+    transform: scale(1.14);
+}
+
+
+/* ==================================================
+   SHOP BY OCCASION END
+================================================== */
+
+
+/* FOOTER START  */
+
+
+
+.main-footer {
+    width: 100%;
+    background: black;
+    overflow: hidden;
+}
+
+
+
+.footer-top {
+    width: 100%;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 20px 30px;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   SOCIAL ICON AREA
+================================================== */
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+
+/* ==================================================
+   SOCIAL ICON
+================================================== */
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* ==================================================
+   HOVER BACKGROUND
+   BOTTOM TO TOP
+================================================== */
+
+.social-icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #000000;
+    border-radius: 50%;
+    transition: height 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 0;
+}
+
+
+/* ==================================================
+   ICON
+================================================== */
+
+.social-icon i {
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    transition:
+    color 0.35s ease,
+   transform 0.45s ease;
+}
+
+
+/* ==================================================
+   SOCIAL HOVER
+================================================== */
+
+.social-icon:hover {
+    transform: translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.45);
+}
+
+
+.social-icon:hover::before {
+    height: 100%;
+}
+
+
+.social-icon:hover i {
+    color: #ffffff;
+
+    transform: rotate(360deg) scale(1.08);
+}
+
+
+/* ==================================================
+   FOOTER MENU
+================================================== */
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ==================================================
+   MENU LINKS
+================================================== */
+
+.footer-menu a {
+    position: relative;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* ==================================================
+   MENU UNDERLINE
+================================================== */
+
+.footer-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #ffffff;
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+
+.footer-menu a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+.footer-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   COPYRIGHT AREA
+================================================== */
+
+.footer-bottom {
+    width: 100%;
+    min-height: 48px;
+    background: #05050596;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* ==================================================
+   COPYRIGHT TEXT
+================================================== */
+
+.footer-bottom p {
+    margin: 0;
+    color: #8c8c8c;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+.footer-bottom a:hover {
+    color: #cccccc;
+}
+
+
+/* ==================================================
+   FOOTER LOAD ANIMATION
+================================================== */
+
+.footer-social,
+.footer-menu,
+.footer-bottom {
+    animation: footerFadeUp 1s ease both;
+}
+
+
+.footer-social {
+    animation-delay: 0.1s;
+}
+
+
+.footer-menu {
+    animation-delay: 0.25s;
+}
+
+
+.footer-bottom {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes footerFadeUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   ICON INITIAL ANIMATION
+================================================== */
+
+.social-icon {
+    animation: iconAppear 0.7s ease both;
+}
+
+
+.social-icon:nth-child(1) {
+    animation-delay: 0.15s;
+    border: 1px solid white;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.25s;
+    border: 1px solid white;
+}
+
+.social-icon:nth-child(3) {
+    animation-delay: 0.35s;
+    border: 1px solid white;
+}
+
+.social-icon:nth-child(4) {
+    animation-delay: 0.45s;
+    border: 1px solid white;
+}
+
+.social-icon:nth-child(5) {
+    animation-delay: 0.55s;
+    border: 1px solid white;
+}
+
+
+@keyframes iconAppear {
+
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(0.7);
+    }
+
+    70% {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   768px - 1024px
+================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .footer-top {
+        min-height: 200px;
+
+        padding: 40px 25px 32px;
+    }
+
+    .footer-social {
+        gap: 16px;
+
+        margin-bottom: 28px;
+    }
+
+    .social-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-icon i {
+        font-size: 19px;
+    }
+
+    .footer-menu {
+        gap: 30px;
+    }
+
+    .footer-menu a {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ==================================================
+   LAPTOP
+   1025px - 1599px
+================================================== */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+    .footer-top {
+        min-height: 210px;
+
+        padding: 42px 30px 34px;
+    }
+
+    .footer-social {
+        gap: 16px;
+
+        margin-bottom: 28px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-icon i {
+        font-size: 19px;
+    }
+
+    .footer-menu {
+        gap: 34px;
+    }
+
+    .footer-menu a {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        min-height: 52px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==================================================
+   LARGE SCREEN
+   1600px - 2560px
+================================================== */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .footer-top {
+        min-height: 230px;
+
+        padding: 48px 40px 38px;
+    }
+
+    .footer-social {
+        gap: 18px;
+
+        margin-bottom: 32px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icon i {
+        font-size: 21px;
+    }
+
+    .footer-menu {
+        gap: 40px;
+    }
+
+    .footer-menu a {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        min-height: 58px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL PHONE
+   320px - 480px
+================================================== */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .footer-top {
+        min-height: 215px;
+
+        padding: 35px 15px 28px;
+    }
+
+    .footer-social {
+        gap: 10px;
+
+        margin-bottom: 24px;
+    }
+
+    .social-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .social-icon i {
+        font-size: 16px;
+    }
+
+    .footer-menu {
+        gap: 14px 20px;
+
+        max-width: 300px;
+    }
+
+    .footer-menu a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        min-height: 48px;
+
+        padding: 10px 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ==================================================
+   PHONE
+   481px - 767px
+================================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .footer-top {
+        min-height: 205px;
+
+        padding: 38px 20px 30px;
+    }
+
+    .footer-social {
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+    .social-icon {
+        width: 41px;
+        height: 41px;
+    }
+
+    .footer-menu {
+        gap: 20px 24px;
+    }
+
+    .footer-menu a {
+        font-size: 13px;
+    }
+
+}
+
+/* FOOTER END */
