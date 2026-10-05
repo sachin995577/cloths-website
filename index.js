@@ -506,136 +506,206 @@ startFashionSlider();
 // CAROUSEL BANNER END
 
 
-// BESTSELLER ON SALE START
 
+
+// SHOP BY CATEGORY START
+
+/* ==================================================
+   SHOP BY CATEGORY CAROUSEL
+================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const track = document.querySelector(".bestseller-track");
-    const cards = document.querySelectorAll(".bestseller-card");
-
-    const prevButton = document.querySelector(".bestseller-prev");
-    const nextButton = document.querySelector(".bestseller-next");
-
-    let currentIndex = 0;
+    const sections = document.querySelectorAll(".bestseller-section");
 
 
-    /* ==============================================
-       VISIBLE CARDS
-    ============================================== */
+    sections.forEach(function (section) {
 
-    function getVisibleCards() {
-
-        if (window.innerWidth <= 767) {
-            return 1;
-        }
-
-        if (window.innerWidth <= 1024) {
-            return 3;
-        }
-
-        return 4;
-    }
+        const track = section.querySelector(".bestseller-track");
+        const cards = section.querySelectorAll(".bestseller-card");
+        const prevButton = section.querySelector(".bestseller-prev");
+        const nextButton = section.querySelector(".bestseller-next");
 
 
-    /* ==============================================
-       UPDATE SLIDER
-    ============================================== */
-
-    function updateSlider() {
-
-        const visibleCards = getVisibleCards();
-
-        const maxIndex = cards.length - visibleCards;
-
-        if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-        }
-
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        }
-
-        const movePercentage = 100 / visibleCards;
-
-        track.style.transform =
-            "translateX(-" + (currentIndex * movePercentage) + "%)";
-
-
-        /* DISABLE PREVIOUS */
-
-        if (currentIndex === 0) {
-            prevButton.style.opacity = "0.4";
-            prevButton.style.pointerEvents = "none";
-        } else {
-            prevButton.style.opacity = "1";
-            prevButton.style.pointerEvents = "auto";
+        if (!track || !cards.length || !prevButton || !nextButton) {
+            return;
         }
 
 
-        /* DISABLE NEXT */
+        let currentIndex = 0;
 
-        if (currentIndex >= maxIndex) {
-            nextButton.style.opacity = "0.4";
-            nextButton.style.pointerEvents = "none";
-        } else {
-            nextButton.style.opacity = "1";
-            nextButton.style.pointerEvents = "auto";
+
+        /* ==============================================
+           VISIBLE CARDS
+        ============================================== */
+
+        function getVisibleCards() {
+
+            const width = window.innerWidth;
+
+            if (width <= 767) {
+                return 1;
+            }
+
+            if (width <= 1024) {
+                return 3;
+            }
+
+            return 4;
         }
 
-    }
+
+        /* ==============================================
+           UPDATE CAROUSEL
+        ============================================== */
+
+        function updateCarousel() {
+
+            const visibleCards = getVisibleCards();
+
+            const totalCards = cards.length;
+
+            const maxIndex = Math.max(
+                0,
+                totalCards - visibleCards
+            );
 
 
-    /* ==============================================
-       NEXT
-    ============================================== */
+            /* INDEX LIMIT */
 
-    nextButton.addEventListener("click", function () {
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
 
-        const visibleCards = getVisibleCards();
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
 
-        const maxIndex = cards.length - visibleCards;
 
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateSlider();
+            /* ==========================================
+               CARD WIDTH
+            ========================================== */
+
+            const cardWidth = 100 / visibleCards;
+
+
+            /* ==========================================
+               MOVE TRACK
+            ========================================== */
+
+            const moveX = currentIndex * cardWidth;
+
+
+            track.style.transform =
+                "translate3d(-" + moveX + "%, 0, 0)";
+
+
+            /* ==========================================
+               PREVIOUS BUTTON
+            ========================================== */
+
+            if (currentIndex === 0) {
+
+                prevButton.disabled = true;
+                prevButton.style.opacity = "0.35";
+                prevButton.style.cursor = "default";
+
+            } else {
+
+                prevButton.disabled = false;
+                prevButton.style.opacity = "1";
+                prevButton.style.cursor = "pointer";
+            }
+
+
+            /* ==========================================
+               NEXT BUTTON
+            ========================================== */
+
+            if (currentIndex >= maxIndex) {
+
+                nextButton.disabled = true;
+                nextButton.style.opacity = "0.35";
+                nextButton.style.cursor = "default";
+
+            } else {
+
+                nextButton.disabled = false;
+                nextButton.style.opacity = "1";
+                nextButton.style.cursor = "pointer";
+            }
+
         }
+
+
+        /* ==============================================
+           NEXT
+        ============================================== */
+
+        nextButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const visibleCards = getVisibleCards();
+
+            const maxIndex = Math.max(
+                0,
+                cards.length - visibleCards
+            );
+
+
+            if (currentIndex < maxIndex) {
+
+                currentIndex++;
+
+                updateCarousel();
+            }
+
+        });
+
+
+        /* ==============================================
+           PREVIOUS
+        ============================================== */
+
+        prevButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+
+            if (currentIndex > 0) {
+
+                currentIndex--;
+
+                updateCarousel();
+            }
+
+        });
+
+
+        /* ==============================================
+           RESIZE
+        ============================================== */
+
+        window.addEventListener("resize", function () {
+
+            updateCarousel();
+
+        });
+
+
+        /* ==============================================
+           INITIAL
+        ============================================== */
+
+        updateCarousel();
 
     });
-
-
-    /* ==============================================
-       PREVIOUS
-    ============================================== */
-
-    prevButton.addEventListener("click", function () {
-
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
-
-    });
-
-
-    /* ==============================================
-       RESIZE
-    ============================================== */
-
-    window.addEventListener("resize", function () {
-        updateSlider();
-    });
-
-
-    /* ==============================================
-       INITIAL
-    ============================================== */
-
-    updateSlider();
 
 });
 
-// BESTSELLER ON SALE END
+
+// SHOP BY CATEGORY END
 
 
 
@@ -743,85 +813,299 @@ window.addEventListener("load", function () {
 // DESIGNER SPORTLIGHT END CAROUSEL
 
 
+// INSTAGRAM SECTION START
 
-// FOOTER START
+document.addEventListener("DOMContentLoaded", function () {
 
-/* ==================================================
-   FOOTER SOCIAL ICON INTERACTION
-================================================== */
+    const track = document.querySelector(".jx-instagram-track");
+    const cards = document.querySelectorAll(".jx-instagram-card");
 
-const socialIcons = document.querySelectorAll(".social-icon");
+    const nextBtn = document.querySelector(".jx-instagram-next");
+    const prevBtn = document.querySelector(".jx-instagram-prev");
 
-socialIcons.forEach((icon) => {
+    let currentIndex = 0;
+    let autoSlide;
 
-    icon.addEventListener("mouseenter", () => {
+    /* ================= VISIBLE ITEMS ================= */
 
-        icon.style.setProperty("--hover-state", "1");
+    function getVisibleItems() {
 
-    });
+        if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
+            return 3;
+        }
 
+        if (window.innerWidth >= 1025) {
+            return 5;
+        }
 
-    icon.addEventListener("mouseleave", () => {
-
-        icon.style.setProperty("--hover-state", "0");
-
-    });
-
-});
-
-
-/* ==================================================
-   FOOTER MENU ACTIVE EFFECT
-================================================== */
-
-const footerLinks = document.querySelectorAll(".footer-menu a");
-
-footerLinks.forEach((link) => {
-
-    link.addEventListener("click", function () {
-
-        footerLinks.forEach((item) => {
-            item.classList.remove("footer-active");
-        });
-
-        this.classList.add("footer-active");
-
-    });
-
-});
-
-
-/* ==================================================
-   FOOTER REVEAL ON SCROLL
-================================================== */
-
-const footer = document.querySelector(".main-footer");
-
-const footerObserver = new IntersectionObserver(
-
-    (entries) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                footer.classList.add("footer-visible");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.15
+        return 1;
     }
 
-);
+    /* ================= UPDATE SLIDER ================= */
 
+    function updateSlider() {
 
-if (footer) {
-    footerObserver.observe(footer);
+        const visibleItems = getVisibleItems();
+        const gap = 5;
+
+        const cardWidth = cards[0].getBoundingClientRect().width;
+
+        const moveAmount = cardWidth + gap;
+
+        track.style.transform =
+            "translateX(-" + (currentIndex * moveAmount) + "px)";
+    }
+
+    /* ================= NEXT ================= */
+
+    function nextSlide() {
+
+        const visibleItems = getVisibleItems();
+        const maxIndex = cards.length - visibleItems;
+
+        currentIndex++;
+
+        if (currentIndex > maxIndex) {
+            currentIndex = 0;
+        }
+
+        updateSlider();
+    }
+
+    /* ================= PREVIOUS ================= */
+
+    function previousSlide() {
+
+        const visibleItems = getVisibleItems();
+        const maxIndex = cards.length - visibleItems;
+
+        currentIndex--;
+
+        if (currentIndex < 0) {
+            currentIndex = maxIndex;
+        }
+
+        updateSlider();
+    }
+
+    /* ================= BUTTONS ================= */
+
+    nextBtn.addEventListener("click", function () {
+        nextSlide();
+        restartAutoSlide();
+    });
+
+    prevBtn.addEventListener("click", function () {
+        previousSlide();
+        restartAutoSlide();
+    });
+
+    /* ================= AUTO SLIDE ================= */
+
+    function startAutoSlide() {
+
+        autoSlide = setInterval(function () {
+            nextSlide();
+        }, 3500);
+
+    }
+
+    function restartAutoSlide() {
+
+        clearInterval(autoSlide);
+        startAutoSlide();
+
+    }
+
+    /* ================= RESIZE ================= */
+
+    window.addEventListener("resize", function () {
+
+        const visibleItems = getVisibleItems();
+        const maxIndex = cards.length - visibleItems;
+
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+
+        updateSlider();
+
+    });
+
+    /* ================= START ================= */
+
+    updateSlider();
+    startAutoSlide();
+
+});
+
+function getVisibleItems() {
+
+    /* 320 - 400 = 2 IMAGES */
+    if (window.innerWidth >= 320 && window.innerWidth <= 400) {
+        return 2;
+    }
+
+    /* 401 - 767 = 1 IMAGE */
+    if (window.innerWidth >= 401 && window.innerWidth <= 767) {
+        return 1;
+    }
+
+    /* 768 - 1024 = 3 IMAGES */
+    if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
+        return 3;
+    }
+
+    /* 1025 - 2560 = 5 IMAGES */
+    return 5;
 }
 
-// FOOTER END
+
+
+// INSTAGRAM SECTION END
+
+  
+
+// 4 icon start
+
+document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200; // Counter speed lower is faster
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = Math.max(1, Math.ceil(target / speed));
+
+            if (count < target) {
+              counter.innerText = Math.min(count + inc, target);
+              setTimeout(updateCount, 25);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Intersection Observer so animation starts when scrolled into view
+      let observerOptions = {
+        threshold: 0.4
+      };
+
+      let hasAnimated = false;
+
+      let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAnimated) {
+            animateCounters();
+            hasAnimated = true; // Run only once
+          }
+        });
+      }, observerOptions);
+
+      const targetSection = document.querySelector('.stats-container');
+      if (targetSection) {
+        observer.observe(targetSection);
+      }
+    });
+
+//  4 icon end
+
+
+ 
+// FOOTER START
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    const backTop = document.getElementById("jxBackTop");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 250) {
+            backTop.classList.add("show");
+        } else {
+            backTop.classList.remove("show");
+        }
+
+    });
+
+
+    backTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* =====================================================
+       NEWSLETTER
+    ===================================================== */
+
+    const newsletterForm =
+        document.getElementById("jxNewsletterForm");
+
+    const emailInput =
+        document.getElementById("jxEmailInput");
+
+
+    /* Placeholder automatically disappears on focus */
+
+    emailInput.addEventListener("focus", function () {
+        this.setAttribute("placeholder", "");
+    });
+
+
+    emailInput.addEventListener("blur", function () {
+
+        if (this.value.trim() === "") {
+            this.setAttribute(
+                "placeholder",
+                "Your email address"
+            );
+        }
+
+    });
+
+
+    /* =====================================================
+       SUBSCRIBE
+    ===================================================== */
+
+    newsletterForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (emailInput.value.trim() === "") {
+            emailInput.focus();
+            return;
+        }
+
+        alert("Thank you for subscribing!");
+
+        emailInput.value = "";
+
+        emailInput.setAttribute(
+            "placeholder",
+            "Your email address"
+        );
+
+    });
+
+});
+
+
+
+
+//  FOOTER END

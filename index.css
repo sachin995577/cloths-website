@@ -89,7 +89,7 @@ body {
 }
 
 .brand-logo:hover img {
-    transform: scale(1.01);
+    transform: scale(1.09);
 }
 
 
@@ -164,6 +164,7 @@ body {
     transition:
     background 0.3s ease,
     box-shadow 0.3s ease;
+    border: 2px solid white;
 }
 
 .search-box:focus-within {
@@ -190,6 +191,7 @@ body {
     padding-left: 15px;
     color: #222222;
     font-size: 13px;
+    /* border: 1px solid white; */
 }
 
 .search-box input::placeholder {
@@ -1635,6 +1637,423 @@ body {
     }
 
 }
+/* logo height */
+/* =========================================================
+   EXTRA LARGE LOGO - FINAL
+   320px - 2560px
+========================================================= */
+
+
+/* ================================
+   320px - 400px
+================================ */
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+    .navbar-container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .brand-logo {
+        width: auto !important;
+        max-width: none !important;
+        flex: 0 0 auto !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 105px !important;
+        max-width: 150px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   401px - 767px
+================================ */
+
+@media (min-width: 401px) and (max-width: 767px) {
+
+    .navbar-container {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .brand-logo {
+        width: auto !important;
+        max-width: none !important;
+        flex: 0 0 auto !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 165px !important;
+        max-width: 165px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   768px - 1024px
+   TABLET
+================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .brand-logo {
+        width: 165px !important;
+        max-width: 165px !important;
+        flex: 0 0 165px !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 103px !important;
+        max-width: 160px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   1025px - 1199px
+================================ */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+    .navbar-container {
+        grid-template-columns:
+            170px
+            minmax(0, 1fr)
+            380px !important;
+    }
+
+    .brand-logo {
+        width: 170px !important;
+        max-width: 170px !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 165px !important;
+        max-width: 165px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   1200px - 1599px
+================================ */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    .navbar-container {
+        grid-template-columns:
+            195px
+            minmax(0, 1fr)
+            430px !important;
+    }
+
+    .brand-logo {
+        width: 195px !important;
+        max-width: 195px !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 130px !important;
+        max-width: 180px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   1600px - 2199px
+================================ */
+
+@media (min-width: 1600px) and (max-width: 2199px) {
+
+    .navbar-container {
+        grid-template-columns:
+            235px
+            minmax(0, 1fr)
+            520px !important;
+    }
+
+    .brand-logo {
+        width: 235px !important;
+        max-width: 235px !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 210px !important;
+        max-width: 210px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+
+/* ================================
+   2200px - 2560px
+================================ */
+
+@media (min-width: 2200px) and (max-width: 2560px) {
+
+    .navbar-container {
+        grid-template-columns:
+            275px
+            minmax(0, 1fr)
+            580px !important;
+    }
+
+    .brand-logo {
+        width: 275px !important;
+        max-width: 275px !important;
+        overflow: visible !important;
+    }
+
+    .brand-logo img {
+        width: 105px !important;
+        max-width: 245px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+}
+
+/* new */
+
+/* =========================================================
+   BLACK NAVBAR THEME
+   HTML / NAVBAR STRUCTURE SAME RAHEGA
+   ========================================================= */
+
+/* MAIN NAVBAR */
+.main-navbar {
+    background: #000000;
+    border-bottom: 1px solid #222222;
+}
+
+
+/* DESKTOP MENU */
+.desktop-menu a {
+    color: #ffffff;
+}
+
+.desktop-menu a::after {
+    background: #ffffff;
+}
+
+
+/* SEARCH BOX */
+.search-box {
+    background: #151515;
+    border: 1px solid #252525;
+}
+
+.search-box:focus-within {
+    background: #1d1d1d;
+}
+
+.search-box i {
+    color: #ffffff;
+}
+
+.search-box input {
+    color: #ffffff;
+}
+
+.search-box input::placeholder {
+    color: #bdbdbd;
+}
+
+
+/* DESKTOP NAV ICONS */
+.nav-icon {
+    color: #ffffff;
+}
+
+.nav-icon:hover {
+    color: #ffffff;
+}
+
+
+/* CART COUNT */
+.cart-count {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* HAMBURGER */
+.hamburger {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    background: #000000;
+}
+
+.mobile-menu-header {
+    border-bottom: 1px solid #222222;
+}
+
+.mobile-close {
+    color: #ffffff;
+}
+
+
+/* MOBILE NAV LINKS */
+.mobile-nav a {
+    color: #ffffff;
+}
+
+.mobile-nav a::after {
+    background: #ffffff;
+}
+
+
+/* MOBILE SEARCH */
+.mobile-search-box {
+    background: #151515;
+    border: 1px solid #252525;
+}
+
+.mobile-search-box i {
+    color: #ffffff;
+}
+
+.mobile-search-box input {
+    color: #ffffff;
+}
+
+.mobile-search-box input::placeholder {
+    color: #bdbdbd;
+}
+
+
+/* MOBILE ACTIONS */
+.mobile-action {
+    color: #ffffff;
+}
+
+.mobile-action-icon {
+    border-color: #333333;
+    color: #ffffff;
+}
+
+.mobile-action:hover {
+    color: #ffffff;
+}
+
+.mobile-action-icon:hover {
+    background: #151515;
+    color: #ffffff;
+}
+
+
+/* MOBILE CART COUNT */
+.mobile-cart-count {
+    background: #ffffff;
+    color: #000000;
+}
+
+#search-icon{
+    color:black;
+}
+/* =========================================================
+   NAVBAR POPUPS
+   POPUPS WHITE HI RAHENGE
+   ========================================================= */
+
+.info-popup,
+.wishlist-popup,
+.cart-popup,
+.profile-popup {
+    background: #ffffff;
+    color: #111111;
+}
+/* SEARCH BOX */
+.search-box {
+    background: whitesmoke;
+    color:black
+}
+
+.search-box:focus-within {
+    background: #ffffff !important;
+}
+
+.search-box input {
+    /* background: #ffffff !important; */
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+.search-box input:focus {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+.search-box input::placeholder {
+    color: #000000 !important;
+    opacity: 1;
+}
+
+
+/* MOBILE SEARCH BOX */
+.mobile-search-box {
+    background: #ffffff !important;
+}
+
+.mobile-search-box:focus-within {
+    background: #ffffff !important;
+}
+
+.mobile-search-box input {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+.mobile-search-box input:focus {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+.mobile-search-box input::placeholder {
+    color: #000000 !important;
+    opacity: 1;
+}
 
 
 /* NAVBAR END */
@@ -1995,7 +2414,7 @@ body {
 /* CAROUSEL BANNER END */
 
 
-/* BESTSELLER ON SALE CAROUSEL START */
+/* SHOP BY CATEGORY START */
 
 
 .bestseller-section {
@@ -2133,7 +2552,7 @@ body {
 
 .bestseller-card h3 {
     margin: 14px 0 7px;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.3;
     color: #222222;
 }
@@ -2164,7 +2583,7 @@ body {
 
 .new-price {
     color: #222222;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 
@@ -2228,7 +2647,8 @@ body {
 
     .bestseller-heading {
         font-size: 25px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        margin-top: -25px;
     }
 
     .bestseller-card {
@@ -2241,7 +2661,7 @@ body {
     }
 
     .bestseller-card h3 {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .bestseller-price {
@@ -2264,12 +2684,12 @@ body {
 @media (min-width: 320px) and (max-width: 767px) {
 
     .bestseller-section {
-        padding: 8px 10px 25px;
+        padding: 8px 10px 15px;
     }
 
     .bestseller-heading {
         font-size: 21px;
-        margin-bottom: 18px;
+        margin-bottom: 14px;
     }
 
     .bestseller-card {
@@ -2322,7 +2742,9 @@ body {
 @media (min-width: 320px) and (max-width: 400px) {
 
     .bestseller-heading {
-        font-size: 19px;
+        font-size: 21px;
+        margin-top: -16px;
+        /* padding: 15px; */
     }
 
     .bestseller-image-box img {
@@ -2363,7 +2785,8 @@ body {
 
 }
 
-/* BESTSELLER ON SALE CAROUSEL END */
+
+/* SHOP BY CATEGORY END */
 
 
 
@@ -2382,9 +2805,11 @@ body {
 
 .designer-heading {
     margin: 0 0 34px;
-    font-size: 40px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: left;
+    margin-top: 20px;
+    padding: 5px;
 }
 
 .designer-carousel {
@@ -2493,8 +2918,9 @@ body {
     }
 
     .designer-heading {
-        font-size: 34px;
-        margin-bottom: 28px;
+        font-size: 25px;
+        margin-bottom: 20px;
+        margin-top: -2px;
     }
 
     .designer-track {
@@ -2535,7 +2961,7 @@ body {
 @media (max-width: 767px) {
 
     .designer-section {
-        padding: 15px 9% 40px;
+        padding: 15px 9% 20px;
     }
 
     .designer-heading {
@@ -2543,6 +2969,7 @@ body {
         font-size: 28px;
         line-height: 1.25;
         text-align: center;
+        margin-top: -15px;
     }
 
     .designer-track {
@@ -2585,12 +3012,14 @@ body {
 @media (max-width: 380px) {
 
     .designer-section {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 9%;
+        padding-right: 9%;
     }
 
     .designer-heading {
-        font-size: 25px;
+        font-size: 21px;
+        margin-top: -20px;
+        margin-bottom: 13px;
     }
 
     .designer-card h3 {
@@ -2843,7 +3272,7 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .designer-card h3 {
-        font-size: 20px;
+        font-size: 25px;
         bottom: 25px;
     }
 
@@ -2874,7 +3303,7 @@ body {
 @media (max-width: 380px) {
 
     .designer-card h3 {
-        font-size: 18px;
+        font-size: 25px;
     }
 
 }
@@ -3168,7 +3597,9 @@ body {
 
     .occasion-heading {
         margin-bottom: 20px;
-        font-size: 28px;
+        font-size: 25px;
+        margin-top: -20px;
+        
     }
 
 
@@ -3243,7 +3674,7 @@ body {
 
     .occasion-title {
         bottom: 18px;
-        font-size: 17px;
+        font-size: 20px;
     }
 
 }
@@ -3257,7 +3688,7 @@ body {
 @media (max-width: 767px) {
 
     .occasion-section {
-        padding: 20px 0 25px;
+        padding: 7px 0 7px;
     }
 
     .occasion-container {
@@ -3269,6 +3700,7 @@ body {
     .occasion-heading {
         margin-bottom: 17px;
         font-size: 25px;
+        margin-left: 10px;
     }
 
 
@@ -3384,8 +3816,10 @@ body {
     }
 
     .occasion-heading {
-        margin-bottom: 14px;
-        font-size: 23px;
+        margin-bottom: 12px;
+        font-size: 21px;
+        margin-left: 10px;
+        margin-top: -3px;
     }
 
 
@@ -3403,13 +3837,13 @@ body {
 
     .occasion-right-bottom {
         gap: 10px;
-        height: 175px;
+        height: 195px;
     }
 
 
     .occasion-title {
         bottom: 13px;
-        font-size: 14px;
+        font-size: 18px;
     }
 
 }
@@ -3449,535 +3883,1306 @@ body {
 ================================================== */
 
 
-/* FOOTER START  */
 
+/* INSTAGRAM SECTION START */
 
+/* ================= INSTAGRAM SECTION ================= */
 
-.main-footer {
+.jx-instagram-section {
     width: 100%;
-    background: black;
     overflow: hidden;
-}
-
-
-
-.footer-top {
-    width: 100%;
-    min-height: 190px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 38px 20px 30px;
-    box-sizing: border-box;
-}
-
-
-/* ==================================================
-   SOCIAL ICON AREA
-================================================== */
-
-.footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 26px;
-}
-
-
-/* ==================================================
-   SOCIAL ICON
-================================================== */
-
-.social-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
     background: #ffffff;
-    color: #111111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-decoration: none;
-    overflow: hidden;
-    transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
 }
 
+/* ================= HEADING ================= */
 
-/* ==================================================
-   HOVER BACKGROUND
-   BOTTOM TO TOP
-================================================== */
-
-.social-icon::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.jx-instagram-heading {
     width: 100%;
-    height: 0%;
-    background: #000000;
-    border-radius: 50%;
-    transition: height 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-    z-index: 0;
+    text-align: center;
+    padding: 24px 20px 22px;
+    background: #ffffff;
 }
 
+.jx-instagram-heading h2 {
+    margin: 0;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
 
-/* ==================================================
-   ICON
-================================================== */
+.jx-instagram-heading p {
+    margin: 7px 0 0;
+    color: #000000;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
 
-.social-icon i {
+/* ================= CAROUSEL ================= */
+
+.jx-instagram-carousel {
     position: relative;
-    z-index: 2;
-    font-size: 18px;
-    transition:
-    color 0.35s ease,
-   transform 0.45s ease;
+    width: 100%;
+    background: white;
+    padding: 0;
+    overflow: hidden;
 }
 
+/* ================= VIEWPORT ================= */
 
-/* ==================================================
-   SOCIAL HOVER
-================================================== */
-
-.social-icon:hover {
-    transform: translateY(-8px) scale(1.08);
-
-    box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.45);
+.jx-instagram-viewport {
+    width: 100%;
+    overflow: hidden;
 }
 
+/* ================= TRACK ================= */
 
-.social-icon:hover::before {
-    height: 100%;
-}
-
-
-.social-icon:hover i {
-    color: #ffffff;
-
-    transform: rotate(360deg) scale(1.08);
-}
-
-
-/* ==================================================
-   FOOTER MENU
-================================================== */
-
-.footer-menu {
+.jx-instagram-track {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 28px;
-
-    flex-wrap: wrap;
+    gap: 5px;
+    transform: translateX(0);
+    transition: transform 0.65s ease;
+    will-change: transform;
 }
 
+/* ================= CARD ================= */
 
-/* ==================================================
-   MENU LINKS
-================================================== */
-
-.footer-menu a {
+.jx-instagram-card {
     position: relative;
-    color: #bdbdbd;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 5px 0;
-    transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+    flex: 0 0 calc((100% - 20px) / 5);
+    height: 290px;
+    overflow: hidden;
+    background: #111111;
+    cursor: pointer;
 }
 
+/* ================= IMAGE ================= */
 
-/* ==================================================
-   MENU UNDERLINE
-================================================== */
+.jx-instagram-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
 
-.footer-menu a::after {
-    content: "";
+/* ================= DARK OVERLAY ================= */
+
+.jx-instagram-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.35s ease;
+    pointer-events: none;
+}
+
+/* ================= ICON ================= */
+
+.jx-instagram-icon {
     position: absolute;
     left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 1px;
-    background: #ffffff;
-    transform: translateX(-50%);
-    transition: width 0.35s ease;
-}
-
-
-.footer-menu a:hover {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
     color: #ffffff;
-    transform: translateY(-3px);
+    font-size: 43px;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    pointer-events: none;
 }
 
+/* ================= HOVER ================= */
 
-.footer-menu a:hover::after {
-    width: 100%;
+.jx-instagram-card:hover .jx-instagram-overlay {
+    background: rgba(0, 0, 0, 0.38);
 }
 
+.jx-instagram-card:hover .jx-instagram-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
 
-/* ==================================================
-   COPYRIGHT AREA
-================================================== */
+/* ================= ARROWS ================= */
 
-.footer-bottom {
-    width: 100%;
-    min-height: 48px;
-    background: #05050596;
+.jx-instagram-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 43px;
+    height: 43px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.377);
+    color: white;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+    font-size: 16px;
+    cursor: pointer;
+
+    /* NO HOVER EFFECT */
+    transition: none;
 }
 
-
-/* ==================================================
-   COPYRIGHT TEXT
-================================================== */
-
-.footer-bottom p {
-    margin: 0;
-    color: #8c8c8c;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.5;
+.jx-instagram-prev {
+    left: 14px;
 }
 
-
-.footer-bottom a {
-    color: #ffffff;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
+.jx-instagram-next {
+    right: 14px;
 }
 
-
-.footer-bottom a:hover {
-    color: #cccccc;
+.jx-instagram-arrow:hover,
+.jx-instagram-arrow:focus,
+.jx-instagram-arrow:active {
+    /* background: rgba(255, 255, 255, 0.95);
+    color: #000000; */
+    transform: translateY(-50%);
+    box-shadow: none;
+    outline: none;
 }
 
-
-/* ==================================================
-   FOOTER LOAD ANIMATION
-================================================== */
-
-.footer-social,
-.footer-menu,
-.footer-bottom {
-    animation: footerFadeUp 1s ease both;
-}
-
-
-.footer-social {
-    animation-delay: 0.1s;
-}
-
-
-.footer-menu {
-    animation-delay: 0.25s;
-}
-
-
-.footer-bottom {
-    animation-delay: 0.4s;
-}
-
-
-@keyframes footerFadeUp {
-
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* ==================================================
-   ICON INITIAL ANIMATION
-================================================== */
-
-.social-icon {
-    animation: iconAppear 0.7s ease both;
-}
-
-
-.social-icon:nth-child(1) {
-    animation-delay: 0.15s;
-    border: 1px solid white;
-}
-
-.social-icon:nth-child(2) {
-    animation-delay: 0.25s;
-    border: 1px solid white;
-}
-
-.social-icon:nth-child(3) {
-    animation-delay: 0.35s;
-    border: 1px solid white;
-}
-
-.social-icon:nth-child(4) {
-    animation-delay: 0.45s;
-    border: 1px solid white;
-}
-
-.social-icon:nth-child(5) {
-    animation-delay: 0.55s;
-    border: 1px solid white;
-}
-
-
-@keyframes iconAppear {
-
-    0% {
-        opacity: 0;
-        transform: translateY(25px) scale(0.7);
-    }
-
-    70% {
-        transform: translateY(-4px) scale(1.05);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-}
-
-
-/* ==================================================
-   TABLET
-   768px - 1024px
-================================================== */
+/* ================= TABLET ================= */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    .footer-top {
-        min-height: 200px;
-
-        padding: 40px 25px 32px;
+    .jx-instagram-heading {
+        padding: 21px 15px 20px;
     }
 
-    .footer-social {
-        gap: 16px;
+    .jx-instagram-heading h2 {
+        font-size: 23px;
+        letter-spacing: 2.5px;
+    }
 
+    .jx-instagram-heading p {
+        font-size: 16px;
+    }
+
+    .jx-instagram-track {
+        gap: 5px;
+    }
+
+    .jx-instagram-card {
+        flex: 0 0 calc((100% - 10px) / 3);
+        height: 280px;
+    }
+
+    .jx-instagram-icon {
+        font-size: 40px;
+    }
+
+    .jx-instagram-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .jx-instagram-prev {
+        left: 10px;
+    }
+
+    .jx-instagram-next {
+        right: 10px;
+    }
+}
+
+/* ================= PHONE ================= */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .jx-instagram-heading {
+        padding: 18px 12px 18px;
+    }
+
+    .jx-instagram-heading h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .jx-instagram-heading p {
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+    .jx-instagram-track {
+        gap: 0;
+    }
+
+    .jx-instagram-card {
+        flex: 0 0 100%;
+        height: 430px;
+    }
+
+    .jx-instagram-icon {
+        font-size: 40px;
+    }
+
+    .jx-instagram-arrow {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .jx-instagram-prev {
+        left: 9px;
+    }
+
+    .jx-instagram-next {
+        right: 9px;
+    }
+}
+
+/* ================= SMALL PHONE ================= */
+
+/* ================= 320px - 400px ================= */
+
+
+
+/* ================= LARGE SCREEN ================= */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .jx-instagram-card {
+        height: 430px;
+    }
+
+    .jx-instagram-heading {
+        padding: 27px 20px 24px;
+    }
+
+    .jx-instagram-heading h2 {
+        font-size: 27px;
+    }
+
+    .jx-instagram-heading p {
+        font-size: 18px;
+    }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+
+    .jx-instagram-track {
+        gap: 5px;
+    }
+
+    .jx-instagram-card {
+        flex: 0 0 calc((100% - 5px) / 2);
+        height: 220px;
+    }
+}
+
+
+/* INSTAGRAM SECTION END */
+
+
+/* four icon start */
+
+  
+stats-container {
+      width: 100%;
+      max-width: 2560px; /* 4K Screens support */
+      margin: 0 auto;
+      padding: 40px 20px;
+     
+    }
+
+    /* Stats Grid Wrapper */
+    .stats-grid {
+      display: grid;
+      /* Mobile View (320px - 767px): 2 Columns (2 Upar, 2 Niche) */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 15px;
+      align-items: center;
+      justify-content: center;
+       margin-top: 25px;
+    }
+
+    /* Individual Stat Item */
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 10px 15px;
+    }
+
+    /* Icon Style */
+    .stat-icon {
+      font-size: 2.2rem;
+      color: #111111;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+    }
+
+    /* Number Style */
+    .stat-number-box {
+      font-size: 1.3rem;
+      /* font-weight: 800; */
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Label Text Style */
+    .stat-label {
+      font-size: 1rem;
+      color: #555555;
+      /* font-weight: 500; */
+    }
+
+    /* Mobile Divider Lines (2x2 Grid setup) */
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(3) {
+      border-right: 1px solid #d1d1d1;
+    }
+
+    /* Tablet, Laptop & Desktop (768px - 2560px): 4 in 1 Row */
+    @media (min-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+
+      /* Mobile Border Reset */
+      .stat-item:nth-child(1),
+      .stat-item:nth-child(3) {
+        border-right: none;
+      }
+
+      /* Vertical Dividers between items */
+      .stat-item:not(:last-child) {
+        border-right: 1px solid #c0c0c0;
+      }
+
+      .stat-icon {
+        font-size: 2.5rem;
+      }
+
+      .stat-number-box {
+        font-size: 2.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Ultra Wide Screens (4K / 2560px) */
+    @media (min-width: 1800px) {
+      .stats-container {
+        padding: 60px 80px;
+      }
+
+      .stat-icon {
+        font-size: 3.2rem;
+        height: 60px;
+      }
+
+      .stat-number-box {
+        font-size: 3rem;
+      }
+
+      .stat-label {
+        font-size: 1.3rem;
+      }
+    }
+
+
+  /* four icon end */
+
+
+
+  /* ================= OUR BRANDS START ================= */
+
+.clothing-brands-section {
+    width: 100%;
+    padding: 25px 4px 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.clothing-brands-container {
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.clothing-brands-title {
+    margin: 0 0 42px;
+    text-align: center;
+    color: #111111;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.clothing-brands-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+.clothing-brand-card {
+    width: 100%;
+    height: 108px;
+    border: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #ffffff;
+    transition: border-color 0.25s ease;
+}
+
+.clothing-brand-card:hover {
+    border: 1px solid #000000;
+}
+
+.clothing-brand-card img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .clothing-brands-section {
+        padding: 28px 12px 35px;
+    }
+
+    .clothing-brands-title {
+        margin-bottom: 32px;
+        font-size: 30px;
+    }
+
+    .clothing-brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .clothing-brand-card {
+        height: 145px;
+    }
+
+    .clothing-brand-card img {
+        width: 72%;
+        height: 82%;
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .clothing-brands-section {
+        padding: 22px 8px 28px;
+    }
+
+    .clothing-brands-title {
+        margin-bottom: 25px;
+        font-size: 27px;
+    }
+
+    .clothing-brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .clothing-brand-card {
+        height: 125px;
+    }
+
+    .clothing-brand-card img {
+        width: 78%;
+        height: 80%;
+    }
+}
+
+
+/* ================= SMALL PHONE ================= */
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+    .clothing-brands-section {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .clothing-brands-grid {
+        gap: 8px;
+    }
+
+    .clothing-brand-card {
+        height: 118px;
+    }
+}
+
+
+/* ================= LARGE SCREEN ================= */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .clothing-brands-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .clothing-brands-title {
+        font-size: 38px;
+        margin-bottom: 45px;
+    }
+
+    .clothing-brands-grid {
+        gap: 18px;
+    }
+
+    .clothing-brand-card {
+        height: 120px;
+    }
+}
+
+/* ================= OUR BRANDS END ================= */
+
+
+/* FOOTER START */
+
+
+
+.jx-footer {
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.jx-footer-main {
+    width: 100%;
+    background: #000;
+}
+
+.jx-footer-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 78px 30px 70px;
+
+    display: grid;
+    grid-template-columns:
+        1.35fr
+        1fr
+        1.15fr
+        .95fr
+        1.45fr;
+
+    column-gap: 50px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.jx-footer-column {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.jx-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 31px;
+    letter-spacing: 1px;
+
+    position: relative;
+    transition: transform .25s ease;
+}
+
+.jx-footer-logo:hover {
+    transform: translateY(-2px);
+}
+
+.jx-footer-logo sup {
+    font-size: 9px;
+    position: relative;
+    top: -11px;
+}
+
+.jx-logo-shield {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+
+/* =========================================================
+   COMPANY INFORMATION
+========================================================= */
+
+.jx-company-info {
+    margin-top: 37px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.jx-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    width: max-content;
+    max-width: 100%;
+
+    position: relative;
+}
+
+.jx-info-item i {
+    width: 17px;
+    flex-shrink: 0;
+
+    margin-top: 4px;
+
+    font-size: 17px;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+}
+
+.jx-info-item:hover i {
+    transform: translateY(-4px) scale(1.08);
+}
+
+
+/* =========================================================
+   COMMON UNDERLINE ANIMATION
+========================================================= */
+
+.jx-info-item span,
+.jx-footer-links a,
+.jx-footer-bottom a {
+    position: relative;
+}
+
+.jx-info-item span::after,
+.jx-footer-links a::after,
+.jx-footer-bottom a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 0;
+    height: 1px;
+
+    background: #fff;
+
+    transition: width .25s ease;
+}
+
+.jx-info-item:hover span::after,
+.jx-footer-links a:hover::after,
+.jx-footer-bottom a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.jx-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 23px;
+}
+
+.jx-social-icons a {
+    width: 18px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition:
+        transform .28s ease,
+        opacity .25s ease;
+}
+
+.jx-social-icons a:hover {
+    transform: translateY(-6px) scale(1.12);
+    opacity: .75;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.jx-footer-column h3 {
+    margin: 8px 0 34px;
+
+    color: #fff;
+
+    font-size: 16px;
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.jx-footer-links {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.jx-footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.jx-footer-links a {
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    display: inline-block;
+
+    transition:
+        transform .22s ease,
+        opacity .22s ease;
+}
+
+.jx-footer-links a:hover {
+    transform: translateX(3px);
+    opacity: .78;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.jx-newsletter-text {
+    margin: 0 0 18px;
+
+    color: #fff;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
+.jx-newsletter-form {
+    width: 100%;
+    max-width: 270px;
+    height: 45px;
+
+    border: 1px solid #777;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 3px;
+
+    box-sizing: border-box;
+
+    transition: border-color .25s ease;
+}
+
+.jx-newsletter-form:focus-within {
+    border-color: #fff;
+}
+
+
+/* EMAIL */
+
+.jx-newsletter-form input {
+    min-width: 0;
+    flex: 1;
+
+    height: 100%;
+
+    padding: 0 12px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 13px;
+}
+
+.jx-newsletter-form input::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.jx-newsletter-form input:focus::placeholder {
+    opacity: 0;
+}
+
+
+/* SUBSCRIBE */
+
+.jx-newsletter-form button {
+    height: 39px;
+    min-width: 108px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 25px;
+    background:#FF4D24;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.jx-newsletter-form button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.jx-footer-bottom {
+    width: 100%;
+
+    background: #222;
+    border-top: 1px solid #333;
+}
+
+.jx-bottom-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+}
+
+.jx-footer-bottom p {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.jx-footer-bottom a {
+    color: #FF4D24;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.jx-back-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 40px;
+
+    width: 50px;
+    height: 50px;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: #fff;
+    color: #777;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease,
+        background .25s ease,
+        color .25s ease;
+
+    z-index: 999;
+}
+
+.jx-back-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.jx-back-top:hover {
+    background: #c5a27d;
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .jx-footer-container {
+        max-width: 900px;
+
+        grid-template-columns:
+            1.2fr
+            1fr
+            1fr;
+
+        column-gap: 45px;
+        row-gap: 55px;
+
+        padding: 65px 35px;
+    }
+
+    .jx-company-column {
+        grid-column: span 1;
+    }
+
+    .jx-newsletter-column {
+        grid-column: span 1;
+    }
+
+    .jx-footer-column h3 {
         margin-bottom: 28px;
     }
 
-    .social-icon {
-        width: 44px;
-        height: 44px;
-    }
-
-    .social-icon i {
-        font-size: 19px;
-    }
-
-    .footer-menu {
-        gap: 30px;
-    }
-
-    .footer-menu a {
-        font-size: 15px;
+    .jx-newsletter-form {
+        max-width: 290px;
     }
 
 }
 
 
-/* ==================================================
-   LAPTOP
-   1025px - 1599px
-================================================== */
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   1025px - 1199px
+========================================================= */
 
-@media (min-width: 1025px) and (max-width: 1599px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
 
-    .footer-top {
-        min-height: 210px;
-
-        padding: 42px 30px 34px;
+    .jx-footer-container {
+        column-gap: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
-    .footer-social {
-        gap: 16px;
-
-        margin-bottom: 28px;
-    }
-
-    .social-icon {
-        width: 45px;
-        height: 45px;
-    }
-
-    .social-icon i {
-        font-size: 19px;
-    }
-
-    .footer-menu {
-        gap: 34px;
-    }
-
-    .footer-menu a {
+    .jx-footer-column h3 {
         font-size: 15px;
+        letter-spacing: 1px;
     }
 
-    .footer-bottom {
-        min-height: 52px;
-    }
-
-    .footer-bottom p {
+    .jx-footer-links a,
+    .jx-info-item,
+    .jx-newsletter-text {
         font-size: 13px;
     }
 
 }
 
 
-/* ==================================================
+/* =========================================================
+   LAPTOP
+   1200px - 1599px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+    .jx-footer-container {
+        max-width: 1250px;
+    }
+
+}
+
+
+/* =========================================================
    LARGE SCREEN
    1600px - 2560px
-================================================== */
+========================================================= */
 
-@media (min-width: 1600px) and (max-width: 2560px) {
+@media (min-width: 1600px) {
 
-    .footer-top {
-        min-height: 230px;
-
-        padding: 48px 40px 38px;
+    .jx-footer-container {
+        max-width: 1250px;
     }
 
-    .footer-social {
-        gap: 18px;
-
-        margin-bottom: 32px;
+    .jx-footer-bottom .jx-bottom-container {
+        max-width: 1250px;
     }
 
-    .social-icon {
-        width: 50px;
-        height: 50px;
+}
+
+
+/* =========================================================
+   PHONE
+   320px - 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .jx-footer-container {
+        max-width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+
+        padding: 52px 24px 48px;
     }
 
-    .social-icon i {
-        font-size: 21px;
+
+    /* LOGO */
+
+    .jx-footer-logo {
+        font-size: 27px;
     }
 
-    .footer-menu {
-        gap: 40px;
+    .jx-logo-shield {
+        width: 35px;
+        height: 35px;
+        font-size: 30px;
     }
 
-    .footer-menu a {
-        font-size: 16px;
+
+    /* COMPANY */
+
+    .jx-company-info {
+        margin-top: 30px;
+        gap: 19px;
     }
 
-    .footer-bottom {
-        min-height: 58px;
+    .jx-info-item {
+        width: 100%;
+        font-size: 13px;
     }
 
-    .footer-bottom p {
+    .jx-social-icons {
+        margin-top: 22px;
+        gap: 24px;
+    }
+
+
+    /* HEADINGS */
+
+    .jx-footer-column h3 {
+        margin: 0 0 22px;
+
+        font-size: 15px;
+        letter-spacing: 1.3px;
+    }
+
+
+    /* LINKS */
+
+    .jx-footer-links {
+        gap: 14px;
+    }
+
+    .jx-footer-links a {
+        font-size: 13px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .jx-newsletter-text {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .jx-desktop-break {
+        display: none;
+    }
+
+    .jx-newsletter-form {
+        max-width: 100%;
+        height: 47px;
+    }
+
+    .jx-newsletter-form button {
+        min-width: 105px;
+    }
+
+
+    /* BOTTOM */
+
+    .jx-bottom-container {
+        padding: 18px 24px;
+    }
+
+    .jx-footer-bottom p {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+ 
+
+    /* BACK TOP */
+
+    .jx-back-top {
+        width: 45px;
+        height: 45px;
+
+        right: 15px;
+        bottom: 20px;
+    }
+
+}
+@media (max-width: 320px) {
+     .jx-footer-bottom p {
+        font-size: 9px;
+        
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   320px - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .jx-footer-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .jx-footer-logo {
+        font-size: 24px;
+    }
+
+    .jx-logo-shield {
+        width: 31px;
+        height: 31px;
+        font-size: 27px;
+    }
+
+    .jx-newsletter-form button {
+        min-width: 92px;
+        padding: 0 12px;
+    }
+
+    .jx-newsletter-form input {
+        padding-left: 10px;
         font-size: 14px;
     }
 
 }
-
-
-/* ==================================================
-   SMALL PHONE
-   320px - 480px
-================================================== */
-
-@media (min-width: 320px) and (max-width: 480px) {
-
-    .footer-top {
-        min-height: 215px;
-
-        padding: 35px 15px 28px;
-    }
-
-    .footer-social {
-        gap: 10px;
-
-        margin-bottom: 24px;
-    }
-
-    .social-icon {
-        width: 39px;
-        height: 39px;
-    }
-
-    .social-icon i {
-        font-size: 16px;
-    }
-
-    .footer-menu {
-        gap: 14px 20px;
-
-        max-width: 300px;
-    }
-
-    .footer-menu a {
-        font-size: 12px;
-    }
-
-    .footer-bottom {
-        min-height: 48px;
-
-        padding: 10px 12px;
-    }
-
-    .footer-bottom p {
-        font-size: 10px;
-    }
-
+.footer-logo img{
+    height: 65px;
+    object-fit: cover;
+    width: 100%;
 }
 
 
-/* ==================================================
-   PHONE
-   481px - 767px
-================================================== */
-
-@media (min-width: 481px) and (max-width: 767px) {
-
-    .footer-top {
-        min-height: 205px;
-
-        padding: 38px 20px 30px;
-    }
-
-    .footer-social {
-        gap: 12px;
-
-        margin-bottom: 25px;
-    }
-
-    .social-icon {
-        width: 41px;
-        height: 41px;
-    }
-
-    .footer-menu {
-        gap: 20px 24px;
-    }
-
-    .footer-menu a {
-        font-size: 13px;
-    }
-
-}
 
 /* FOOTER END */
+
