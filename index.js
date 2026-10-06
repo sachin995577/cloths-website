@@ -1015,6 +1015,38 @@ document.addEventListener("DOMContentLoaded", () => {
 //  4 icon end
 
 
+// CLOTH VIDEO START
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.querySelector(".cloth-video-slider");
+
+    if (!slider) {
+        return;
+    }
+
+    const videos = slider.querySelectorAll("video");
+
+    videos.forEach(function (video) {
+
+        video.muted = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+
+        video.play().catch(function () {});
+
+        video.addEventListener("loadeddata", function () {
+            video.play().catch(function () {});
+        });
+
+    });
+
+});
+
+
+// CLOTH VIDEO END
+
+ 
  
 // FOOTER START
 

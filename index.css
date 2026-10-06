@@ -27,8 +27,28 @@ body {
     padding-top: 72px;
     background: #ffffff;
     color: #111111;
+    
 }
-
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+     /* Font Family Setup */
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Text Formatting */
+  font-size: 16px;
+  font-weight: 500;             /* 400 = Normal, 600 = Semi-Bold, 700 = Bold */
+  letter-spacing: 0.5px;        /* Montserrat ke letters par halka space achha lagta hai */
+  
+  /* Visual Styling */
+  color: #0066cc;
+  text-decoration: none;        /* Default underline hatane ke liye */
+  
+  /* Interaction & Smooth Effect */
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
 
 /* ==================================================
    NAVBAR
@@ -2567,6 +2587,8 @@ body {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 
@@ -2743,7 +2765,7 @@ body {
 
     .bestseller-heading {
         font-size: 21px;
-        margin-top: -16px;
+        margin-top: 10px;
         /* padding: 15px; */
     }
 
@@ -3018,7 +3040,7 @@ body {
 
     .designer-heading {
         font-size: 21px;
-        margin-top: -20px;
+        margin-top: -5px;
         margin-bottom: 13px;
     }
 
@@ -3819,7 +3841,7 @@ body {
         margin-bottom: 12px;
         font-size: 21px;
         margin-left: 10px;
-        margin-top: -3px;
+        margin-top: 10px;
     }
 
 
@@ -4104,7 +4126,7 @@ body {
     }
 
     .jx-instagram-heading h2 {
-        font-size: 18px;
+        font-size: 17px;
         letter-spacing: 2px;
     }
 
@@ -4203,6 +4225,7 @@ stats-container {
       align-items: center;
       justify-content: center;
        margin-top: 25px;
+       padding: 20px;
     }
 
     /* Individual Stat Item */
@@ -4229,7 +4252,6 @@ stats-container {
     /* Number Style */
     .stat-number-box {
       font-size: 1.3rem;
-      /* font-weight: 800; */
       letter-spacing: -0.5px;
       line-height: 1.1;
       margin-bottom: 6px;
@@ -4242,7 +4264,7 @@ stats-container {
     .stat-label {
       font-size: 1rem;
       color: #555555;
-      /* font-weight: 500; */
+     
     }
 
     /* Mobile Divider Lines (2x2 Grid setup) */
@@ -4465,6 +4487,409 @@ stats-container {
 }
 
 /* ================= OUR BRANDS END ================= */
+
+
+
+/* CLOTH VIDEO START */
+
+/* ================= CLOTH VIDEO ================= */
+
+.cloth-video-section {
+    width: 100%;
+    padding: 55px 0 65px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.cloth-video-wrapper {
+    width: 100%;
+    max-width: 2560px;
+    margin: auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.cloth-video-title {
+    margin: 0 0 30px;
+    text-align: center;
+    color: #111;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.cloth-video-slider {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+    overscroll-behavior-x: contain;
+}
+
+.cloth-video-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.cloth-video-track {
+    width: max-content;
+    display: flex;
+    gap: 16px;
+}
+
+.cloth-video-card {
+    position: relative;
+
+    flex: 0 0 calc((100vw - 64px) / 4.25);
+
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    scroll-snap-align: start;
+}
+
+.cloth-video-box {
+    width: 100%;
+    aspect-ratio: 0.67 / 1;
+
+    overflow: hidden;
+
+    border-radius: 8px 8px 0 0;
+
+    background: #eee;
+}
+
+.cloth-video-box video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    pointer-events: none;
+}
+
+.cloth-product-image {
+    position: absolute;
+
+    left: 50%;
+    top: calc(67% - 25px);
+
+    transform: translateX(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+.cloth-product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.cloth-product-info {
+    min-height: 126px;
+
+    padding: 48px 7px 14px;
+
+    box-sizing: border-box;
+}
+
+.cloth-product-info h3 {
+    margin: 0 0 22px;
+
+    color: #111;
+
+    font-size: 15px;
+    line-height: 1.25;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cloth-price {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+.current-price {
+    color: #111;
+    font-size: 16px;
+}
+
+.old-price {
+    color: #aaa;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.discount {
+    color: #16b982;
+    font-size: 14px;
+}
+
+
+/* ================= 1600 - 2560 ================= */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .cloth-video-wrapper {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .cloth-video-title {
+        font-size: 30px;
+        margin-bottom: 32px;
+    }
+
+    .cloth-video-track {
+        gap: 18px;
+    }
+
+    .cloth-video-card {
+        flex-basis: calc((100vw - 72px) / 4.25);
+    }
+}
+
+
+/* ================= 1025 - 1599 ================= */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+    .cloth-video-section {
+        padding-top: 50px;
+    }
+
+    .cloth-video-wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cloth-video-title {
+        font-size: 27px;
+        margin-bottom: 27px;
+    }
+
+    .cloth-video-track {
+        gap: 15px;
+    }
+
+    .cloth-video-card {
+        flex-basis: calc((100vw - 60px) / 4.25);
+    }
+}
+
+
+/* ================= TABLET 768 - 1024 ================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cloth-video-section {
+        padding: 43px 0 52px;
+    }
+
+    .cloth-video-wrapper {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .cloth-video-title {
+        font-size: 25px;
+        margin-bottom: 24px;
+    }
+
+    .cloth-video-track {
+        gap: 14px;
+    }
+
+    .cloth-video-card {
+        flex-basis: calc((100vw - 50px) / 2.18);
+    }
+
+    .cloth-product-info {
+        min-height: 125px;
+        padding-top: 47px;
+    }
+
+    .cloth-product-info h3 {
+        font-size: 15px;
+    }
+
+    .current-price {
+        font-size: 15px;
+    }
+
+    .old-price,
+    .discount {
+        font-size: 13px;
+    }
+}
+
+
+/* ================= PHONE 426 - 767 ================= */
+
+@media (min-width: 426px) and (max-width: 767px) {
+
+    .cloth-video-section {
+        padding: 35px 0 45px;
+    }
+
+    .cloth-video-wrapper {
+        padding: 0 15px;
+    }
+
+    .cloth-video-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .cloth-video-track {
+        gap: 12px;
+    }
+
+    .cloth-video-card {
+        flex-basis: 86vw;
+    }
+
+    .cloth-product-info {
+        min-height: 123px;
+        padding-top: 45px;
+    }
+
+    .cloth-product-info h3 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .current-price {
+        font-size: 15px;
+    }
+
+    .old-price,
+    .discount {
+        font-size: 13px;
+    }
+}
+
+
+/* ================= PHONE 320 - 425 ================= */
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+    .cloth-video-section {
+        padding: 32px 0 42px;
+    }
+
+    .cloth-video-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cloth-video-title {
+        font-size: 21px;
+        margin-bottom: 19px;
+    }
+
+    .cloth-video-track {
+        gap: 11px;
+    }
+
+    .cloth-video-card {
+        flex-basis: 86vw;
+    }
+
+    .cloth-product-image {
+        width: 49px;
+        height: 49px;
+
+        top: calc(67% - 24px);
+    }
+
+    .cloth-product-info {
+        min-height: 120px;
+        padding: 44px 7px 13px;
+    }
+
+    .cloth-product-info h3 {
+        font-size: 13px;
+        margin-bottom: 19px;
+    }
+
+    .cloth-price {
+        gap: 6px;
+    }
+
+    .current-price {
+        font-size: 14px;
+    }
+
+    .old-price,
+    .discount {
+        font-size: 12px;
+    }
+}
+
+
+/* ================= SMALL PHONE 320 - 375 ================= */
+
+@media (min-width: 320px) and (max-width: 375px) {
+
+    .cloth-video-wrapper {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .cloth-video-track {
+        gap: 10px;
+    }
+
+    .cloth-video-card {
+        flex-basis: 88vw;
+    }
+
+    .cloth-product-info h3 {
+        font-size: 12px;
+    }
+
+    .current-price {
+        font-size: 13px;
+    }
+
+    .old-price,
+    .discount {
+        font-size: 11px;
+    }
+}
+
+/* CLOTH VIDEO END */
+
+
 
 
 /* FOOTER START */
@@ -5118,8 +5543,8 @@ stats-container {
     }
 
     .jx-footer-bottom p {
-        font-size: 11px;
-        line-height: 1.8;
+        font-size: 10px;
+        line-height: 1.1;
     }
  
 
@@ -5182,7 +5607,100 @@ stats-container {
     width: 100%;
 }
 
-
-
 /* FOOTER END */
+
+
+
+/* FIRST PAGE OF HOME PAGE COMPLETE */
+
+
+
+
+
+
+/* SECOND PAGE OF  WOMEN KA START */
+
+/* ================= BANNER START ================= */
+
+.fashion-banner {
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.fashion-banner picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fashion-banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ================= PHONE ================= */
+
+@media (max-width: 767px) {
+
+    .fashion-banner {
+        height: 520px;
+    }
+
+    .fashion-banner img {
+        object-position: center center;
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .fashion-banner {
+        height: 600px;
+    }
+
+    .fashion-banner img {
+        object-position: center center;
+    }
+
+}
+
+/* ================= LAPTOP / DESKTOP ================= */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+    .fashion-banner {
+        height: 680px;
+    }
+
+    .fashion-banner img {
+        object-position: center center;
+    }
+
+}
+
+/* ================= LARGE SCREEN ================= */
+
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .fashion-banner {
+        height: 720px;
+    }
+
+    .fashion-banner img {
+        object-position: center center;
+    }
+
+}
+
+/* ================= BANNER END ================= */
+
+
 

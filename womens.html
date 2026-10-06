@@ -1,0 +1,1503 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- FONT AWESOME KA LINK -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR START -->
+
+      
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="main-navbar">
+
+    <div class="navbar-container">
+
+
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
+
+        <a href="#" class="brand-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+
+        <!-- ==================================================
+             DESKTOP MENU
+             EXACT CENTER
+        ================================================== -->
+
+        <nav class="desktop-menu desktop-menu-center">
+
+            <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens">MENS</a>
+
+            <a href="kids">KIDS</a>
+
+            <a href="indowestern.html">INDOWESTERN</a>
+
+            <a href="wedding">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             DESKTOP ACTIONS
+        ================================================== -->
+
+        <div class="desktop-actions">
+
+
+            <!-- ==================================================
+                 SEARCH
+                 NO POPUP
+            ================================================== -->
+
+            <div class="search-box">
+
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 INFORMATION POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="infoPopup"
+                aria-label="Information"
+            >
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 WISHLIST POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="wishlistPopup"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 CART POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon cart-icon"
+                type="button"
+                data-popup="cartPopup"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 PROFILE POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="profilePopup"
+                aria-label="Profile"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HAMBURGER
+             ONLY 320px - 768px
+        ================================================== -->
+
+        <button
+            class="hamburger"
+            id="openMenu"
+            type="button"
+            aria-label="Open Menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MOBILE / TABLET MENU
+     ONLY 320px - 768px
+================================================== -->
+
+<aside
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+
+    <!-- ==================================================
+         MOBILE HEADER
+    ================================================== -->
+
+    <div class="mobile-menu-header">
+
+
+        <a href="#" class="mobile-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MOBILE NAV
+    ================================================== -->
+
+    <nav class="mobile-nav">
+
+           <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens">MENS</a>
+
+            <a href="kids">KIDS</a>
+
+            <a href="indowestern.html">INDOWESTERN</a>
+
+            <a href="wedding">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+        
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MOBILE ACTIONS
+    ================================================== -->
+
+    <div class="mobile-actions">
+
+
+        <!-- ==================================================
+             MOBILE SEARCH
+             NO POPUP
+        ================================================== -->
+
+        <div class="mobile-search-box">
+
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             INFORMATION
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="infoPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </span>
+
+            <span>Information</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             WISHLIST
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="wishlistPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </span>
+
+            <span>Wishlist</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             CART
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="cartPopup"
+        >
+
+            <span class="mobile-action-icon mobile-cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="mobile-cart-count">0</span>
+
+            </span>
+
+            <span>Cart</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             PROFILE
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="profilePopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </span>
+
+            <span>Profile</span>
+
+        </button>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     POPUP OVERLAY
+================================================== -->
+
+<div
+    class="popup-overlay"
+    id="popupOverlay"
+></div>
+
+
+
+<!-- ==================================================
+     INFORMATION POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="infoPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-circle-question"></i>
+
+    </div>
+
+
+
+    <h2>Information</h2>
+
+
+
+    <p>
+        Discover premium watches, elegant designs and
+        timeless collections made for every occasion.
+    </p>
+
+
+
+    <div class="popup-content-list">
+
+
+        <div>
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span>Fast Delivery</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Secure Payment</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>Easy Returns</span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     WISHLIST POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="wishlistPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+
+
+    <h2>Your Wishlist</h2>
+
+
+
+    <p>
+        Your wishlist is currently empty.
+        Add your favourite watches here.
+    </p>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Explore Watches
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     CART POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="cartPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+    </div>
+
+
+
+    <h2>Your Cart</h2>
+
+
+
+    <p>
+        Your shopping bag is currently empty.
+    </p>
+
+
+
+    <div class="empty-cart">
+
+        <span class="cart-number">0</span>
+
+        <span>Items in your cart</span>
+
+    </div>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Continue Shopping
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     PROFILE POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="profilePopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-user"></i>
+
+    </div>
+
+
+
+    <h2>My Account</h2>
+
+
+
+    <p>
+        Login to manage your account, orders and
+        favourite watches.
+    </p>
+
+
+
+    <div class="profile-buttons">
+
+
+        <button
+            class="popup-main-btn"
+            type="button"
+        >
+
+            Login
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            Create Account
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            My Orders
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- NAVBAR END -->
+
+
+
+
+    <!-- ================= BANNER START ================= -->
+
+<section class="fashion-banner">
+
+    <picture>
+        <!-- 320px - 767px -->
+        <source
+            media="(max-width: 767px)"
+            srcset="images/banner-phone.jpg"
+        >
+
+        <!-- 768px - 1024px -->
+        <source
+            media="(max-width: 1024px)"
+            srcset="images/banner-tablet.jpg"
+        >
+
+        <!-- 1025px - 1599px -->
+        <source
+            media="(max-width: 1599px)"
+            srcset="images/banner-desktop.jpg"
+        >
+
+        <!-- 1600px - 2560px -->
+        <source
+            media="(min-width: 1600px)"
+            srcset="images/banner-large.jpg"
+        >
+
+        <!-- Default -->
+        <img
+            src="images/banner-desktop.jpg"
+            alt="Fashion Banner"
+        >
+    </picture>
+
+</section>
+
+<!-- ================= BANNER END ================= -->
+ 
+
+
+
+
+<!-- SHOP BY CATEGORY START -->
+
+
+
+
+<section class="bestseller-section">
+
+    <h2 class="bestseller-heading">
+     NEW ARRIVALS
+    </h2>
+
+
+    <div class="bestseller-carousel">
+
+        <!-- LEFT ARROW -->
+        <button class="bestseller-arrow bestseller-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <!-- VIEWPORT -->
+        <div class="bestseller-viewport">
+
+            <div class="bestseller-track">
+
+
+                <!-- PRODUCT 1 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/trust-t-shirt.webp"
+                             alt="Yellow Kota Doria Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>STREET SWAG T-SHIRTS MENS</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                             ₹2,949
+                        </span>
+
+                        <span class="new-price">
+                            ₹1,999
+                        </span>
+
+                        <span class="discount">
+                            (10% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 2 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/surf-tshirt.webp"
+                             alt="Purple Embroidered Suit Set">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>MALIBU BEACH T-SHIRT</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹9,990
+                        </span>
+
+                        <span class="new-price">
+                            ₹5,999
+                        </span>
+
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 3 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/cartoon-tshirt.webp"
+                             alt="Blue Embroidered Chanderi Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>JUST MAKE NEON TANKTOP</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹11,560
+                        </span>
+
+                        <span class="new-price">
+                            ₹5,780
+                        </span>
+
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 4 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/queen-girl.webp"
+                             alt="Bottle Green Suit Set">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>STREET QUEEN T-SHIRT</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹19,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹10,999
+                        </span>
+
+                        <span class="discount">
+                            (45% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 5 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/black-art.webp"
+                             alt="Pink Embroidered Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>JUNGLE FLIGHT WOMEN'S  T-SHIRT</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹12,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹7,799
+                        </span>
+
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 6 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/summer-edition.webp"
+                             alt="Maroon Designer Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>WILD STYLE TANKTOP</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹14,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹8,499
+                        </span>
+
+                        <span class="discount">
+                            (43% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 7 -->
+                <div class="bestseller-card">
+
+                    <div class="bestseller-image-box">
+
+                        <img src="image-folder/summer-mood.webp"
+                             alt="Green Festive Suit">
+
+                        <a href="#" class="bestseller-shop-btn">
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+                    <h3>SUMMER MOOD TANKTOP</h3>
+
+                    <div class="bestseller-price">
+
+                        <span class="old-price">
+                            ₹16,999
+                        </span>
+
+                        <span class="new-price">
+                            ₹9,999
+                        </span>
+
+                        <span class="discount">
+                            (41% OFF)
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT ARROW -->
+        <button class="bestseller-arrow bestseller-next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- SHOP BY CATEGORY END -->
+
+    
+
+   <!-- ================= INSTAGRAM SECTION ================= -->
+  
+   <section class="jx-instagram-section">
+
+    <!-- TITLE -->
+    <div class="jx-instagram-heading">
+        <h2>CHECKOUT INSTAGRAM</h2>
+        <p>@juxarofficial</p>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="jx-instagram-carousel">
+
+        <!-- LEFT ARROW -->
+        <button class="jx-instagram-arrow jx-instagram-prev" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- VIEWPORT -->
+        <div class="jx-instagram-viewport">
+
+            <!-- TRACK -->
+            <div class="jx-instagram-track">
+
+                <!-- IMAGE 1 - INSTAGRAM -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Instagram">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 2 - VIDEO -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Video">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 3 - INSTAGRAM -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Instagram">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 4 - VIDEO -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Video">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 5 - INSTAGRAM -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1506629905607-d9a2e6b7c6f2?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Instagram">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 6 - VIDEO -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Video">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 7 - INSTAGRAM -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Instagram">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 8 - VIDEO -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Video">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 9 - INSTAGRAM -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1496217590455-aa63a8350eea?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Instagram">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <!-- IMAGE 10 - VIDEO -->
+                <div class="jx-instagram-card">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=90"
+                         alt="Fashion Video">
+
+                    <div class="jx-instagram-overlay"></div>
+
+                    <div class="jx-instagram-icon">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT ARROW -->
+        <button class="jx-instagram-arrow jx-instagram-next" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+   <!-- four icon start -->
+
+  <section class="stats-container">
+    <div class="stats-grid">
+      
+      <!-- Item 1 -->
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="stat-number-box">
+          <span class="counter" data-target="5">0</span>M+
+        </div>
+        <div class="stat-label">Successful Deliveries</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+        <div class="stat-number-box">
+          <span class="counter" data-target="1500">0</span>+
+        </div>
+        <div class="stat-label">Designers</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div class="stat-number-box">
+          <span class="counter" data-target="24">0</span>/7
+        </div>
+        <div class="stat-label">Customer Support</div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="stat-number-box">
+          <span class="counter" data-target="75">0</span>+
+        </div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- four icon end -->
+
+
+  <!-- ================= OUR BRANDS START ================= -->
+
+<section class="clothing-brands-section">
+
+    <div class="clothing-brands-container">
+
+        <h2 class="clothing-brands-title">Our Brands</h2>
+
+        <div class="clothing-brands-grid">
+
+            <!-- BRAND 1 -->
+            <div class="clothing-brand-card">
+                <img src="https://silailor.in/wp-content/uploads/2021/02/Silailor-Logo.png" alt="Fashion Brand">
+            </div>
+
+            <!-- BRAND 2 -->
+            <div class="clothing-brand-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTispmrnXbOywA2R1rtvraHQYCfSFYL-AkRXk_EaeIYEzygSB01jPdefA&s=10" alt="Fashion Brand">
+            </div>
+
+            <!-- BRAND 3 -->
+            <div class="clothing-brand-card">
+                <img src="https://pngimg.com/uploads/calvin_klein/calvin_klein_PNG8.png" alt="Fashion Brand">
+            </div>
+
+            <!-- BRAND 4 -->
+            <div class="clothing-brand-card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Pandora_logo_2025.svg/1280px-Pandora_logo_2025.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Fashion Brand">
+            </div>
+
+            <!-- BRAND 5 -->
+            <div class="clothing-brand-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgXRhF6HfDS_uqyHtBREa5oLQCMXKKhOoY4iAFdDL5IQ&s=10" alt="Fashion Brand">
+            </div>
+
+            <!-- BRAND 6 -->
+            <div class="clothing-brand-card">
+                <img src="https://vivawalkofficial.com/cdn/shop/files/logo_46png.png?v=1724218431&width=760" alt="Fashion Brand">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OUR BRANDS END ================= -->
+ 
+  
+<!-- ================= FOOTER START ================= -->
+
+<footer class="jx-footer">
+
+    <div class="jx-footer-main">
+
+        <div class="jx-footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="jx-footer-column jx-company-column">
+
+                <a href="#" class="jx-footer-logo">
+                    <span class="jx-logo-shield">
+                       <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                    <div class="footer-logo">
+                         <img src="https://www.pngkey.com/png/full/223-2230265_advertise-on-h-mark-channel-comcast-spotlight-advertising.png" alt="">
+                    </div>
+                </a>
+
+                <div class="jx-company-info">
+
+                    <a href="#" class="jx-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>
+                            BIHAR (PATNA) BIR OIYARA 
+                            PIN CODE- 804451
+                        </span>
+                    </a>
+
+                    <a href="mailto:contact@juxar.com" class="jx-info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>@Castle.com</span>
+                    </a>
+
+                    <a href="tel:+919958006997" class="jx-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 7481825360</span>
+                    </a>
+
+                </div>
+
+                <!-- SOCIAL ICONS -->
+                <div class="jx-social-icons">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+            <div class="jx-footer-column">
+
+                <h3>CATEGORIES</h3>
+
+                <ul class="jx-footer-links">
+
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+
+                    <li>
+                        <a href="#">WOMENS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">MENS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">KIDS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">INDOWESTERN</a>
+                    </li>
+
+                    <li>
+                        <a href="#">WEDDING</a>
+                    </li>
+
+                      <li>
+                        <a href="#">BRA</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+            <div class="jx-footer-column">
+
+                <h3>INFORMATION</h3>
+
+                <ul class="jx-footer-links">
+
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Exchange &amp; Return Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms &amp; Condition</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Shipping &amp; Delivery Policy</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- USEFUL LINKS -->
+            <div class="jx-footer-column">
+
+                <h3>USEFUL LINKS</h3>
+
+                <ul class="jx-footer-links">
+
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- NEWSLETTER -->
+            <div class="jx-footer-column jx-newsletter-column">
+
+                <h3>NEWSLETTER SIGNUP</h3>
+
+                <p class="jx-newsletter-text">
+                    Subscribe to our newsletter and get latest<br class="jx-desktop-break">
+                    updates
+                </p>
+
+                <form class="jx-newsletter-form" id="jxNewsletterForm">
+
+                    <input
+                        type="email"
+                        id="jxEmailInput"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="jx-footer-bottom">
+
+        <div class="jx-bottom-container">
+
+            <p>
+                All Rights Reserved © 2026
+                <a href="#">Castle</a>
+                - Developed by
+                <a href="#">SACHIN RAJPUT</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BACK TO TOP -->
+    <!-- <button
+        type="button"
+        class="jx-back-top"
+        id="jxBackTop"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-chevron-up"></i>
+    </button> -->
+
+</footer>
+
+<!-- ================= FOOTER END ================= -->
+
+
+
+
+  <script src="index.js">
+     
+  </script>
+
+   
+    
+</body>
+</html>
