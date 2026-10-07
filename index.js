@@ -830,43 +830,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getVisibleItems() {
 
+        /* 320 - 400 = 2 IMAGES */
+        if (window.innerWidth >= 320 && window.innerWidth <= 400) {
+            return 2;
+        }
+
+        /* 401 - 767 = 1 IMAGE */
+        if (window.innerWidth >= 401 && window.innerWidth <= 767) {
+            return 1;
+        }
+
+        /* 768 - 1024 = 3 IMAGES */
         if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
             return 3;
         }
 
-        if (window.innerWidth >= 1025) {
-            return 5;
-        }
+        /* 1025 - 2560 = 5 IMAGES */
+        return 5;
+    }
 
-        return 1;
+    /* ================= MAX INDEX ================= */
+
+    function getMaxIndex() {
+
+        const visibleItems = getVisibleItems();
+
+        return Math.max(0, cards.length - visibleItems);
     }
 
     /* ================= UPDATE SLIDER ================= */
 
     function updateSlider() {
 
-        const visibleItems = getVisibleItems();
         const gap = 5;
+
+        if (!cards.length) {
+            return;
+        }
 
         const cardWidth = cards[0].getBoundingClientRect().width;
 
         const moveAmount = cardWidth + gap;
 
         track.style.transform =
-            "translateX(-" + (currentIndex * moveAmount) + "px)";
+            `translateX(-${currentIndex * moveAmount}px)`;
     }
 
     /* ================= NEXT ================= */
 
     function nextSlide() {
 
-        const visibleItems = getVisibleItems();
-        const maxIndex = cards.length - visibleItems;
+        const maxIndex = getMaxIndex();
 
-        currentIndex++;
+        /*
+        Last image/group par pahunchne ke baad
+        blank area me nahi jayega.
+        Pehle last position par rukega.
+        Agli movement par first slide par aa jayega.
+        */
 
-        if (currentIndex > maxIndex) {
+        if (currentIndex < maxIndex) {
+
+            currentIndex++;
+
+        } else {
+
             currentIndex = 0;
+
         }
 
         updateSlider();
@@ -876,28 +906,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function previousSlide() {
 
-        const visibleItems = getVisibleItems();
-        const maxIndex = cards.length - visibleItems;
+        const maxIndex = getMaxIndex();
 
-        currentIndex--;
+        if (currentIndex > 0) {
 
-        if (currentIndex < 0) {
+            currentIndex--;
+
+        } else {
+
             currentIndex = maxIndex;
+
         }
 
         updateSlider();
     }
 
-    /* ================= BUTTONS ================= */
+    /* ================= NEXT BUTTON ================= */
 
     nextBtn.addEventListener("click", function () {
+
         nextSlide();
+
         restartAutoSlide();
+
     });
 
+    /* ================= PREVIOUS BUTTON ================= */
+
     prevBtn.addEventListener("click", function () {
+
         previousSlide();
+
         restartAutoSlide();
+
     });
 
     /* ================= AUTO SLIDE ================= */
@@ -905,14 +946,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function startAutoSlide() {
 
         autoSlide = setInterval(function () {
+
             nextSlide();
+
         }, 3500);
 
     }
 
+    /* ================= RESTART AUTO SLIDE ================= */
+
     function restartAutoSlide() {
 
         clearInterval(autoSlide);
+
         startAutoSlide();
 
     }
@@ -921,11 +967,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("resize", function () {
 
-        const visibleItems = getVisibleItems();
-        const maxIndex = cards.length - visibleItems;
+        const maxIndex = getMaxIndex();
 
         if (currentIndex > maxIndex) {
+
             currentIndex = maxIndex;
+
         }
 
         updateSlider();
@@ -935,31 +982,10 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ================= START ================= */
 
     updateSlider();
+
     startAutoSlide();
 
 });
-
-function getVisibleItems() {
-
-    /* 320 - 400 = 2 IMAGES */
-    if (window.innerWidth >= 320 && window.innerWidth <= 400) {
-        return 2;
-    }
-
-    /* 401 - 767 = 1 IMAGE */
-    if (window.innerWidth >= 401 && window.innerWidth <= 767) {
-        return 1;
-    }
-
-    /* 768 - 1024 = 3 IMAGES */
-    if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
-        return 3;
-    }
-
-    /* 1025 - 2560 = 5 IMAGES */
-    return 5;
-}
-
 
 
 // INSTAGRAM SECTION END
@@ -1141,3 +1167,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //  FOOTER END
+
+
+/* =========================================
+   SCROLL IMAGE ANIMATION SCROLL KARNE PE START
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollImages = document.querySelectorAll(
+        ".bestseller-image-box img, " +
+        ".designer-card img, " +
+        ".occasion-card img, " +
+        ".jx-instagram-card img, " +
+        ".clothing-brand-card img"
+    );
+
+    if (!scrollImages.length) {
+        return;
+    }
+
+    const imageObserver = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("scroll-image-show");
+                } else {
+                    entry.target.classList.remove("scroll-image-show");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.20,
+            rootMargin: "0px 0px -8% 0px"
+        }
+    );
+
+    scrollImages.forEach(function (image) {
+        imageObserver.observe(image);
+    });
+
+});
+
+// SCROLL KARNE PE START ANIMATION IMAGE END
+
+
