@@ -2079,16 +2079,6 @@ a{
 /* NAVBAR END */
 
 
-/* HIDE ICON PHONE */
-@media (max-width: 767px) {
-    .mobile-action[data-popup="profilePopup"] {
-        display: none;
-    }
-}
-
-/* HIDE ICON PHONE END */
-
-
 /* CAROUSEL BANNER START */
 
 
@@ -5014,7 +5004,7 @@ stats-container {
 
 .jx-footer-main {
     width: 100%;
-    background: #000;
+    background: #222222;
 }
 
 .jx-footer-container {
@@ -5851,96 +5841,865 @@ stats-container {
 /* SARA ANIMATION PE CHOTA SE BADA SCROLL KARNE PE ANIMATION END */
 
 
+/* 
+
+
+/* SCROLL REVEAL ANIMATION START ALL HEADING SECTION */
+
+/* =========================================================
+   HEADING SCROLL REVEAL
+   BOTTOM TO TOP
+   ========================================================= */
 
 
 
-
-
-
-/* SECOND PAGE OF  WOMEN KA START */
-
-/* ================= BANNER START ================= */
-
-.fashion-banner {
-    width: 100%;
-    height: 720px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+.heading-scroll-reveal {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(55px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.fashion-banner picture {
-    display: block;
-    width: 100%;
-    height: 100%;
+.heading-scroll-reveal.heading-scroll-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.fashion-banner img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 
-/* ================= PHONE ================= */
+/* =========================================================
+   PHONE
+   320px - 767px
+   ========================================================= */
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
 
-    .fashion-banner {
-        height: 520px;
+    .heading-scroll-reveal {
+        transform: translateY(40px);
+        transition:
+            opacity 0.75s ease,
+            transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .fashion-banner img {
-        object-position: center center;
+    .heading-scroll-reveal.heading-scroll-show {
+        transform: translateY(0);
     }
 
 }
 
-/* ================= TABLET ================= */
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+   ========================================================= */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    .fashion-banner {
-        height: 600px;
+    .heading-scroll-reveal {
+        transform: translateY(45px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .fashion-banner img {
-        object-position: center center;
+    .heading-scroll-reveal.heading-scroll-show {
+        transform: translateY(0);
     }
 
 }
 
-/* ================= LAPTOP / DESKTOP ================= */
+
+/* =========================================================
+   LAPTOP
+   1025px - 1599px
+   ========================================================= */
 
 @media (min-width: 1025px) and (max-width: 1599px) {
 
-    .fashion-banner {
-        height: 680px;
+    .heading-scroll-reveal {
+        transform: translateY(50px);
+        transition:
+            opacity 0.85s ease,
+            transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .fashion-banner img {
-        object-position: center center;
+    .heading-scroll-reveal.heading-scroll-show {
+        transform: translateY(0);
     }
 
 }
 
-/* ================= LARGE SCREEN ================= */
+
+/* =========================================================
+   LARGE SCREEN
+   1600px - 2560px
+   ========================================================= */
 
 @media (min-width: 1600px) and (max-width: 2560px) {
 
-    .fashion-banner {
-        height: 720px;
+    .heading-scroll-reveal {
+        transform: translateY(55px);
+        transition:
+            opacity 0.9s ease,
+            transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .fashion-banner img {
-        object-position: center center;
+    .heading-scroll-reveal.heading-scroll-show {
+        transform: translateY(0);
     }
 
 }
 
-/* ================= BANNER END ================= */
+/* SCROLL REVEAL ANIMATION END ALL HEADING SECTION */
+
+/* FINAL FIRST PAGE COMPLETE */
 
 
 
+/* SECOND PAGE START OF WOMEN */
 
+
+
+  /* WOMEN PAGE ALL CODE START */
+
+
+.tshirt-section {
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 70px 25px 80px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.small-heading {
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    color: #111;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heading-text {
+    color: #777;
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.tshirt-grid {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 3px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.tshirt-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* =========================================================
+   IMAGE BOX
+========================================================= */
+
+.tshirt-image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGES
+========================================================= */
+
+.product-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.55s ease,
+        transform 0.65s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* FIRST IMAGE */
+
+.first-image {
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* SECOND IMAGE */
+
+.second-image {
+    z-index: 2;
+    opacity: 0;
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   HOVER IMAGE CHANGE
+========================================================= */
+
+.tshirt-image-box:hover .first-image {
+    opacity: 0;
+    transform: scale(0.90);
+}
+
+.tshirt-image-box:hover .second-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   SALE BADGE
+========================================================= */
+
+.sale-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    z-index: 10;
+
+    background: black;
+    color: #fff;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   QUICK SHOP
+========================================================= */
+
+.quick-shop {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 54px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    z-index: 8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(100%);
+
+    transition:
+        transform 0.5s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* SHOW QUICK SHOP */
+
+.tshirt-image-box:hover .quick-shop {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   QUICK SHOP LINK
+========================================================= */
+
+.quick-shop-link {
+    position: relative;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    padding: 5px 0;
+}
+
+
+/* UNDERLINE */
+
+.quick-shop-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #111;
+
+    transform: translateX(-50%);
+
+    transition: width 0.35s ease;
+}
+
+
+.quick-shop-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ICONS
+========================================================= */
+
+.quick-icons {
+    position: absolute;
+
+    right: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.icon-btn {
+    border: 0;
+    outline: 0;
+    background: transparent;
+
+    color: #111;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+.icon-btn:hover {
+    transform: scale(1.12);
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-details {
+    text-align: center;
+
+    padding: 15px 8px 8px;
+}
+
+
+.product-details h3 {
+    color: #555;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+
+.product-details p {
+    font-size: 13px;
+}
+
+
+.old-price {
+    color: #777;
+    text-decoration: line-through;
+
+    margin-right: 5px;
+}
+
+
+.new-price {
+    color: #16B982;
+}
+
+
+/* =========================================================
+   320px - 767px
+   PHONE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .tshirt-section {
+        padding: 5px 5px 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .small-heading {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .heading-text {
+        font-size: 12px;
+        line-height: 1.6;
+        padding: 0 15px;
+    }
+
+    .tshirt-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3px;
+    }
+
+    .tshirt-image-box {
+        aspect-ratio: 3 / 4;
+    }
+
+    .sale-badge {
+        top: 8px;
+        right: 8px;
+
+        padding: 5px 7px;
+
+        font-size: 9px;
+    }
+
+    .quick-shop {
+        height: 45px;
+    }
+
+    .quick-shop-link {
+        font-size: 10px;
+    }
+
+    .quick-icons {
+        right: 7px;
+        gap: 7px;
+    }
+
+    .icon-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    .product-details {
+        padding: 10px 3px 8px;
+    }
+
+    .product-details h3 {
+        font-size: 10px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+        margin-bottom: 4px;
+    }
+
+    .product-details p {
+        font-size: 10px;
+    }
+
+    .old-price {
+        margin-right: 2px;
+    }
+}
+
+
+/* =========================================================
+   768px - 1024px
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+   .tshirt-section {
+    padding: 28px 6px 30px;
+     }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .heading-text {
+        font-size: 13px;
+    }
+
+    .tshirt-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3px;
+    }
+
+    /* 4th product hidden on tablet */
+    .tshirt-card:nth-child(4) {
+        display: none;
+    }
+
+    .tshirt-image-box {
+        aspect-ratio: 3 / 4;
+    }
+
+    .quick-shop {
+        height: 52px;
+    }
+
+    .quick-shop-link {
+        font-size: 13px;
+    }
+
+    .product-details h3 {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .product-details p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   1025px - 1599px
+   LAPTOP / DESKTOP
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+    .tshirt-section {
+    padding: 20px 22px 35px;
+      }
+
+    .tshirt-grid {
+        max-width: 1450px;
+    }
+}
+
+
+/* =========================================================
+   1600px - 2560px
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .tshirt-section {
+    padding: 40px 35px 70px;
+     }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .heading-text {
+        font-size: 15px;
+    }
+
+    .tshirt-grid {
+        max-width: 1650px;
+        gap: 4px;
+    }
+
+    .product-details {
+        padding-top: 17px;
+    }
+
+    .product-details h3 {
+        font-size: 15px;
+    }
+
+    .product-details p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   SMOOTH IMAGE HOVER EFFECT
+========================================================= */
+
+.product-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.75s cubic-bezier(.22, .61, .36, 1),
+        transform 0.9s cubic-bezier(.22, .61, .36, 1),
+        filter 0.75s ease;
+}
+
+
+/* =========================================================
+   FIRST IMAGE
+========================================================= */
+
+.first-image {
+    z-index: 1;
+    opacity: 1;
+
+    transform: scale(1);
+
+    filter: brightness(1);
+}
+
+
+/* =========================================================
+   SECOND IMAGE
+========================================================= */
+
+.second-image {
+    z-index: 2;
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    filter: brightness(1.04);
+}
+
+
+/* =========================================================
+   HOVER IMAGE CHANGE
+========================================================= */
+
+.tshirt-image-box:hover .first-image {
+    opacity: 0;
+
+    transform: scale(0.91);
+
+    filter: brightness(0.96);
+}
+
+
+.tshirt-image-box:hover .second-image {
+    opacity: 1;
+
+    transform: scale(1);
+
+    filter: brightness(1);
+}
+
+
+/* =========================================================
+   QUICK SHOP SMOOTH ANIMATION
+========================================================= */
+
+.quick-shop {
+    transform: translateY(105%);
+
+    opacity: 0;
+
+    transition:
+        transform 0.65s cubic-bezier(.22, .61, .36, 1),
+        opacity 0.45s ease;
+}
+
+
+.tshirt-image-box:hover .quick-shop {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   QUICK SHOP LINK
+========================================================= */
+
+.quick-shop-link {
+    transform: translateY(8px);
+
+    opacity: 0;
+
+    transition:
+        transform 0.45s cubic-bezier(.22, .61, .36, 1) 0.12s,
+        opacity 0.4s ease 0.12s;
+}
+
+
+.tshirt-image-box:hover .quick-shop-link {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HEART + EYE ANIMATION
+========================================================= */
+
+.quick-icons {
+    opacity: 0;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.4s ease 0.18s,
+        transform 0.5s cubic-bezier(.22, .61, .36, 1) 0.18s;
+}
+
+
+.tshirt-image-box:hover .quick-icons {
+    opacity: 1;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.icon-btn {
+    transition:
+        transform 0.3s cubic-bezier(.22, .61, .36, 1),
+        opacity 0.3s ease;
+}
+
+
+.icon-btn:hover {
+    transform: scale(1.18);
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   QUICK SHOP UNDERLINE
+========================================================= */
+
+.quick-shop-link::after {
+    width: 0;
+
+    transition:
+        width 0.4s cubic-bezier(.22, .61, .36, 1);
+}
+
+
+.quick-shop-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   TOUCH DEVICE SMOOTH EFFECT
+========================================================= */
+
+.tshirt-image-box.touch-active .first-image {
+    opacity: 0;
+
+    transform: scale(0.91);
+
+    filter: brightness(0.96);
+}
+
+
+.tshirt-image-box.touch-active .second-image {
+    opacity: 1;
+
+    transform: scale(1);
+
+    filter: brightness(1);
+}
+
+
+.tshirt-image-box.touch-active .quick-shop {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+.tshirt-image-box.touch-active .quick-shop-link {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+.tshirt-image-box.touch-active .quick-icons {
+    opacity: 1;
+
+    transform: translateY(-50%);
+}
+
+
+/* WOMEN PAGE ALL CODE END */

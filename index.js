@@ -1216,3 +1216,131 @@ document.addEventListener("DOMContentLoaded", function () {
 // SCROLL KARNE PE START ANIMATION IMAGE END
 
 
+
+
+// SCROLL REVEAL SECTION ALL HEADING START
+
+/* =========================================================
+   HEADING SCROLL REVEAL
+   ONLY SECTION HEADINGS
+   PRODUCT / CLOTH NAMES EXCLUDED
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const headingElements = document.querySelectorAll(
+        ".fashion-banner-content h1, " +
+        ".bestseller-heading, " +
+        ".designer-heading, " +
+        ".occasion-heading, " +
+        ".jx-instagram-heading h2, " +
+        ".clothing-brands-title, " +
+        ".cloth-video-title, " +
+        ".jx-footer-column h3"
+    );
+
+    if (!headingElements.length) {
+        return;
+    }
+
+    headingElements.forEach(function (heading) {
+        heading.classList.add("heading-scroll-reveal");
+    });
+
+
+    /* =====================================================
+       INTERSECTION OBSERVER
+       ===================================================== */
+
+    if ("IntersectionObserver" in window) {
+
+        const headingObserver = new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "heading-scroll-show"
+                        );
+
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            }
+        );
+
+
+        headingElements.forEach(function (heading) {
+            headingObserver.observe(heading);
+        });
+
+    } else {
+
+        headingElements.forEach(function (heading) {
+            heading.classList.add("heading-scroll-show");
+        });
+
+    }
+
+});
+
+// SCROLL REVEAL SECTION ALL HEADING SECTION END'
+
+
+
+// FINAL FIRST PAGE COMPLETE
+
+
+
+
+// SECOND PAGE START
+
+
+// WOMEN PAGE ALL CODE
+
+const productBoxes = document.querySelectorAll(".tshirt-image-box");
+
+
+productBoxes.forEach((box) => {
+
+    box.addEventListener("click", function (event) {
+
+        /* Quick shop buttons par click karne par image toggle nahi hoga */
+        if (
+            event.target.closest(".quick-shop") ||
+            event.target.closest(".icon-btn") ||
+            event.target.closest(".quick-shop-link")
+        ) {
+            return;
+        }
+
+
+        /* Baaki cards se active remove */
+        productBoxes.forEach((item) => {
+
+            if (item !== box) {
+                item.classList.remove("touch-active");
+            }
+
+        });
+
+
+        /* Current card toggle */
+        box.classList.toggle("touch-active");
+
+    });
+
+});
+
+
+// WOMEN PAGE ALL CODE END
+
+
