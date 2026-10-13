@@ -1,0 +1,2268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- FONT AWESOME KA LINK -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR START -->
+
+      
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="main-navbar">
+
+    <div class="navbar-container">
+
+
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
+
+        <a href="#" class="brand-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+
+        <!-- ==================================================
+             DESKTOP MENU
+             EXACT CENTER
+        ================================================== -->
+
+        <nav class="desktop-menu desktop-menu-center">
+
+            <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens.html">MENS</a>
+
+            <a href="kids.html">KIDS</a>
+
+            <a href="indowestern.html">INDOWESTERN</a>
+
+            <a href="wedding.html">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             DESKTOP ACTIONS
+        ================================================== -->
+
+        <div class="desktop-actions">
+
+
+            <!-- ==================================================
+                 SEARCH
+                 NO POPUP
+            ================================================== -->
+
+            <div class="search-box">
+
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 INFORMATION POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="infoPopup"
+                aria-label="Information"
+            >
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 WISHLIST POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="wishlistPopup"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 CART POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon cart-icon"
+                type="button"
+                data-popup="cartPopup"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 PROFILE POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="profilePopup"
+                aria-label="Profile"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HAMBURGER
+             ONLY 320px - 768px
+        ================================================== -->
+
+        <button
+            class="hamburger"
+            id="openMenu"
+            type="button"
+            aria-label="Open Menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MOBILE / TABLET MENU
+     ONLY 320px - 768px
+================================================== -->
+
+<aside
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+
+    <!-- ==================================================
+         MOBILE HEADER
+    ================================================== -->
+
+    <div class="mobile-menu-header">
+
+
+        <a href="#" class="mobile-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MOBILE NAV
+    ================================================== -->
+
+    <nav class="mobile-nav">
+
+           <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens">MENS</a>
+
+            <a href="kids">KIDS</a>
+
+            <a href="indowestern.html">INDOWESTERN</a>
+
+            <a href="wedding">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+        
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MOBILE ACTIONS
+    ================================================== -->
+
+    <div class="mobile-actions">
+
+
+        <!-- ==================================================
+             MOBILE SEARCH
+             NO POPUP
+        ================================================== -->
+
+        <div class="mobile-search-box">
+
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             INFORMATION
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="infoPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </span>
+
+            <span>Information</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             WISHLIST
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="wishlistPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </span>
+
+            <span>Wishlist</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             CART
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="cartPopup"
+        >
+
+            <span class="mobile-action-icon mobile-cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="mobile-cart-count">0</span>
+
+            </span>
+
+            <span>Cart</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             PROFILE
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="profilePopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </span>
+
+            <span>Profile</span>
+
+        </button>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     POPUP OVERLAY
+================================================== -->
+
+<div
+    class="popup-overlay"
+    id="popupOverlay"
+></div>
+
+
+
+<!-- ==================================================
+     INFORMATION POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="infoPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-circle-question"></i>
+
+    </div>
+
+
+
+    <h2>Information</h2>
+
+
+
+    <p>
+        Discover premium watches, elegant designs and
+        timeless collections made for every occasion.
+    </p>
+
+
+
+    <div class="popup-content-list">
+
+
+        <div>
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span>Fast Delivery</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Secure Payment</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>Easy Returns</span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     WISHLIST POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="wishlistPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+
+
+    <h2>Your Wishlist</h2>
+
+
+
+    <p>
+        Your wishlist is currently empty.
+        Add your favourite watches here.
+    </p>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Explore Watches
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     CART POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="cartPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+    </div>
+
+
+
+    <h2>Your Cart</h2>
+
+
+
+    <p>
+        Your shopping bag is currently empty.
+    </p>
+
+
+
+    <div class="empty-cart">
+
+        <span class="cart-number">0</span>
+
+        <span>Items in your cart</span>
+
+    </div>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Continue Shopping
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     PROFILE POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="profilePopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-user"></i>
+
+    </div>
+
+
+
+    <h2>My Account</h2>
+
+
+
+    <p>
+        Login to manage your account, orders and
+        favourite watches.
+    </p>
+
+
+
+    <div class="profile-buttons">
+
+
+        <button
+            class="popup-main-btn"
+            type="button"
+        >
+
+            Login
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            Create Account
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            My Orders
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- NAVBAR END -->
+
+
+     <!-- WOMEN PAGE ALL CODE START -->
+
+    <section class="tshirt-section">
+
+        <!-- SECTION HEADING -->
+        <div class="section-heading">
+
+            <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
+
+            <h2>ENGAGEMENT</h2>
+
+            <!-- <p class="heading-text">
+                Discover our latest collection of stylish and comfortable
+                everyday t-shirts.
+            </p> -->
+
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCT GRID
+        ====================================================== -->
+
+        <div class="tshirt-grid">
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <!-- FIRST IMAGE -->
+                    <img
+                        class="product-image first-image"
+                        src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-purple-stonework-georgette-designer-readymadelehenga-gcrm0029505_purple_2.jpg?v=1687858983"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SECOND IMAGE -->
+                    <img
+                        class="product-image second-image"
+                        src="https://aishwaryafashion.com/wp-content/uploads/2026/08/Stunning-Pink-Bridal-Lehenga-for-Sangeet-Engagement-Reception.jpg"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SALE -->
+                    <span class="sale-badge">30% OFF</span>
+
+
+                    <!-- QUICK SHOP PANEL -->
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="product-details">
+
+                    <h3>CUTE GRAPHIC WOMEN T-SHIRT</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,575.00 </span>
+                        <span class="new-price">₹1,102.50</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-third-tshirt.webp"
+                        alt="My World T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-four-tshirt.webp"
+                        alt="My World T-Shirt">
+
+                    <span class="sale-badge">10% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>MAROON EMBELLISHED T-SHIRT</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,699.00</span>
+                        <span class="new-price">₹1,529.01</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-five-tshirt.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-six-thsirt.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <span class="sale-badge">15% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>COLLOR V-NECK T-SHIRT</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 2,999.00 </span>
+                        <span class="new-price">₹2,549.15</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-seven-thsirt.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-eight-tshirt.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <span class="sale-badge">50% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>WOMEN BLACK RIB V-NECK T-SHIRT</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,499.00</span>
+                        <span class="new-price">₹7,49.05</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WOMEN PAGE ALL CODE END -->
+
+
+
+    <section class="tshirt-section">
+
+        <!-- SECTION HEADING -->
+        <div class="section-heading">
+
+            <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
+
+            <h2>CO-ORD SETS </h2>
+
+            <!-- <p class="heading-text">
+                Discover our latest collection of stylish and comfortable
+                everyday t-shirts.
+            </p> -->
+
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCT GRID
+        ====================================================== -->
+
+        <div class="tshirt-grid">
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <!-- FIRST IMAGE -->
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-first-cords.jpg"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SECOND IMAGE -->
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-second-coords.jpg"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SALE -->
+                    <span class="sale-badge">20% OFF</span>
+
+
+                    <!-- QUICK SHOP PANEL -->
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="product-details">
+
+                    <h3>RED PRINTED CO-ORD SET</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 2,600.00  </span>
+                        <span class="new-price">₹2,080.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-third-coords.webp"
+                        alt="My World T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-four-coords.webp"
+                        alt="My World T-Shirt">
+
+                    <span class="sale-badge">25% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>AMOR GREEN CO-ORD SET</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 4,600.00 </span>
+                        <span class="new-price">₹3,450.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-five-coords.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-six-coords.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <span class="sale-badge">10% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>BLUE GEORGETTA CO-ORD SET</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,850.00  </span>
+                        <span class="new-price">₹1,650.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-seven-coords.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-eight-coords.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <span class="sale-badge">15% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>YELLOW INDO WESTERN CO-ORDS </h3>
+
+                    <p>
+                        <span class="old-price">Rs. 3,999.00</span>
+                        <span class="new-price">₹3,399.15</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WOMEN PAGE ALL CODE END -->
+
+
+
+
+      <!-- WOMEN PAGE ALL CODE START -->
+
+    <section class="tshirt-section">
+
+        <!-- SECTION HEADING -->
+        <div class="section-heading">
+
+            <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
+
+            <h2>SAREES</h2>
+
+            <!-- <p class="heading-text">
+                Discover our latest collection of stylish and comfortable
+                everyday t-shirts.
+            </p> -->
+
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCT GRID
+        ====================================================== -->
+
+        <div class="tshirt-grid">
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <!-- FIRST IMAGE -->
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-first-saree.webp"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SECOND IMAGE -->
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-second-saree.webp"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SALE -->
+                    <span class="sale-badge">50% OFF</span>
+
+
+                    <!-- QUICK SHOP PANEL -->
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="product-details">
+
+                    <h3>BLACK CHIFFON SAREE</h3>
+
+                    <p>
+                        <span class="old-price">Rs 14,999</span>
+                        <span class="new-price">₹7,499.5</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-third-saree.webp"
+                        alt="My World T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-four-saree.webp"
+                        alt="My World T-Shirt">
+
+                    <span class="sale-badge">75% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>HEAVY BRIDAL SAREE</h3>
+
+                    <p>
+                        <span class="old-price">Rs. 12,480.92</span>
+                        <span class="new-price"> ₹3,120.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-five-saree.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-six-saree.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <span class="sale-badge">45% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>SHREYA BANARSI SAREE</h3>
+
+                    <p>
+                        <span class="old-price">Rs 7,300.00 </span>
+                        <span class="new-price">₹4,015.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-seven-saree.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-eight-saree.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <span class="sale-badge">25 OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>MIMOSA SILK SAREE</h3>
+
+                    <p>
+                        <span class="old-price">Rs.1899.00</span>
+                        <span class="new-price">₹1,424.25</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WOMEN PAGE ALL CODE END -->
+
+
+
+
+
+    
+      <!-- WOMEN PAGE ALL CODE START -->
+
+    <section class="tshirt-section">
+
+        <!-- SECTION HEADING -->
+        <div class="section-heading">
+
+            <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
+
+            <h2>LEHENGAS</h2>
+
+            <!-- <p class="heading-text">
+                Discover our latest collection of stylish and comfortable
+                everyday t-shirts.
+            </p> -->
+
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCT GRID
+        ====================================================== -->
+
+        <div class="tshirt-grid">
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <!-- FIRST IMAGE -->
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-first-lehenga.jpg"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SECOND IMAGE -->
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-second-leheng.jpg"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SALE -->
+                    <span class="sale-badge">65% OFF</span>
+
+
+                    <!-- QUICK SHOP PANEL -->
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="product-details">
+
+                    <h3>WINE SILK LEHENGA SET</h3>
+
+                    <p>
+                        <span class="old-price">Rs 7,449</span>
+                        <span class="new-price">₹2,607.15</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-third-lehenga.webp"
+                        alt="My World T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-four--lehenga.webp"
+                        alt="My World T-Shirt">
+
+                    <span class="sale-badge">80% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>RAMA WEDDING WEAR LEHENGA</h3>
+
+                    <p>
+                        <span class="old-price">Rs.24,540.00</span>
+                        <span class="new-price">₹4,908.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-five-lehenga.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-six-lehenga.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <span class="sale-badge">40% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>PARTY FUNCTION  LEHENGA</h3>
+
+                    <p>
+                        <span class="old-price">Rs 5,800,00 </span>
+                        <span class="new-price">₹3,480.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-seven-lehenga.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-eight-lehenga.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <span class="sale-badge">10% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>NET LEHENGA PARTYWEAR</h3>
+
+                    <p>
+                        <span class="old-price">Rs.29,695.00</span>
+                        <span class="new-price">₹26,725.05</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WOMEN PAGE ALL CODE END -->
+
+
+
+
+    
+      <!-- WOMEN PAGE ALL CODE START -->
+
+    <section class="tshirt-section">
+
+        <!-- SECTION HEADING -->
+        <div class="section-heading">
+
+            <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
+
+            <h2>SUITS</h2>
+
+            <!-- <p class="heading-text">
+                Discover our latest collection of stylish and comfortable
+                everyday t-shirts.
+            </p> -->
+
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCT GRID
+        ====================================================== -->
+
+        <div class="tshirt-grid">
+
+
+            <!-- =================================================
+                 PRODUCT 1
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <!-- FIRST IMAGE -->
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-first-suit.webp"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SECOND IMAGE -->
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-second-suit.webp"
+                        alt="Street Queen T-Shirt">
+
+                    <!-- SALE -->
+                    <span class="sale-badge">5% OFF</span>
+
+
+                    <!-- QUICK SHOP PANEL -->
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div class="product-details">
+
+                    <h3>SARA MAROON COTTON SUIT</h3>
+
+                    <p>
+                        <span class="old-price">Rs 1,499.00</span>
+                        <span class="new-price">₹1,424.05</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 2
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-third-suit.webp"
+                        alt="My World T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-four-suit.webp"
+                        alt="My World T-Shirt">
+
+                    <span class="sale-badge">55% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>PINK BANDHANI COTTON SUIT</h3>
+
+                    <p>
+                        <span class="old-price">Rs.4,600.00</span>
+                        <span class="new-price">₹2,300.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 3
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-five-suit.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-six-suit.webp"
+                        alt="Girls Swag T-Shirt">
+
+                    <span class="sale-badge">50% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>PARTY FUNCTION  LEHENGA</h3>
+
+                    <p>
+                        <span class="old-price">Rs 3,200,00 </span>
+                        <span class="new-price">₹ 1,600.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUCT 4
+            ================================================== -->
+
+            <article class="tshirt-card">
+
+                <div class="tshirt-image-box">
+
+                    <img
+                        class="product-image first-image"
+                        src="image-folder/women-seven-suit.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <img
+                        class="product-image second-image"
+                        src="image-folder/women-eight-suit.webp"
+                        alt="Wildcats T-Shirt">
+
+                    <span class="sale-badge">40% OFF</span>
+
+                    <div class="quick-shop">
+
+                        <a href="#" class="quick-shop-link">
+                            QUICK SHOP
+                        </a>
+
+                        <div class="quick-icons">
+
+                            <button class="icon-btn" aria-label="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="icon-btn" aria-label="View Product">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-details">
+
+                    <h3>GULABHAR HANDWORK SUIT</h3>
+
+                    <p>
+                        <span class="old-price">Rs.6,450.00</span>
+                        <span class="new-price">₹.3,870.00</span>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- WOMEN PAGE ALL CODE END -->
+
+
+
+
+   
+
+  
+    <!-- ================= FOOTER START ================= -->
+
+    <footer class="jx-footer">
+
+        <div class="jx-footer-main">
+
+            <div class="jx-footer-container">
+
+                <!-- COMPANY INFO -->
+                <div class="jx-footer-column jx-company-column">
+
+                    <a href="#" class="jx-footer-logo">
+                        <span class="jx-logo-shield">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                        <div class="footer-logo">
+                            <img src="https://www.pngkey.com/png/full/223-2230265_advertise-on-h-mark-channel-comcast-spotlight-advertising.png"
+                                alt="">
+                        </div>
+                    </a>
+
+                    <div class="jx-company-info">
+
+                        <a href="#" class="jx-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>
+                                BIHAR (PATNA) BIR OIYARA
+                                PIN CODE- 804451
+                            </span>
+                        </a>
+
+                        <a href="mailto:contact@juxar.com" class="jx-info-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>@Castle.com</span>
+                        </a>
+
+                        <a href="tel:+919958006997" class="jx-info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 7481825360</span>
+                        </a>
+
+                    </div>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="jx-social-icons">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORIES -->
+                <div class="jx-footer-column">
+
+                    <h3>CATEGORIES</h3>
+
+                    <ul class="jx-footer-links">
+
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WOMENS</a>
+                        </li>
+
+                        <li>
+                            <a href="#">MENS</a>
+                        </li>
+
+                        <li>
+                            <a href="#">KIDS</a>
+                        </li>
+
+                        <li>
+                            <a href="#">INDOWESTERN</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WEDDING</a>
+                        </li>
+
+                        <li>
+                            <a href="#">BRA</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+                <div class="jx-footer-column">
+
+                    <h3>INFORMATION</h3>
+
+                    <ul class="jx-footer-links">
+
+                        <li>
+                            <a href="#">PRIVACY POLICY</a>
+                        </li>
+
+                        <li>
+                            <a href="#">EXCHANGE &amp; RETURN</a>
+                        </li>
+
+                        <li>
+                            <a href="#">TERMS &amp; CONDITION</a>
+                        </li>
+
+                        <li>
+                            <a href="#">SHIPPING &amp; DELIVERY </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- USEFUL LINKS -->
+                <div class="jx-footer-column">
+
+                    <h3>USEFUL LINKS</h3>
+
+                    <ul class="jx-footer-links">
+
+                        <li>
+                            <a href="#">ABOUT US</a>
+                        </li>
+
+                        <li>
+                            <a href="#">CONTACT US</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- NEWSLETTER -->
+                <div class="jx-footer-column jx-newsletter-column">
+
+                    <h3>NEWSLETTER SIGNUP</h3>
+
+                    <p class="jx-newsletter-text">
+                        Subscribe to our newsletter and get latest updates.<br class="jx-desktop-break">
+                        
+                    </p>
+
+                    <form class="jx-newsletter-form" id="jxNewsletterForm">
+
+                        <input type="email" id="jxEmailInput" placeholder="Your email address"
+                            aria-label="Your email address" required>
+
+                        <button type="submit">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="jx-footer-bottom">
+
+            <div class="jx-bottom-container">
+
+                <p>
+                    All Rights Reserved © 2026
+                    <a href="#">Castle</a>
+                    - Developed by
+                    <a href="#">SACHIN RAJPUT</a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BACK TO TOP -->
+        <!-- <button
+        type="button"
+        class="jx-back-top"
+        id="jxBackTop"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-chevron-up"></i>
+    </button> -->
+
+    </footer>
+
+    <!-- ================= FOOTER END ================= -->
+
+
+
+
+
+  <script src="index.js">
+     
+  </script>
+
+   
+    
+</body>
+</html>

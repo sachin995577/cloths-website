@@ -705,6 +705,98 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const section = document.querySelector(".bestseller-section");
+
+    if (!section) {
+        console.log("Error: .bestseller-section nahi mila");
+        return;
+    }
+
+    const heading = section.querySelector(".bestseller-heading");
+    const cards = section.querySelectorAll(".bestseller-card");
+
+    const elements = [];
+
+    if (heading) {
+        elements.push(heading);
+    }
+
+    cards.forEach(function (card) {
+        elements.push(card);
+    });
+
+    if (!elements.length) return;
+
+    section.classList.add("reveal-enabled");
+
+    if (!("IntersectionObserver" in window)) {
+        elements.forEach(function (element) {
+            element.classList.add("reveal-visible");
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    elements.forEach(function (element, index) {
+        element.style.transitionDelay = (index * 80) + "ms";
+        observer.observe(element);
+    });
+
+});
+
+// SCROLL REVEAL START
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(
+        ".bestseller-carousel .bestseller-card"
+    );
+
+    if (!cards.length) return;
+
+    /* Phone par text ko hide nahi karna */
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        return;
+    }
+
+    document.documentElement.classList.add("bestseller-reveal-ready");
+
+    const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("bestseller-revealed");
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(function (card) {
+        const heading = card.querySelector("h3");
+        const price = card.querySelector(".bestseller-price");
+
+        if (heading) observer.observe(heading);
+        if (price) observer.observe(price);
+    });
+});
+
+
+// SCROLL REVEAL END
+
 // SHOP BY CATEGORY END
 
 
@@ -811,6 +903,32 @@ window.addEventListener("load", function () {
 
 
 // DESIGNER SPORTLIGHT END CAROUSEL
+
+
+// 6 IMAGE WEDDING START ANIMATION
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const headings = document.querySelectorAll(".occasion-title");
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("occasion-reveal-active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    headings.forEach(function (heading) {
+        observer.observe(heading);
+    });
+});
+
+//  6 IMAGE WEDDING END ANIMATION
+
 
 
 // INSTAGRAM SECTION START
@@ -987,12 +1105,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// animation start juxaofficial
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = document.querySelector("p.juxar-reveal-text");
+
+    if (!text) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("juxar-reveal-active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(text);
+});
+
+// animation start juxaoffical end
+
 
 // INSTAGRAM SECTION END
 
   
 
 // 4 icon start
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');
@@ -1038,44 +1184,753 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-//  4 icon end
+   
+    // VIDEO KE NICHE TEXT WALA ANIAMTION SCROLL REVEAL START
 
+    (function () {
 
-// CLOTH VIDEO START
+    function initWatchBuyReveal() {
+
+        const items = document.querySelectorAll(".watch-buy-info");
+
+        if (!items.length) {
+            return;
+        }
+
+        // Purane observers ya classes ke bina initial state
+        items.forEach(function (item) {
+            item.classList.remove("wb-reveal-active");
+        });
+
+        if (!("IntersectionObserver" in window)) {
+            items.forEach(function (item) {
+                item.classList.add("wb-reveal-active");
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("wb-reveal-active");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        }, {
+            threshold: 0,
+            rootMargin: "0px 0px -40px 0px"
+        });
+
+        items.forEach(function (item) {
+            observer.observe(item);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initWatchBuyReveal
+        );
+    } else {
+        initWatchBuyReveal();
+    }
+
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const slider = document.querySelector(".cloth-video-slider");
+    const elements = document.querySelectorAll(
+        ".watch-buy-section img, .watch-buy-section .watch-buy-info"
+    );
 
-    if (!slider) {
-        return;
-    }
+    const observer = new IntersectionObserver(function (entries) {
 
-    const videos = slider.querySelectorAll("video");
+        entries.forEach(function (entry) {
 
-    videos.forEach(function (video) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("wb-reveal-active");
 
-        video.muted = true;
-        video.setAttribute("muted", "");
-        video.setAttribute("playsinline", "");
+                // Har element sirf ek baar animate hoga
+                observer.unobserve(entry.target);
+            }
 
-        video.play().catch(function () {});
-
-        video.addEventListener("loadeddata", function () {
-            video.play().catch(function () {});
         });
 
+    }, {
+        threshold: 0.1
+    });
+
+    elements.forEach(function (element) {
+        observer.observe(element);
     });
 
 });
 
 
+    // VIDEO KE NICHE TEXT WALA ANIAMTION SCROLL REVEAL END 
+
+//  4 icon end
+
+
+// FOUR SCROLL REVEAL START
+
+(function () {
+
+    function initStatsReveal() {
+
+        const items = document.querySelectorAll(
+            ".stats-container .stat-item"
+        );
+
+        if (!items.length) return;
+
+        if (!("IntersectionObserver" in window)) {
+            items.forEach(function (item) {
+                item.classList.add("stats-show");
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("stats-show");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        }, {
+            threshold: 0.1
+        });
+
+        items.forEach(function (item, index) {
+            item.style.transitionDelay = (index * 100) + "ms";
+            observer.observe(item);
+        });
+
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initStatsReveal);
+    } else {
+        initStatsReveal();
+    }
+
+})();
+
+// FOUR SCROLL REVEAL END
+
+
+// CLOTH VIDEO START
+
+  
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".watch-buy-carousel");
+    if (!carousel) return;
+
+    const viewport = carousel.querySelector(".watch-buy-viewport");
+    const track = carousel.querySelector(".watch-buy-track");
+    const cards = Array.from(track.querySelectorAll(".watch-buy-card"));
+    const prev = carousel.querySelector(".watch-buy-prev");
+    const next = carousel.querySelector(".watch-buy-next");
+
+    if (!viewport || !cards.length || !prev || !next) return;
+
+    let index = 0;
+    let step = 0;
+    let maxIndex = 0;
+    let startX = 0;
+    let currentX = 0;
+    let dragging = false;
+    let moved = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let resizeFrame;
+
+    function measure() {
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+
+        step = cardWidth + gap;
+
+        const maxScroll = Math.max(
+            0,
+            track.scrollWidth - viewport.clientWidth
+        );
+
+        maxIndex = step > 0 ? Math.ceil(maxScroll / step) : 0;
+        index = Math.min(index, maxIndex);
+
+        render(false);
+    }
+
+    function render(animate = true) {
+        const maxScroll = Math.max(
+            0,
+            track.scrollWidth - viewport.clientWidth
+        );
+
+        const position = Math.min(index * step, maxScroll);
+
+        track.style.transition = animate
+            ? "transform 600ms cubic-bezier(.22,.75,.25,1)"
+            : "none";
+
+        track.style.transform =
+            `translate3d(${-position}px, 0, 0)`;
+    }
+
+    function moveNext() {
+        index = index >= maxIndex ? 0 : index + 1;
+        render(true);
+    }
+
+    function movePrev() {
+        index = index <= 0 ? maxIndex : index - 1;
+        render(true);
+    }
+
+    next.addEventListener("click", moveNext);
+    prev.addEventListener("click", movePrev);
+
+    // Play and pause videos
+    cards.forEach(card => {
+        const video = card.querySelector("video");
+        const button = card.querySelector(".watch-buy-play");
+        const videoBox = card.querySelector(".watch-buy-video");
+
+        if (!video || !button || !videoBox) return;
+
+        video.muted = true;
+        video.playsInline = true;
+        video.loop = true;
+
+        video.addEventListener("play", () => {
+            videoBox.classList.remove("is-paused");
+            card.classList.add("is-zoomed");
+            button.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        });
+
+        video.addEventListener("pause", () => {
+            videoBox.classList.add("is-paused");
+            card.classList.remove("is-zoomed");
+            button.innerHTML = '<i class="fa-solid fa-play"></i>';
+        });
+
+        button.addEventListener("click", async event => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (video.paused) {
+                cards.forEach(otherCard => {
+                    const otherVideo = otherCard.querySelector("video");
+                    if (otherVideo && otherVideo !== video) {
+                        otherVideo.pause();
+                    }
+                });
+
+                try {
+                    await video.play();
+                } catch (error) {
+                    console.error("Video play error:", error);
+                }
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    // Desktop mouse drag
+    viewport.addEventListener("pointerdown", event => {
+        if (event.pointerType !== "mouse") return;
+        if (event.target.closest("button, video")) return;
+
+        dragging = true;
+        moved = false;
+        startX = event.clientX;
+        currentX = startX;
+
+        track.style.transition = "none";
+        viewport.setPointerCapture(event.pointerId);
+    });
+
+    viewport.addEventListener("pointermove", event => {
+        if (!dragging) return;
+
+        currentX = event.clientX;
+        if (Math.abs(currentX - startX) > 6) moved = true;
+
+        const maxScroll = Math.max(
+            0,
+            track.scrollWidth - viewport.clientWidth
+        );
+
+        const position = Math.max(
+            0,
+            Math.min(index * step - (startX - currentX), maxScroll)
+        );
+
+        track.style.transform =
+            `translate3d(${-position}px, 0, 0)`;
+    });
+
+    function finishDrag() {
+        if (!dragging) return;
+
+        dragging = false;
+        const distance = currentX - startX;
+
+        if (moved && Math.abs(distance) > 40) {
+            distance < 0 ? moveNext() : movePrev();
+        } else {
+            render(true);
+        }
+    }
+
+    viewport.addEventListener("pointerup", finishDrag);
+    viewport.addEventListener("pointercancel", finishDrag);
+
+    // Touch swipe, including two-finger horizontal movement
+    function center(touches, axis) {
+        let total = 0;
+
+        for (let i = 0; i < touches.length; i++) {
+            total += axis === "x"
+                ? touches[i].clientX
+                : touches[i].clientY;
+        }
+
+        return total / touches.length;
+    }
+
+    viewport.addEventListener("touchstart", event => {
+        if (!event.touches.length) return;
+
+        touchStartX = center(event.touches, "x");
+        touchStartY = center(event.touches, "y");
+        currentX = touchStartX;
+        moved = false;
+    }, { passive: true });
+
+    viewport.addEventListener("touchmove", event => {
+        if (!event.touches.length) return;
+
+        currentX = center(event.touches, "x");
+
+        const deltaX = currentX - touchStartX;
+        const deltaY = center(event.touches, "y") - touchStartY;
+
+        if (
+            Math.abs(deltaX) > 8 &&
+            Math.abs(deltaX) > Math.abs(deltaY)
+        ) {
+            moved = true;
+        }
+    }, { passive: true });
+
+    viewport.addEventListener("touchend", () => {
+        const distance = currentX - touchStartX;
+
+        if (moved && Math.abs(distance) > 40) {
+            distance < 0 ? moveNext() : movePrev();
+        }
+    }, { passive: true });
+
+    viewport.addEventListener("touchcancel", () => {
+        render(true);
+    }, { passive: true });
+
+    // Recalculate for every screen size
+    window.addEventListener("resize", () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(measure);
+    });
+
+    measure();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".watch-buy-carousel");
+    if (!carousel) return;
+
+    const viewport = carousel.querySelector(".watch-buy-viewport");
+    const track = carousel.querySelector(".watch-buy-track");
+    const prev = carousel.querySelector(".watch-buy-prev");
+    const next = carousel.querySelector(".watch-buy-next");
+
+    if (!viewport || !track || !prev || !next) return;
+
+    const originalCards = Array.from(
+        track.querySelectorAll(".watch-buy-card")
+    );
+
+    if (!originalCards.length) return;
+
+    const originalCount = originalCards.length;
+    const cloneCount = Math.min(6, originalCount);
+
+    // Clone beginning cards for smooth looping after video 10
+    originalCards.slice(0, cloneCount).forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add("watch-buy-clone");
+        track.appendChild(clone);
+    });
+
+    let cards = Array.from(track.querySelectorAll(".watch-buy-card"));
+    let index = 0;
+    let step = 0;
+    let maxIndex = originalCount;
+    let isAnimating = false;
+    let startX = 0;
+    let currentX = 0;
+    let dragging = false;
+    let moved = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let resizeFrame;
+
+    function getGap() {
+        return parseFloat(getComputedStyle(track).columnGap) || 0;
+    }
+
+    function measure() {
+        cards = Array.from(track.querySelectorAll(".watch-buy-card"));
+
+        const firstCard = cards[0];
+        if (!firstCard) return;
+
+        step = firstCard.getBoundingClientRect().width + getGap();
+
+        render(false);
+    }
+
+    function render(animate = true) {
+        if (!step) return;
+
+        const target = index * step;
+
+        track.style.transition = animate
+            ? "transform 600ms cubic-bezier(.22,.75,.25,1)"
+            : "none";
+
+        track.style.transform = `translate3d(${-target}px,0,0)`;
+    }
+
+    function moveNext() {
+        if (isAnimating) return;
+
+        isAnimating = true;
+        index++;
+        render(true);
+    }
+
+    function movePrev() {
+        if (isAnimating) return;
+
+        if (index === 0) {
+            // Jump to equivalent cloned position without visible animation
+            index = originalCount;
+            render(false);
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    index = originalCount - 1;
+                    isAnimating = true;
+                    render(true);
+                });
+            });
+
+            return;
+        }
+
+        index--;
+        isAnimating = true;
+        render(true);
+    }
+
+    next.addEventListener("click", moveNext);
+    prev.addEventListener("click", movePrev);
+
+    // Seamlessly reset after reaching the first cloned video
+    track.addEventListener("transitionend", function (event) {
+        if (event.target !== track || event.propertyName !== "transform") {
+            return;
+        }
+
+        if (index >= originalCount) {
+            index = 0;
+            render(false);
+        }
+
+        isAnimating = false;
+    });
+
+    // Keep videos playing continuously; center button pauses or resumes
+    function setupVideo(card) {
+        const video = card.querySelector("video");
+        const button = card.querySelector(".watch-buy-play");
+        const box = card.querySelector(".watch-buy-video");
+
+        if (!video || !button || !box) return;
+
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline", "");
+        video.setAttribute("muted", "");
+
+        function syncState() {
+            const paused = video.paused || video.ended;
+
+            box.classList.toggle("is-paused", paused);
+            card.classList.toggle("is-zoomed", !paused);
+
+            button.innerHTML = paused
+                ? '<i class="fa-solid fa-play"></i>'
+                : '<i class="fa-solid fa-pause"></i>';
+
+            button.setAttribute(
+                "aria-label",
+                paused ? "Play video" : "Pause video"
+            );
+        }
+
+        video.addEventListener("play", syncState);
+        video.addEventListener("pause", syncState);
+        video.addEventListener("ended", syncState);
+
+        button.addEventListener("click", async function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (video.paused) {
+                try {
+                    await video.play();
+                } catch (error) {
+                    console.error("Video play error:", error);
+                }
+            } else {
+                video.pause();
+            }
+
+            syncState();
+        });
+
+        // Muted autoplay is generally allowed; browser policies may vary
+        video.play().catch(() => {
+            syncState();
+        });
+
+        syncState();
+    }
+
+    cards.forEach(setupVideo);
+
+    // Desktop mouse drag
+    viewport.addEventListener("pointerdown", function (event) {
+        if (event.pointerType !== "mouse") return;
+        if (event.target.closest("button, video")) return;
+
+        dragging = true;
+        moved = false;
+        startX = event.clientX;
+        currentX = startX;
+
+        track.style.transition = "none";
+        viewport.setPointerCapture(event.pointerId);
+    });
+
+    viewport.addEventListener("pointermove", function (event) {
+        if (!dragging) return;
+
+        currentX = event.clientX;
+        if (Math.abs(currentX - startX) > 6) moved = true;
+
+        const maxScroll = Math.max(
+            0,
+            (originalCount + cloneCount) * step - getGap()
+                - viewport.clientWidth
+        );
+
+        const position = Math.max(
+            0,
+            Math.min(index * step - (startX - currentX), maxScroll)
+        );
+
+        track.style.transform = `translate3d(${-position}px,0,0)`;
+    });
+
+    function finishDrag() {
+        if (!dragging) return;
+
+        dragging = false;
+        const distance = currentX - startX;
+
+        if (moved && Math.abs(distance) > 40) {
+            distance < 0 ? moveNext() : movePrev();
+        } else {
+            render(true);
+        }
+    }
+
+    viewport.addEventListener("pointerup", finishDrag);
+    viewport.addEventListener("pointercancel", finishDrag);
+
+    // One-finger or two-finger horizontal touch swipe
+    function center(touches, axis) {
+        let total = 0;
+
+        for (let i = 0; i < touches.length; i++) {
+            total += axis === "x"
+                ? touches[i].clientX
+                : touches[i].clientY;
+        }
+
+        return total / touches.length;
+    }
+
+    viewport.addEventListener("touchstart", function (event) {
+        if (!event.touches.length) return;
+
+        touchStartX = center(event.touches, "x");
+        touchStartY = center(event.touches, "y");
+        currentX = touchStartX;
+        moved = false;
+    }, { passive: true });
+
+    viewport.addEventListener("touchmove", function (event) {
+        if (!event.touches.length) return;
+
+        currentX = center(event.touches, "x");
+
+        const dx = currentX - touchStartX;
+        const dy = center(event.touches, "y") - touchStartY;
+
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+            moved = true;
+        }
+    }, { passive: true });
+
+    viewport.addEventListener("touchend", function () {
+        const distance = currentX - touchStartX;
+
+        if (moved && Math.abs(distance) > 40) {
+            distance < 0 ? moveNext() : movePrev();
+        }
+    }, { passive: true });
+
+    viewport.addEventListener("touchcancel", function () {
+        render(true);
+    }, { passive: true });
+
+    window.addEventListener("resize", function () {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(measure);
+    });
+
+    measure();
+});
+
+
+
 // CLOTH VIDEO END
+
+
+// OUR BRAND ANIMATION SCROLL REVEAL IMG START
+
+(function () {
+
+    function initBrandImages() {
+        const images = document.querySelectorAll(
+            ".clothing-brand-card img"
+        );
+
+        if (!images.length) return;
+
+        if (!("IntersectionObserver" in window)) {
+            images.forEach(function (img) {
+                img.classList.add("brand-img-show");
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("brand-img-show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05
+        });
+
+        images.forEach(function (img) {
+            observer.observe(img);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initBrandImages);
+    } else {
+        initBrandImages();
+    }
+
+})();
+
+// OUR BRAND ANIAMTION SCROLL REVEAL IMG END
 
  
  
 // FOOTER START
 
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const footerElements = document.querySelectorAll(
+        ".jx-footer a, .jx-footer p"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+        footerElements.forEach(function (element) {
+            element.classList.add("jx-reveal-active");
+        });
+        return;
+    }
+
+    const footerObserver = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("jx-reveal-active");
+                } else {
+                    entry.target.classList.remove("jx-reveal-active");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.1,
+            rootMargin: "0px 0px -30px 0px"
+        }
+    );
+
+    footerElements.forEach(function (element) {
+        footerObserver.observe(element);
+    });
+
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1169,51 +2024,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //  FOOTER END
 
 
-/* =========================================
-   SCROLL IMAGE ANIMATION SCROLL KARNE PE START
-========================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const scrollImages = document.querySelectorAll(
-        ".bestseller-image-box img, " +
-        ".designer-card img, " +
-        ".occasion-card img, " +
-        ".jx-instagram-card img, " +
-        ".clothing-brand-card img"
-    );
-
-    if (!scrollImages.length) {
-        return;
-    }
-
-    const imageObserver = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("scroll-image-show");
-                } else {
-                    entry.target.classList.remove("scroll-image-show");
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.20,
-            rootMargin: "0px 0px -8% 0px"
-        }
-    );
-
-    scrollImages.forEach(function (image) {
-        imageObserver.observe(image);
-    });
-
-});
-
-// SCROLL KARNE PE START ANIMATION IMAGE END
 
 
 
@@ -1296,7 +2106,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
 // FINAL FIRST PAGE COMPLETE
+
+
 
 
 

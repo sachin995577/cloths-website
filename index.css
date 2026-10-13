@@ -11,6 +11,9 @@
     box-sizing: border-box;
 }
 
+/* 
+ font-family: 'Montserrat', sans-serif; font-weight: 600; */
+    
 
 /* ==================================================
    HTML / BODY
@@ -29,6 +32,9 @@ body {
     color: #111111;
     
 }
+
+
+
 p{
     font-family: 'Montserrat', sans-serif;
 }
@@ -520,7 +526,8 @@ a{
 
 .mobile-action:hover .mobile-action-icon {
     transform: scale(1.02);
-    background: #f5f5f5;
+    background: black;
+    color:white;
 }
 
 
@@ -1380,7 +1387,7 @@ a{
     }
 
     .desktop-menu a {
-        font-size: 12px;
+        font-size: 10px;
         white-space: nowrap;
         flex: 0 0 auto;
     }
@@ -1711,7 +1718,7 @@ a{
     }
 
     .brand-logo img {
-        width: 165px !important;
+        width: 110px !important;
         max-width: 165px !important;
         height: auto !important;
         display: block !important;
@@ -1769,7 +1776,7 @@ a{
     }
 
     .brand-logo img {
-        width: 165px !important;
+        width: 113px !important;
         max-width: 165px !important;
         height: auto !important;
         display: block !important;
@@ -2175,14 +2182,12 @@ a{
 
 .fashion-banner-content h1 {
     margin-bottom: 18px;
-
     font-size: clamp(34px, 4vw, 72px);
-
     line-height: 1.1;
-
     letter-spacing: 4px;
-
     text-align: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 500;
+    
 }
 
 
@@ -2431,6 +2436,7 @@ a{
 
 }
 
+
 /* CAROUSEL BANNER END */
 
 
@@ -2443,6 +2449,7 @@ a{
     overflow: hidden;
     margin-top: 25px;
     padding: 20px;
+    
 }
 
 
@@ -2457,6 +2464,8 @@ a{
     margin: 0 0 24px;
     color: #111111;
     padding: 6px;
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
+    
 }
 
 
@@ -2572,10 +2581,15 @@ a{
 
 .bestseller-card h3 {
     margin: 14px 0 7px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.3;
-    color: #222222;
+    color:black;
+       /* Font Family Setup */
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+    
 }
+
 
 
 /* ==================================================
@@ -2605,14 +2619,14 @@ a{
 
 .new-price {
     color: #222222;
-    font-size: 17px;
+    font-size: 9px;
 }
 
 
 /* DISCOUNT */
 
 .discount {
-    color: #ff4d24;
+    color: #FF4D24;
     font-size: 14px;
 }
 
@@ -2683,7 +2697,7 @@ a{
     }
 
     .bestseller-card h3 {
-        font-size: 15px;
+        font-size: 11px;
     }
 
     .bestseller-price {
@@ -2794,7 +2808,7 @@ a{
     }
 
     .bestseller-image-box img {
-        height: 560px;
+        height: 680px;
     }
 
     .bestseller-heading {
@@ -2806,6 +2820,88 @@ a{
     }
 
 }
+
+/* SCROLL REVEAL START */
+
+
+/* SHOP BY CATEGORY SCROLL REVEAL */
+
+.bestseller-section .bestseller-heading,
+.bestseller-section .bestseller-card {
+    opacity: 1;
+    transform: none;
+}
+
+/* Animation sirf JavaScript active hone par lagegi */
+
+.bestseller-section.reveal-enabled .bestseller-heading,
+.bestseller-section.reveal-enabled .bestseller-card {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.bestseller-section.reveal-enabled .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bestseller-section.reveal-enabled .bestseller-heading,
+    .bestseller-section.reveal-enabled .bestseller-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+
+/* BESTSELLER SCROLL REVEAL */
+
+.bestseller-card h3,
+.bestseller-card .bestseller-price {
+    opacity: 1;
+    transform: none;
+}
+
+/* Animation sirf jab JavaScript ready ho */
+.bestseller-reveal-ready .bestseller-card h3,
+.bestseller-reveal-ready .bestseller-card .bestseller-price {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.bestseller-reveal-ready .bestseller-card h3.bestseller-revealed,
+.bestseller-reveal-ready .bestseller-card .bestseller-price.bestseller-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Phone par price visible rahe */
+@media (max-width: 767px) {
+    .bestseller-card .bestseller-price {
+        opacity: 1;
+        transform: none;
+    }
+
+    .bestseller-reveal-ready .bestseller-card .bestseller-price {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bestseller-card h3,
+    .bestseller-card .bestseller-price {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* SCROLL REVEAL END */
+
 
 
 /* SHOP BY CATEGORY END */
@@ -2832,6 +2928,7 @@ a{
     text-align: left;
     margin-top: 20px;
     padding: 5px;
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
 }
 
 .designer-carousel {
@@ -2890,9 +2987,11 @@ a{
     margin: 0;
     color: #fff;
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
     z-index: 2;
+    font-family: 'Montserrat', sans-serif; font-weight: 600;
+    
 }
 
 
@@ -3365,6 +3464,7 @@ a{
     color: #202733;
     font-size: 28px;
     line-height: 1.2;
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
 }
 
 
@@ -3873,7 +3973,7 @@ a{
 /* ==================================================
    FAST + SMOOTH IMAGE ZOOM
 ================================================== */
-
+/* 
 .occasion-card img {
     display: block;
 
@@ -3888,27 +3988,27 @@ a{
     transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
 
     will-change: transform;
-}
+} 
 
 
 /* ==================================================
    STRONG HOVER ZOOM
 ================================================== */
-
+/* 
 .occasion-card:hover img {
     transform: scale(1.14);
-}
+} */
 /* ==================================================
    OCCASION CARD - SMOOTH ZOOM
 ================================================== */
-
+/* 
 .occasion-card {
     position: relative;
     overflow: hidden;
-}
+} */
 
 /* IMAGE */
-.occasion-card img {
+/* .occasion-card img {
     width: 100%;
     height: 100%;
     display: block;
@@ -3921,40 +4021,40 @@ a{
     transition: transform 0.8s ease-in-out;
 
     will-change: transform;
-}
+} */
 
 
 /* ==================================================
    DESKTOP ZOOM
 ================================================== */
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
 
     .occasion-card:hover img {
         transform: scale(1.12);
     }
 
-}
+} */
 
 
 /* ==================================================
    TABLET
 ================================================== */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
 
     .occasion-card:hover img {
         transform: scale(1.10);
     }
 
-}
+} */
 
 
 /* ==================================================
    PHONE
 ================================================== */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 
     .occasion-card:active img {
         transform: scale(1.07);
@@ -3963,6 +4063,19 @@ a{
 }
 .occasion-card:hover img {
     transform: scale(1.20) !important;
+} */
+
+
+.occasion-title {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.occasion-title.occasion-reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 13px;
 }
 
 
@@ -4002,8 +4115,10 @@ a{
 .jx-instagram-heading p {
     margin: 7px 0 0;
     color: #000000;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 1px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
 }
 
 /* ================= CAROUSEL ================= */
@@ -4074,10 +4189,10 @@ a{
     transform: translate(-50%, -50%) scale(0.7);
     opacity: 0;
     color: #ffffff;
-    font-size: 43px;
+    font-size: 31px;
     transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
+    opacity 0.3s ease,
+    transform 0.3s ease;
     pointer-events: none;
 }
 
@@ -4165,7 +4280,7 @@ a{
     }
 
     .jx-instagram-icon {
-        font-size: 40px;
+        font-size: 34px;
     }
 
     .jx-instagram-arrow {
@@ -4211,7 +4326,7 @@ a{
     }
 
     .jx-instagram-icon {
-        font-size: 40px;
+        font-size: 25px;
     }
 
     .jx-instagram-arrow {
@@ -4292,6 +4407,24 @@ a{
 
 }
 
+/* animation start juxaoffical wala */
+
+/* INSTAGRAM TEXT REVEAL */
+
+.juxar-reveal-text {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.juxar-reveal-text.juxar-reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* aniamtion end juxaofficial wala */
+
 
 /* INSTAGRAM SECTION END */
 
@@ -4299,11 +4432,14 @@ a{
 /* four icon start */
 
   
+
 stats-container {
       width: 100%;
       max-width: 2560px; /* 4K Screens support */
       margin: 0 auto;
       padding: 40px 20px;
+       font-family: 'Montserrat', sans-serif; font-weight: 500;
+      
      
     }
 
@@ -4353,8 +4489,10 @@ stats-container {
 
     /* Label Text Style */
     .stat-label {
-      font-size: 1rem;
+      font-size: 10px;
       color: #555555;
+       font-family: 'Montserrat', sans-serif; font-weight: 500;
+      
      
     }
 
@@ -4391,7 +4529,7 @@ stats-container {
       }
 
       .stat-label {
-        font-size: 0.9rem;
+        font-size: 10px;
       }
     }
 
@@ -4415,8 +4553,26 @@ stats-container {
       }
     }
 
+    
+
 
   /* four icon end */
+
+
+  /* FOUR ICON SCROLL REVEAL START */
+
+  .stats-grid .stat-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.stats-grid .stat-item.stats-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  /* FOUR ICON SCROLL REVEAL END */
 
 
 
@@ -4429,11 +4585,13 @@ stats-container {
     box-sizing: border-box;
 }
 
+
 .clothing-brands-container {
     width: 100%;
     max-width: 2560px;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
 }
 
 .clothing-brands-title {
@@ -4442,6 +4600,8 @@ stats-container {
     color: #111111;
     font-size: 28px;
     line-height: 1.2;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 500;
 }
 
 .clothing-brands-grid {
@@ -4579,404 +4739,386 @@ stats-container {
 
 /* ================= OUR BRANDS END ================= */
 
+/* OUR BRAND ANIMATION SCROLL REVEAL START */
+.clothing-brand-card img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
 
+.clothing-brand-card img.brand-img-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* OUR BRAND ANIMATION SCROLL REVEAL END */
 
 /* CLOTH VIDEO START */
 
 /* ================= CLOTH VIDEO ================= */
 
-.cloth-video-section {
-    width: 100%;
-    padding: 55px 0 65px;
-    background: #fff;
-    overflow: hidden;
-}
 
-.cloth-video-wrapper {
+
+.watch-buy-section {
     width: 100%;
-    max-width: 2560px;
-    margin: auto;
-    padding: 0 24px;
+    padding: 8px 0 20px;
+    overflow: hidden;
+    background: #fff;
     box-sizing: border-box;
 }
 
-.cloth-video-title {
-    margin: 0 0 30px;
+.watch-buy-section *,
+.watch-buy-section *::before,
+.watch-buy-section *::after {
+    box-sizing: border-box;
+}
+
+.watch-buy-heading {
+    margin: 0 0 36px;
+    color: #333;
     text-align: center;
-    color: #111;
-    font-size: 28px;
-    letter-spacing: 1px;
+    font-size: 30px;
+    line-height: 1.1;
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
 }
 
-.cloth-video-slider {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-
-    overscroll-behavior-x: contain;
-}
-
-.cloth-video-slider::-webkit-scrollbar {
-    display: none;
-}
-
-.cloth-video-track {
-    width: max-content;
-    display: flex;
-    gap: 16px;
-}
-
-.cloth-video-card {
+.watch-buy-carousel {
     position: relative;
-
-    flex: 0 0 calc((100vw - 64px) / 4.25);
-
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
-
-    box-sizing: border-box;
-
-    scroll-snap-align: start;
+    width: 100%;
+    padding: 0 50px;
 }
 
-.cloth-video-box {
+.watch-buy-viewport {
     width: 100%;
-    aspect-ratio: 0.67 / 1;
-
     overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
 
-    border-radius: 8px 8px 0 0;
+.watch-buy-track {
+    --visible: 5.2;
+    --gap: 30px;
 
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    width: 100%;
+    transition: transform 600ms cubic-bezier(.22, .75, .25, 1);
+    will-change: transform;
+}
+
+.watch-buy-card {
+    flex: 0 0 calc(
+        (100% - (var(--visible) - 1) * var(--gap))
+        / var(--visible)
+    );
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.watch-buy-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 5;
+    overflow: hidden;
+    border-radius: 6px;
     background: #eee;
+    box-shadow: 0 1px 6px #00000020;
 }
 
-.cloth-video-box video {
+.watch-buy-video video {
+    display: block;
     width: 100%;
     height: 100%;
-
-    display: block;
-
     object-fit: cover;
-
-    pointer-events: none;
+    transform: scale(1);
+    transition: transform 700ms ease;
 }
 
-.cloth-product-image {
+.watch-buy-card.is-zoomed .watch-buy-video video {
+    transform: scale(1.04);
+}
+
+.watch-buy-play {
     position: absolute;
-
+    top: 50%;
     left: 50%;
-    top: calc(67% - 25px);
-
-    transform: translateX(-50%);
-
-    width: 50px;
-    height: 50px;
-
-    background: #fff;
-
-    border: 1px solid #ddd;
-
-    overflow: hidden;
-
     z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ffffffaa;
+    border-radius: 50%;
+    background: #00000055;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 200ms ease;
 }
 
-.cloth-product-image img {
-    width: 100%;
-    height: 100%;
+.watch-buy-video.is-paused .watch-buy-play {
+    opacity: 1;
+}
 
+.watch-buy-product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding-top: 10px;
+}
+
+.watch-buy-product img {
     display: block;
-
+    width: 64px;
+    height: 65px;
+    flex-shrink: 0;
     object-fit: cover;
+    border-radius: 4px;
+    -webkit-user-drag: none;
 }
 
-.cloth-product-info {
-    min-height: 126px;
-
-    padding: 48px 7px 14px;
-
-    box-sizing: border-box;
+.watch-buy-info {
+    flex: 1;
+    min-width: 0;
 }
 
-.cloth-product-info h3 {
-    margin: 0 0 22px;
-
-    color: #111;
-
+.watch-buy-info p {
+    margin: 0 0 4px;
+    color: #222;
     font-size: 15px;
-    line-height: 1.25;
-
+    line-height: 1.4;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520;
 }
 
-.cloth-price {
-    display: flex;
-    align-items: center;
 
-    gap: 8px;
-
-    white-space: nowrap;
-}
-
-.current-price {
-    color: #111;
-    font-size: 16px;
-}
-
-.old-price {
-    color: #aaa;
+.watch-buy-info span {
+    display: block;
+    color:black;
     font-size: 14px;
-    text-decoration: line-through;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
 }
 
-.discount {
-    color: #16b982;
-    font-size: 14px;
+/* ARROWS: NO HOVER EFFECT */
+
+.watch-buy-arrow {
+    position: absolute;
+    top: 44%;
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 1px 5px #00000018;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
-
-/* ================= 1600 - 2560 ================= */
-
-@media (min-width: 1600px) and (max-width: 2560px) {
-
-    .cloth-video-wrapper {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .cloth-video-title {
-        font-size: 30px;
-        margin-bottom: 32px;
-    }
-
-    .cloth-video-track {
-        gap: 18px;
-    }
-
-    .cloth-video-card {
-        flex-basis: calc((100vw - 72px) / 4.25);
-    }
+.watch-buy-prev {
+    left: 5px;
 }
 
-
-/* ================= 1025 - 1599 ================= */
-
-@media (min-width: 1025px) and (max-width: 1599px) {
-
-    .cloth-video-section {
-        padding-top: 18px;
-    }
-
-    .cloth-video-wrapper {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .cloth-video-title {
-        font-size: 28px;
-        margin-bottom: 34px;
-    }
-
-    .cloth-video-track {
-        gap: 15px;
-    }
-
-    .cloth-video-card {
-        flex-basis: calc((100vw - 60px) / 4.25);
-    }
+.watch-buy-next {
+    right: 5px;
 }
 
-
-/* ================= TABLET 768 - 1024 ================= */
+/* TABLET: 3 VIDEOS */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-    .cloth-video-section {
-        padding: 43px 0 52px;
+    .watch-buy-carousel {
+        padding: 0 36px;
     }
 
-    .cloth-video-wrapper {
-        padding-left: 22px;
-        padding-right: 22px;
+    .watch-buy-track {
+        --visible: 3.2;
+        --gap: 18px;
     }
 
-    .cloth-video-title {
-        font-size: 25px;
-        margin-bottom: 24px;
+    .watch-buy-heading {
+        margin-bottom: 25px;
     }
 
-    .cloth-video-track {
-        gap: 14px;
+    .watch-buy-product {
+        gap: 7px;
     }
 
-    .cloth-video-card {
-        flex-basis: calc((100vw - 50px) / 2.18);
+    .watch-buy-product img {
+        width: 48px;
+        height: 54px;
     }
 
-    .cloth-product-info {
-        min-height: 125px;
-        padding-top: 47px;
-    }
-
-    .cloth-product-info h3 {
-        font-size: 15px;
-    }
-
-    .current-price {
-        font-size: 15px;
-    }
-
-    .old-price,
-    .discount {
-        font-size: 13px;
-    }
-}
-
-
-/* ================= PHONE 426 - 767 ================= */
-
-@media (min-width: 426px) and (max-width: 767px) {
-
-    .cloth-video-section {
-        padding: 35px 0 45px;
-    }
-
-    .cloth-video-wrapper {
-        padding: 0 15px;
-    }
-
-    .cloth-video-title {
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-
-    .cloth-video-track {
-        gap: 12px;
-    }
-
-    .cloth-video-card {
-        flex-basis: 86vw;
-    }
-
-    .cloth-product-info {
-        min-height: 123px;
-        padding-top: 45px;
-    }
-
-    .cloth-product-info h3 {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .current-price {
-        font-size: 15px;
-    }
-
-    .old-price,
-    .discount {
-        font-size: 13px;
-    }
-}
-
-
-/* ================= PHONE 320 - 425 ================= */
-
-@media (min-width: 320px) and (max-width: 425px) {
-
-    .cloth-video-section {
-        padding: 5px 0 10px;
-    }
-
-    .cloth-video-wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .cloth-video-title {
-        font-size: 21px;
-        margin-bottom: 19px;
-    }
-
-    .cloth-video-track {
-        gap: 11px;
-    }
-
-    .cloth-video-card {
-        flex-basis: 86vw;
-    }
-
-    .cloth-product-image {
-        width: 49px;
-        height: 49px;
-
-        top: calc(67% - 24px);
-    }
-
-    .cloth-product-info {
-        min-height: 120px;
-        padding: 44px 7px 13px;
-    }
-
-    .cloth-product-info h3 {
-        font-size: 13px;
-        margin-bottom: 19px;
-    }
-
-    .cloth-price {
-        gap: 6px;
-    }
-
-    .current-price {
-        font-size: 14px;
-    }
-
-    .old-price,
-    .discount {
-        font-size: 12px;
-    }
-}
-
-
-/* ================= SMALL PHONE 320 - 375 ================= */
-
-@media (min-width: 320px) and (max-width: 375px) {
-
-    .cloth-video-wrapper {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .cloth-video-track {
-        gap: 10px;
-    }
-
-    .cloth-video-card {
-        flex-basis: 88vw;
-    }
-
-    .cloth-product-info h3 {
+    .watch-buy-info p,
+    .watch-buy-info span {
         font-size: 12px;
     }
 
-    .current-price {
-        font-size: 13px;
+    .watch-buy-arrow {
+        width: 34px;
+        height: 34px;
     }
 
-    .old-price,
-    .discount {
-        font-size: 11px;
+    .watch-buy-play {
+        width: 38px;
+        height: 38px;
+        opacity: 1;
     }
 }
+
+/* PHONE: 1 VIDEO */
+
+@media (max-width: 767px) {
+    .watch-buy-section {
+        padding: 12px 0 18px;
+    }
+
+    .watch-buy-heading {
+        margin-bottom: 22px;
+        font-size: 29px;
+    }
+
+    .watch-buy-carousel {
+        padding: 0 25px;
+    }
+
+    .watch-buy-track {
+        --visible: 1.15;
+        --gap: 12px;
+    }
+
+    .watch-buy-product {
+        gap: 7px;
+        padding-top: 8px;
+    }
+
+    .watch-buy-product img {
+        width: 48px;
+        height: 52px;
+    }
+
+    .watch-buy-info p,
+    .watch-buy-info span {
+        font-size: 12px;
+    }
+
+    .watch-buy-arrow {
+        top: 42%;
+        width: 31px;
+        height: 31px;
+    }
+
+    .watch-buy-prev {
+        left: 1px;
+    }
+
+    .watch-buy-next {
+        right: 1px;
+    }
+
+    .watch-buy-play {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+    .watch-buy-carousel {
+        padding: 0 21px;
+    }
+
+    .watch-buy-track {
+        --visible: 1.12;
+        --gap: 10px;
+    }
+
+    .watch-buy-product img {
+        width: 42px;
+        height: 48px;
+    }
+
+    .watch-buy-info p,
+    .watch-buy-info span {
+        font-size: 15px;
+    }
+}
+
+/* LARGE DESKTOP */
+
+@media (min-width: 1600px) {
+    .watch-buy-carousel {
+        padding: 0 50px;
+    }
+
+    .watch-buy-track {
+        --visible: 5.2;
+        --gap: 30px;
+    }
+
+    .watch-buy-product img {
+        width: 70px;
+        height: 72px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .watch-buy-track,
+    .watch-buy-video video,
+    .watch-buy-play {
+        transition: none;
+    }
+}
+
+/* VIDOE KE NICHE CHOTA TEXT WALA SCROLL REVEAL ANIMATION START */
+
+.watch-buy-info {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.watch-buy-info.wb-reveal-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+.watch-buy-section img,
+.watch-buy-info {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.watch-buy-section img.wb-reveal-active,
+.watch-buy-section .watch-buy-info.wb-reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* VIDEO KE NCIHE CHOTA TEXT WALA SCROLL REVEAL ANIAMTION END */
+
 
 /* CLOTH VIDEO END */
 
@@ -4995,7 +5137,10 @@ stats-container {
     color: #fff;
     overflow: hidden;
     margin-top: 20px;
+    
+    
 }
+
 
 
 /* =========================================================
@@ -5033,7 +5178,18 @@ stats-container {
 .jx-footer-column {
     min-width: 0;
 }
-
+.jx-footer-column h3 {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 500;
+}
+.jx-footer-column ul li a {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+}
+.jx-newsletter-text{
+     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+}
 
 /* =========================================================
    LOGO
@@ -5092,7 +5248,6 @@ stats-container {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-
     color: #fff;
     text-decoration: none;
 
@@ -5131,6 +5286,13 @@ stats-container {
 .jx-footer-links a,
 .jx-footer-bottom a {
     position: relative;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+  
+  /* Text Formatting */
+
+  font-weight: 570;             /* 400 = Normal, 600 = Semi-Bold, 700 = Bold */
+  letter-spacing: 0.5px;        /* Montserrat ke letters par halka space achha lagta hai */
 }
 
 .jx-info-item span::after,
@@ -5356,14 +5518,14 @@ stats-container {
     border-top: 1px solid #333;
 }
 
-.jx-bottom-container {
+.jx-bottom-container p {
     width: 100%;
     max-width: 1250px;
-
     margin: 0 auto;
     padding: 20px 30px;
-
     box-sizing: border-box;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
 }
 
 .jx-footer-bottom p {
@@ -5699,7 +5861,15 @@ stats-container {
     width: 100%;
 }
 
+
+
 /* FOOTER END */
+
+
+
+
+
+
 
 
 
@@ -5707,138 +5877,15 @@ stats-container {
 
 
 
-/* SARA IMAGE PE ANIMATION SCROLL KARNE PE CHOTA SE BADA */
-
-/* =========================================
-   CLEAN SCROLL IMAGE EFFECT
-   SMALL -> BIG
-   NO BACKGROUND GAP
-   BANNER + VIDEO EXCLUDED
-========================================= */
 
 
-/* =========================================
-   SCROLL IMAGE EFFECT
-   SMALL -> THODA AUR BIG
-========================================= */
-
-.bestseller-image-box,
-.designer-card,
-.occasion-card,
-.jx-instagram-card,
-.clothing-brand-card {
-    overflow: hidden;
-    position: relative;
-}
 
 
-.bestseller-image-box img,
-.designer-card img,
-.occasion-card img,
-.jx-instagram-card img,
-.clothing-brand-card img {
-    transform: scale(1);
-    transform-origin: center center;
-
-    transition:
-        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-
-    will-change: transform;
-}
 
 
-/* =========================================
-   SCROLL PAR IMAGE THODA AUR BADA
-========================================= */
-
-.bestseller-image-box img.scroll-image-show,
-.designer-card img.scroll-image-show,
-.occasion-card img.scroll-image-show,
-.jx-instagram-card img.scroll-image-show,
-.clothing-brand-card img.scroll-image-show {
-    transform: scale(1.075);
-}
 
 
-/* =========================================
-   PHONE
-========================================= */
 
-@media (max-width: 767px) {
-
-    .bestseller-image-box img,
-    .designer-card img,
-    .occasion-card img,
-    .jx-instagram-card img,
-    .clothing-brand-card img {
-        transform: scale(1);
-
-        transition:
-            transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .bestseller-image-box img.scroll-image-show,
-    .designer-card img.scroll-image-show,
-    .occasion-card img.scroll-image-show,
-    .jx-instagram-card img.scroll-image-show,
-    .clothing-brand-card img.scroll-image-show {
-        transform: scale(1.065);
-    }
-
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .bestseller-image-box img.scroll-image-show,
-    .designer-card img.scroll-image-show,
-    .occasion-card img.scroll-image-show,
-    .jx-instagram-card img.scroll-image-show,
-    .clothing-brand-card img.scroll-image-show {
-        transform: scale(1.075);
-    }
-
-}
-
-
-/* =========================================
-   LAPTOP
-========================================= */
-
-@media (min-width: 1025px) and (max-width: 1599px) {
-
-    .bestseller-image-box img.scroll-image-show,
-    .designer-card img.scroll-image-show,
-    .occasion-card img.scroll-image-show,
-    .jx-instagram-card img.scroll-image-show,
-    .clothing-brand-card img.scroll-image-show {
-        transform: scale(1.08);
-    }
-
-}
-
-
-/* =========================================
-   LARGE SCREEN
-========================================= */
-
-@media (min-width: 1600px) and (max-width: 2560px) {
-
-    .bestseller-image-box img.scroll-image-show,
-    .designer-card img.scroll-image-show,
-    .occasion-card img.scroll-image-show,
-    .jx-instagram-card img.scroll-image-show,
-    .clothing-brand-card img.scroll-image-show {
-        transform: scale(1.085);
-    }
-
-}
-
-/* SARA ANIMATION PE CHOTA SE BADA SCROLL KARNE PE ANIMATION END */
 
 
 /* 
@@ -5858,8 +5905,9 @@ stats-container {
     visibility: hidden;
     transform: translateY(55px);
     transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    font-family: 'Montserrat', sans-serif; font-weight: 500;
 }
 
 .heading-scroll-reveal.heading-scroll-show {
@@ -5885,6 +5933,7 @@ stats-container {
 
     .heading-scroll-reveal.heading-scroll-show {
         transform: translateY(0);
+        font-size: 16px;
     }
 
 }
@@ -5927,6 +5976,7 @@ stats-container {
 
     .heading-scroll-reveal.heading-scroll-show {
         transform: translateY(0);
+        font-size: 21px;
     }
 
 }
@@ -5991,9 +6041,11 @@ stats-container {
 
 .section-heading h2 {
     color: #111;
-    font-size: 30px;
-    letter-spacing: 2px;
+    font-size: 25px;
+    letter-spacing: 1px;
     margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+     font-weight: 500;
 }
 
 .heading-text {
@@ -6257,13 +6309,13 @@ stats-container {
 
 
 .product-details h3 {
-    color: #555;
-
+    color: black;
     font-size: 14px;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 1px;
     margin-bottom: 6px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    
 }
 
 
@@ -6273,15 +6325,17 @@ stats-container {
 
 
 .old-price {
-    color: #777;
+  color: #FF4D24;
     text-decoration: line-through;
-
     margin-right: 5px;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    
 }
 
 
 .new-price {
-    color: #16B982;
+    color: black;
 }
 
 
@@ -6329,10 +6383,8 @@ stats-container {
     .sale-badge {
         top: 8px;
         right: 8px;
-
         padding: 5px 7px;
-
-        font-size: 9px;
+        font-size: 7px;
     }
 
     .quick-shop {
@@ -6439,7 +6491,7 @@ stats-container {
 @media (min-width: 1025px) and (max-width: 1599px) {
 
     .tshirt-section {
-    padding: 20px 22px 35px;
+    padding: 17px 17px 17px;
       }
 
     .tshirt-grid {
