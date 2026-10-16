@@ -2021,6 +2021,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 //  FOOTER END
 
 
@@ -2157,5 +2159,183 @@ productBoxes.forEach((box) => {
 
 
 // WOMEN PAGE ALL CODE END
+
+
+
+// JEWELERY PAGE START
+
+
+// Extraordinary Gifts for Every Occasion start
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector("#occasionSlider");
+
+    if (!slider) {
+        return;
+    }
+
+    const viewport = slider.querySelector(".occasion-viewport");
+    const track = slider.querySelector(".occasion-track");
+    const nextBtn = slider.querySelector(".occasion-next");
+    const prevBtn = slider.querySelector(".occasion-prev");
+
+    if (!viewport || !track || !nextBtn || !prevBtn) {
+        return;
+    }
+
+    let index = 0;
+
+    function getCards() {
+        return Array.from(track.querySelectorAll(".occasion-card"));
+    }
+
+    function getVisibleCards() {
+        if (window.innerWidth <= 767) return 1;
+        if (window.innerWidth <= 1024) return 3;
+        return 4;
+    }
+
+    function getStep() {
+        const card = getCards()[0];
+        if (!card) return 0;
+
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.columnGap) ||
+                    parseFloat(trackStyle.gap) || 0;
+
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateSlider() {
+        const cards = getCards();
+        if (!cards.length) return;
+
+        const maxIndex = Math.max(
+            0,
+            cards.length - getVisibleCards()
+        );
+
+        index = Math.max(0, Math.min(index, maxIndex));
+
+        track.style.transform = `translateX(-${index * getStep()}px)`;
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            const cards = getCards();
+            const maxIndex = Math.max(
+                0,
+                cards.length - getVisibleCards()
+            );
+
+            index = index >= maxIndex ? 0 : index + 1;
+            updateSlider();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            const cards = getCards();
+            const maxIndex = Math.max(
+                0,
+                cards.length - getVisibleCards()
+            );
+
+            index = index <= 0 ? maxIndex : index - 1;
+            updateSlider();
+        });
+    }
+
+    window.addEventListener("resize", updateSlider);
+
+    track.style.transition = "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)";
+
+    updateSlider();
+});
+
+
+// Extraordinary Gifts for Every Occasion end
+
+
+
+
+/* =========================================
+   CATEGORY IMAGE FLIP
+========================================= */
+
+document.querySelectorAll(".match-category-card").forEach((card) => {
+
+    card.addEventListener("click", function (event) {
+
+        const isTouchDevice =
+            window.matchMedia("(hover: none)").matches;
+
+        if (isTouchDevice) {
+            event.preventDefault();
+
+            this.classList.toggle("is-flipped");
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".match-category-card").forEach((card) => {
+
+    card.addEventListener("click", function (event) {
+
+        if (window.matchMedia("(hover: none)").matches) {
+            event.preventDefault();
+
+            this.classList.toggle("is-flipped");
+        }
+
+    });
+
+});
+
+
+
+/* =========================================
+   LUXURY BANNER ANIMATION CONTROL
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const banner = document.querySelector(".luxury-hero-banner");
+    const bannerImage = document.querySelector(".luxury-banner-img");
+
+    if (!banner || !bannerImage) {
+        return;
+    }
+
+    /* Pause animation when banner is off-screen */
+
+    const bannerObserver = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    bannerImage.style.animationPlayState = "running";
+                } else {
+                    bannerImage.style.animationPlayState = "paused";
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.01
+        }
+    );
+
+    bannerObserver.observe(banner);
+
+});
 
 

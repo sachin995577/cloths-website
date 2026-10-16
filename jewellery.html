@@ -1,0 +1,1078 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- FONT AWESOME KA LINK -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR START -->
+
+      
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="main-navbar">
+
+    <div class="navbar-container">
+
+
+        <!-- ==================================================
+             LOGO
+        ================================================== -->
+
+        <a href="#" class="brand-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+
+        <!-- ==================================================
+             DESKTOP MENU
+             EXACT CENTER
+        ================================================== -->
+
+        <nav class="desktop-menu desktop-menu-center">
+
+            <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens.html">MENS</a>
+
+            <a href="kids.html">KIDS</a>
+
+            <a href="jewellery.html">JEWELLERY</a>
+
+            <a href="wedding.html">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             DESKTOP ACTIONS
+        ================================================== -->
+
+        <div class="desktop-actions">
+
+
+            <!-- ==================================================
+                 SEARCH
+                 NO POPUP
+            ================================================== -->
+
+            <div class="search-box">
+
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 INFORMATION POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="infoPopup"
+                aria-label="Information"
+            >
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 WISHLIST POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="wishlistPopup"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 CART POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon cart-icon"
+                type="button"
+                data-popup="cartPopup"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+
+
+            <!-- ==================================================
+                 PROFILE POPUP
+            ================================================== -->
+
+            <button
+                class="nav-icon"
+                type="button"
+                data-popup="profilePopup"
+                aria-label="Profile"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HAMBURGER
+             ONLY 320px - 768px
+        ================================================== -->
+
+        <button
+            class="hamburger"
+            id="openMenu"
+            type="button"
+            aria-label="Open Menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MOBILE / TABLET MENU
+     ONLY 320px - 768px
+================================================== -->
+
+<aside
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+
+    <!-- ==================================================
+         MOBILE HEADER
+    ================================================== -->
+
+    <div class="mobile-menu-header">
+
+
+        <a href="#" class="mobile-logo">
+
+            <img
+                src="image-folder/chanel-logo.png"
+                alt="WatchStore Logo"
+            >
+
+        </a>
+
+
+        <button
+            class="mobile-close"
+            id="closeMenu"
+            type="button"
+            aria-label="Close Menu"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MOBILE NAV
+    ================================================== -->
+
+    <nav class="mobile-nav">
+
+           <a href="index.html">HOME</a>
+
+            <a href="womens.html">WOMENS</a>
+
+             <a href="mens">MENS</a>
+
+            <a href="kids">KIDS</a>
+
+            <a href="jewellery.html">JEWELLERY</a>
+
+            <a href="wedding">WEDDING</a>
+
+             <a href="bra.html">BRA</a>
+        
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         MOBILE ACTIONS
+    ================================================== -->
+
+    <div class="mobile-actions">
+
+
+        <!-- ==================================================
+             MOBILE SEARCH
+             NO POPUP
+        ================================================== -->
+
+        <div class="mobile-search-box">
+
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             INFORMATION
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="infoPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+            </span>
+
+            <span>Information</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             WISHLIST
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="wishlistPopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </span>
+
+            <span>Wishlist</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             CART
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="cartPopup"
+        >
+
+            <span class="mobile-action-icon mobile-cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="mobile-cart-count">0</span>
+
+            </span>
+
+            <span>Cart</span>
+
+        </button>
+
+
+
+        <!-- ==================================================
+             PROFILE
+        ================================================== -->
+
+        <button
+            class="mobile-action"
+            type="button"
+            data-popup="profilePopup"
+        >
+
+            <span class="mobile-action-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </span>
+
+            <span>Profile</span>
+
+        </button>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     POPUP OVERLAY
+================================================== -->
+
+<div
+    class="popup-overlay"
+    id="popupOverlay"
+></div>
+
+
+
+<!-- ==================================================
+     INFORMATION POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="infoPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-circle-question"></i>
+
+    </div>
+
+
+
+    <h2>Information</h2>
+
+
+
+    <p>
+        Discover premium watches, elegant designs and
+        timeless collections made for every occasion.
+    </p>
+
+
+
+    <div class="popup-content-list">
+
+
+        <div>
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span>Fast Delivery</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Secure Payment</span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <span>Easy Returns</span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     WISHLIST POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="wishlistPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+
+
+    <h2>Your Wishlist</h2>
+
+
+
+    <p>
+        Your wishlist is currently empty.
+        Add your favourite watches here.
+    </p>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Explore Watches
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     CART POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="cartPopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+    </div>
+
+
+
+    <h2>Your Cart</h2>
+
+
+
+    <p>
+        Your shopping bag is currently empty.
+    </p>
+
+
+
+    <div class="empty-cart">
+
+        <span class="cart-number">0</span>
+
+        <span>Items in your cart</span>
+
+    </div>
+
+
+
+    <button
+        class="popup-main-btn"
+        type="button"
+    >
+
+        Continue Shopping
+
+    </button>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     PROFILE POPUP
+================================================== -->
+
+<div
+    class="popup-box"
+    id="profilePopup"
+>
+
+
+    <button
+        class="popup-close"
+        type="button"
+        aria-label="Close"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="popup-icon">
+
+        <i class="fa-regular fa-user"></i>
+
+    </div>
+
+
+
+    <h2>My Account</h2>
+
+
+
+    <p>
+        Login to manage your account, orders and
+        favourite watches.
+    </p>
+
+
+
+    <div class="profile-buttons">
+
+
+        <button
+            class="popup-main-btn"
+            type="button"
+        >
+
+            Login
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            Create Account
+
+        </button>
+
+
+
+        <button
+            class="popup-secondary-btn"
+            type="button"
+        >
+
+            My Orders
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- NAVBAR END -->
+
+    
+   
+<!-- =========================================
+     LUXURY WATCH BANNER START
+========================================= -->
+
+<section class="luxury-hero-banner">
+
+    <picture class="luxury-banner-picture">
+
+        <!-- PHONE: 320px - 767px -->
+        <source
+            media="(min-width: 320px) and (max-width: 767px)"
+            srcset="images/luxury-banner-phone.jpg"
+        >
+
+        <!-- TABLET: 768px - 1024px -->
+        <source
+            media="(min-width: 768px) and (max-width: 1024px)"
+            srcset="images/luxury-banner-tablet.jpg"
+        >
+
+        <!-- LAPTOP: 1025px - 1599px -->
+        <source
+            media="(min-width: 1025px) and (max-width: 1599px)"
+            srcset="https://hazoorilaljewellers.com/wp-content/uploads/2026/09/Diamond-1536x610-1.jpg"
+        >
+
+        <!-- LARGE SCREEN: 1600px - 2560px -->
+        <source
+            media="(min-width: 1600px) and (max-width: 2560px)"
+            srcset="images/luxury-banner-large.jpg"
+        >
+
+        <!-- DEFAULT BANNER IMAGE -->
+        <img
+            src="images/luxury-banner.jpg"
+            alt="Premium luxury watch collection"
+            class="luxury-banner-img"
+        >
+
+    </picture>
+
+</section>
+
+<!-- =========================================
+     LUXURY WATCH BANNER END
+========================================= -->
+
+ 
+
+    
+<!-- =========================================
+     FIND YOUR PERFECT MATCH START
+========================================= -->
+
+<section class="match-category-section">
+
+    <div class="match-category-container">
+
+        <div class="match-category-heading">
+            <p>SHOP BY CATEGORIES</p>
+        </div>
+
+        <div class="match-category-grid">
+
+            <!-- 1. EARRINGS -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="https://karatcart.com/cdn/shop/files/partnerimages_2Fe654093a_33017626_2.jpg?v=1725618819&width=1946" alt="Earrings">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="https://karatcart.com/cdn/shop/files/partnerimages_2Fedd5d314_33017626_1.jpg?v=1725618819&width=1946" alt="Earrings Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>EARRINGS</h3>
+            </a>
+
+            <!-- 2. FINGER RINGS -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="https://smarsjewelry.com/cdn/shop/files/ChatGPTImageJul12_2026_09_18_22PM_a9df2c77-84ad-43f1-bf24-48169b64010d.png?v=1783871327&width=3840" alt="Finger Rings">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="https://smarsjewelry.com/cdn/shop/files/2048.1.jpg?v=1757675079&width=1200" alt="Finger Rings Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>MANGAL SUTRA</h3>
+            </a>
+
+            <!-- 3. PENDANTS -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="https://mooneye.in/cdn/shop/files/NP-00287_3.png?v=1784791233&width=1200" alt="Pendants">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="https://mooneye.in/cdn/shop/files/NP-00287_2.png?v=1784791233&width=1200" alt="Pendants Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>NOSE PIN</h3>
+            </a>
+
+            <!-- 4. MANGALSUTRA -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="https://preetimohan.com/cdn/shop/files/2_b85e176a-612a-482a-8073-5a0c50d051ee.jpg?v=1756191649&width=1800" alt="Mangalsutra">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="https://preetimohan.com/cdn/shop/files/4_4bd6070b-5a4a-477b-9655-1a7c874c4ab2.jpg?v=1756191649&width=1800" alt="Mangalsutra Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>NECKLACE</h3>
+            </a>
+
+            <!-- 5. NECKLACES -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="image-folder/necklace-1.jpg" alt="Necklaces">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="image-folder/necklace-2.jpg" alt="Necklaces Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>NECKLACES</h3>
+            </a>
+
+            <!-- 6. BRACELETS -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="image-folder/bracelet-1.jpg" alt="Bracelets">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="image-folder/bracelet-2.jpg" alt="Bracelets Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>BRACELETS</h3>
+            </a>
+
+            <!-- 7. BANGLES -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="image-folder/bangles-1.jpg" alt="Bangles">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="image-folder/bangles-2.jpg" alt="Bangles Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>BANGLES</h3>
+            </a>
+
+            <!-- 8. GOLD CHAINS -->
+            <a href="#" class="match-category-card">
+                <div class="match-category-flip">
+                    <div class="match-category-front">
+                        <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Mia-product-catalog/default/dw6905e186/images/Mia/hi-res/5923SVR_2.jpg?sw=480&sh=480" alt="Gold Chains">
+                    </div>
+                    <div class="match-category-back">
+                        <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Mia-product-catalog/default/dwea9d7f07/images/hi-res/5923SQU_1.jpg?sw=480&sh=480" alt="Gold Chains Collection">
+                    </div>
+                </div>
+                <div class="match-category-shop-now">
+                    <span>SHOP NOW</span>
+                </div>
+                <h3>GOLD CHAINS</h3>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FIND YOUR PERFECT MATCH END
+========================================= -->
+
+
+
+    
+    
+    
+
+  
+    <!-- ================= FOOTER START ================= -->
+
+
+<footer class="luxury-fashion-footer">
+
+    <!-- TOP FOOTER -->
+    <div class="luxury-footer-top">
+
+        <!-- LOGO -->
+        <div class="luxury-footer-brand">
+            <a href="index.html">
+                <img src="image-folder/chanel-logo.png"
+                     alt="Fashion Logo">
+            </a>
+
+            <p>YOUR STYLE, YOUR STATEMENT</p>
+        </div>
+
+        <!-- NAVIGATION: ALL IN ONE ROW -->
+        <nav class="luxury-footer-navigation">
+
+            <a href="index.html">HOME</a>
+            <a href="womens.html">WOMENS</a>
+            <a href="mens.html">MENS</a>
+            <a href="kids.html">KIDS</a>
+            <a href="jewellery.html">JEWELLERY</a>
+            <a href="wedding.html">WEDDING</a>
+            <a href="bra.html">BRA</a>
+
+        </nav>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="luxury-footer-divider"></div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="luxury-footer-social">
+
+        <a href="https://wa.me/9955776194"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+        <a href="https://x.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Twitter X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+         <a href="https://www.youtube.com/@sachinrajputsingh3368"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+
+        <a href="https://instagram.com/star_sachin_rajput?cplk=MXFvcHB3MWo0ODF6Yg%3D%3D"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+       
+<!-- BIR MANDIR LOCATION -->
+  
+<a href="https://www.google.com/maps/search/?api=1&query=Shankar+Ji+Shiv+Mandir+Bir+Village+Dhanarua+Patna+Bihar"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Shankar Ji Mandir, Bir Village">
+
+    <i class="fa-solid fa-location-dot"></i>
+
+</a>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="luxury-footer-copyright">
+        <p>© 2026 SACHINSINGHRAJPUT. ALL RIGHTS RESERVED.</p>
+    </div>
+
+</footer>
+
+    <!-- ================= FOOTER END ================= -->
+
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector("#occasionSlider");
+
+    if (!slider) {
+        console.error("occasionSlider nahi mila");
+        return;
+    }
+
+    const viewport = slider.querySelector(".occasion-viewport");
+    const track = slider.querySelector(".occasion-track");
+    const nextBtn = slider.querySelector(".occasion-next");
+    const prevBtn = slider.querySelector(".occasion-prev");
+
+    if (!viewport || !track || !nextBtn || !prevBtn) {
+        console.error("Slider ke HTML class names check karo");
+        return;
+    }
+
+    let index = 0;
+
+    function getCards() {
+        return Array.from(track.querySelectorAll(".occasion-card"));
+    }
+
+    function getVisibleCards() {
+        if (window.innerWidth <= 767) return 1;
+        if (window.innerWidth <= 1024) return 3;
+        return 4;
+    }
+
+    function getStep() {
+        const card = getCards()[0];
+        if (!card) return 0;
+
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.columnGap) ||
+                    parseFloat(trackStyle.gap) || 0;
+
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateSlider() {
+        const cards = getCards();
+        if (!cards.length) return;
+
+        const maxIndex = Math.max(
+            0,
+            cards.length - getVisibleCards()
+        );
+
+        index = Math.max(0, Math.min(index, maxIndex));
+
+        // Fixed: Added multiplication (*) operator between index and getStep()
+        track.style.transform = `translateX(-${index * getStep()}px)`;
+    }
+
+    // Safely add event listeners only if the buttons exist
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("hello");
+
+            const cards = getCards();
+            const maxIndex = Math.max(
+                0,
+                cards.length - getVisibleCards()
+            );
+
+            index = index >= maxIndex ? 0 : index + 1;
+            updateSlider();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("hey");
+            const cards = getCards();
+            const maxIndex = Math.max(
+                0,
+                cards.length - getVisibleCards()
+            );
+
+            index = index <= 0 ? maxIndex : index - 1;
+            updateSlider();
+        });
+    }
+    window.addEventListener("resize", updateSlider);
+
+    track.style.transition = "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)";
+
+    updateSlider();
+});
+</script>
+
+
+  <script src="index.js">
+     
+  </script>
+
+
+
+   
+    
+</body>
+</html>
