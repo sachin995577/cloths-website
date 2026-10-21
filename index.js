@@ -1844,6 +1844,35 @@ document.addEventListener("DOMContentLoaded", function () {
 // CLOTH VIDEO END
 
 
+// NEWSLETTER PART START
+
+const clothNewsletterForm = document.getElementById("clothNewsletterForm");
+const clothNewsletterMessage = document.getElementById("clothNewsletterMessage");
+
+if (clothNewsletterForm && clothNewsletterMessage) {
+    clothNewsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const emailInput = clothNewsletterForm.querySelector(
+            ".cloth-newsletter-email"
+        );
+
+        if (!emailInput.checkValidity()) {
+            emailInput.reportValidity();
+            return;
+        }
+
+        clothNewsletterMessage.textContent =
+            "Thank you for subscribing!";
+
+        clothNewsletterForm.reset();
+    });
+}
+
+// NEWSLETTER PART END
+
+
+
 // OUR BRAND ANIMATION SCROLL REVEAL IMG START
 
 (function () {
@@ -2267,6 +2296,13 @@ document.addEventListener("DOMContentLoaded", function () {
    CATEGORY IMAGE FLIP
 ========================================= */
 
+
+
+
+/* =========================================
+   CATEGORY IMAGE FLIP
+========================================= */
+
 document.querySelectorAll(".match-category-card").forEach((card) => {
 
     card.addEventListener("click", function (event) {
@@ -2337,5 +2373,12 @@ document.addEventListener("DOMContentLoaded", function () {
     bannerObserver.observe(banner);
 
 });
+
+
+
+
+
+
+
 
 
