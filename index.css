@@ -130,6 +130,7 @@ a{
     justify-content: center;
     gap: clamp(24px, 6.7vw, 48px);
     white-space: nowrap;
+    
 }
 
 
@@ -5081,12 +5082,15 @@ stats-container {
     justify-content: center;
     overflow: hidden;
     background-color: #1c1c1c;
-    /* background-image: url("images/cloth-background.jpg"); */
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/079/158/009/small/botanical-floral-frame-banner-with-colorful-flowers-and-copy-space-free-vector.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     box-sizing: border-box;
+   
+    
+   
 }
 
 .cloth-newsletter *,
@@ -5100,7 +5104,7 @@ stats-container {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: rgba(15, 15, 15, 0.82);
+    background: rgba(15, 15, 15, 0.763);
 }
 
 .cloth-newsletter-content {
@@ -5125,8 +5129,9 @@ stats-container {
     color: #ffffff;
     font-size: 28px;
     line-height: 1.3;
-    letter-spacing: 4px;
-    font-weight: 400;
+    letter-spacing: 5px;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
 }
 
 .cloth-newsletter-description {
@@ -5134,6 +5139,8 @@ stats-container {
     color: #eeeeee;
     font-size: 14px;
     line-height: 1.7;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 450;
 }
 
 .cloth-newsletter-form {
@@ -5144,6 +5151,8 @@ stats-container {
     width: 100%;
     max-width: 560px;
     margin: 0 auto;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520;
 }
 
 .cloth-newsletter-email {
@@ -5162,6 +5171,10 @@ stats-container {
         border-color 0.25s ease,
         background-color 0.25s ease,
         box-shadow 0.25s ease;
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520;
+        
+        
 }
 
 .cloth-newsletter-email::placeholder {
@@ -5194,6 +5207,8 @@ stats-container {
         background-color 0.3s ease,
         color 0.3s ease,
         border-color 0.3s ease;
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520;
 }
 
 .cloth-newsletter-button:hover {
@@ -5309,9 +5324,9 @@ stats-container {
     }
 
     .cloth-newsletter-title {
-        margin-bottom: 18px;
-        font-size: 23px;
-        letter-spacing: 3px;
+        margin-bottom: 8px;
+        font-size: 21px;
+        letter-spacing: 2px;
     }
 
     .cloth-newsletter-description {
@@ -5323,7 +5338,7 @@ stats-container {
 
     .cloth-newsletter-form {
         flex-direction: column;
-        gap: 12px;
+        gap: 17px;
         max-width: 380px;
     }
 
@@ -5379,6 +5394,14 @@ stats-container {
         height: 42px;
     }
 }
+.cloth-newsletter {
+    min-height: 250px;       /* Section ki height kam */
+    padding: 30px 20px 25px; /* Upar aur niche space kam */
+    margin-top: 60px;        /* Upar ka gap kam */
+}
+
+
+
 
 /* NEWSLETTER PART END */
 
@@ -5393,7 +5416,6 @@ stats-container {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-
     width: 100%;
     padding: 65px 6% 25px;
 
@@ -5402,15 +5424,17 @@ stats-container {
 
     background-image:
         linear-gradient(
-            rgba(8, 8, 8, 0.90),
-            rgba(8, 8, 8, 0.94)
+            rgba(3, 3, 3, 0.689),
+            rgba(3, 3, 3, 0.74)
+            
         ),
-        url("https://t4.ftcdn.net/jpg/06/06/08/59/360_F_606085957_m7lE4bgggPgS8q3IzKcT6bTTIlx5Dy6U.jpg");
-
+        url("https://riactive.in/cdn/shop/files/Bottoms_Banner.png?v=1781767933&width=2000");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 40px;
+    margin-top: 80px;
+  
+
 }
 
 /* TOP AREA */
@@ -8904,7 +8928,7 @@ JEWELERY PAGE START */
 }
 
 .wedding-title:hover {
-    color: #f04457;
+    color: #FF4D24;
 }
 
 /* ==============================

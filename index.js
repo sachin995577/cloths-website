@@ -1869,6 +1869,32 @@ if (clothNewsletterForm && clothNewsletterMessage) {
     });
 }
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const newsletter = document.querySelector(".cloth-newsletter");
+
+    if (!newsletter) return;
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    newsletter.classList.add("cloth-newsletter-visible");
+                } else {
+                    newsletter.classList.remove("cloth-newsletter-visible");
+                }
+            });
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -30px 0px"
+        }
+    );
+
+    observer.observe(newsletter);
+});
+
 // NEWSLETTER PART END
 
 
