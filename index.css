@@ -30,6 +30,7 @@ body {
     padding-top: 72px;
     background: #ffffff;
     color: #111111;
+    /* overflow-x: hidden; */
     
 }
 
@@ -2829,90 +2830,13 @@ a{
 
 }
 
-/* SCROLL REVEAL START */
-
-
-/* SHOP BY CATEGORY SCROLL REVEAL */
-
-.bestseller-section .bestseller-heading,
-.bestseller-section .bestseller-card {
-    opacity: 1;
-    transform: none;
-}
-
-/* Animation sirf JavaScript active hone par lagegi */
-
-.bestseller-section.reveal-enabled .bestseller-heading,
-.bestseller-section.reveal-enabled .bestseller-card {
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.bestseller-section.reveal-enabled .reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .bestseller-section.reveal-enabled .bestseller-heading,
-    .bestseller-section.reveal-enabled .bestseller-card {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-}
-
-
-/* BESTSELLER SCROLL REVEAL */
-
-.bestseller-card h3,
-.bestseller-card .bestseller-price {
-    opacity: 1;
-    transform: none;
-}
-
-/* Animation sirf jab JavaScript ready ho */
-.bestseller-reveal-ready .bestseller-card h3,
-.bestseller-reveal-ready .bestseller-card .bestseller-price {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.bestseller-reveal-ready .bestseller-card h3.bestseller-revealed,
-.bestseller-reveal-ready .bestseller-card .bestseller-price.bestseller-revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Phone par price visible rahe */
-@media (max-width: 767px) {
-    .bestseller-card .bestseller-price {
-        opacity: 1;
-        transform: none;
-    }
-
-    .bestseller-reveal-ready .bestseller-card .bestseller-price {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .bestseller-card h3,
-    .bestseller-card .bestseller-price {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-    }
-}
-
-/* SCROLL REVEAL END */
 
 
 
 /* SHOP BY CATEGORY END */
+
+
+
 
 
 
@@ -3444,11 +3368,6 @@ font-family: 'Montserrat', sans-serif;
 
 
 
-
-/* ==================================================
-   SHOP BY OCCASION START
-================================================== */
-   
 /* ==================================================
    SHOP BY OCCASION
 ================================================== */
@@ -4354,7 +4273,9 @@ font-family: 'Montserrat', sans-serif;
 
 /* INSTAGRAM TEXT REVEAL */
 
-.juxar-reveal-text {
+
+
+/* .juxar-reveal-text {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -4363,7 +4284,7 @@ font-family: 'Montserrat', sans-serif;
 .juxar-reveal-text.juxar-reveal-active {
     opacity: 1;
     transform: translateY(0);
-}
+}  */
 
 
 /* aniamtion end juxaofficial wala */
@@ -4502,20 +4423,6 @@ stats-container {
   /* four icon end */
 
 
-  /* FOUR ICON SCROLL REVEAL START */
-
-  .stats-grid .stat-item {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.stats-grid .stat-item.stats-show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-  /* FOUR ICON SCROLL REVEAL END */
 
 
 
@@ -4682,20 +4589,6 @@ stats-container {
 
 /* ================= OUR BRANDS END ================= */
 
-/* OUR BRAND ANIMATION SCROLL REVEAL START */
-.clothing-brand-card img {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.clothing-brand-card img.brand-img-show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* OUR BRAND ANIMATION SCROLL REVEAL END */
 
 /* CLOTH VIDEO START */
 
@@ -5030,39 +4923,74 @@ stats-container {
     }
 }
 
-/* VIDOE KE NICHE CHOTA TEXT WALA SCROLL REVEAL ANIMATION START */
 
-.watch-buy-info {
+
+
+
+/* =========================================
+   SHARED SECTION SCROLL REVEAL
+========================================= */
+
+.project-reveal {
+    --project-reveal-x: 0px;
+    --project-reveal-y: 24px;
     opacity: 0;
-    transform: translate3d(0, 40px, 0);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.watch-buy-info.wb-reveal-active {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
-
-
-
-.watch-buy-section img,
-.watch-buy-info {
-    opacity: 0;
-    transform: translateY(35px);
+    translate: var(--project-reveal-x) var(--project-reveal-y);
     transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+        opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+        translate 850ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.watch-buy-section img.wb-reveal-active,
-.watch-buy-section .watch-buy-info.wb-reveal-active {
+.project-reveal--visible {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
 }
 
-/* VIDEO KE NCIHE CHOTA TEXT WALA SCROLL REVEAL ANIAMTION END */
+.project-reveal--up {
+    --project-reveal-y: 24px;
+}
 
+.project-reveal--down {
+    --project-reveal-y: -24px;
+}
 
+.project-reveal--left {
+    --project-reveal-x: -24px;
+    --project-reveal-y: 0px;
+}
+
+.project-reveal--right {
+    --project-reveal-x: 24px;
+    --project-reveal-y: 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-reveal {
+        transition:
+            opacity 350ms ease-out,
+            translate 350ms ease-out;
+    }
+
+    .project-reveal--up {
+        --project-reveal-y: 8px;
+    }
+
+    .project-reveal--down {
+        --project-reveal-y: -8px;
+    }
+
+    .project-reveal--left {
+        --project-reveal-x: -8px;
+    }
+
+    .project-reveal--right {
+        --project-reveal-x: 8px;
+    }
+
+    .project-reveal.project-reveal--visible {
+        opacity: 1;
+    }
+}
 /* CLOTH VIDEO END */
 
 
@@ -5903,161 +5831,12 @@ stats-container {
 
 
 
-
-
-
-
 /* FIRST PAGE OF HOME PAGE COMPLETE */
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-/* 
-
-
-/* SCROLL REVEAL ANIMATION START ALL HEADING SECTION */
-
-/* =========================================================
-   HEADING SCROLL REVEAL
-   BOTTOM TO TOP
-   ========================================================= */
-
-
-
-.heading-scroll-reveal {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(55px);
-    transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-    font-family: 'Montserrat', sans-serif; font-weight: 500;
-}
-
-.heading-scroll-reveal.heading-scroll-show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   PHONE
-   320px - 767px
-   ========================================================= */
-
-@media (min-width: 320px) and (max-width: 767px) {
-
-    .heading-scroll-reveal {
-        transform: translateY(40px);
-        transition:
-            opacity 0.75s ease,
-            transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .heading-scroll-reveal.heading-scroll-show {
-        transform: translateY(0);
-        font-size: 16px;
-    }
-
-}
-
-
-/* =========================================================
-   TABLET
-   768px - 1024px
-   ========================================================= */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .heading-scroll-reveal {
-        transform: translateY(45px);
-        transition:
-            opacity 0.8s ease,
-            transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .heading-scroll-reveal.heading-scroll-show {
-        transform: translateY(0);
-    }
-
-}
-
-
-/* =========================================================
-   LAPTOP
-   1025px - 1599px
-   ========================================================= */
-
-@media (min-width: 1025px) and (max-width: 1599px) {
-
-    .heading-scroll-reveal {
-        transform: translateY(50px);
-        transition:
-        opacity 0.85s ease,
-        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .heading-scroll-reveal.heading-scroll-show {
-        transform: translateY(0);
-        font-size: 25px;
-    }
-
-}
-/* .link{
-   cursor: pointer;
-   margin-top: 20px;
-   color:white;
-   font-size: 15px;
-   transition: all 0.3s ease;
-}
-.link:hover{
-    color:#FF4D24;
-    transition: all 0.3s ease;
-} */
-
-
-/* =========================================================
-   LARGE SCREEN
-   1600px - 2560px
-   ========================================================= */
-
-@media (min-width: 1600px) and (max-width: 2560px) {
-
-    .heading-scroll-reveal {
-        transform: translateY(55px);
-        transition:
-            opacity 0.9s ease,
-            transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .heading-scroll-reveal.heading-scroll-show {
-        transform: translateY(0);
-    }
-
-}
-
-/* SCROLL REVEAL ANIMATION END ALL HEADING SECTION */
-
-/* FINAL FIRST PAGE COMPLETE */
-
-
-
-/* SECOND PAGE START OF WOMEN */
-
-
-
-  /* WOMEN PAGE ALL CODE START */
 
 
 .tshirt-section {
@@ -6143,7 +5922,7 @@ stats-container {
 }
 
 
-/* =========================================================
+/* ==================================================
    PRODUCT IMAGES
 ========================================================= */
 
@@ -8519,279 +8298,11 @@ JEWELERY PAGE START */
 
 
 
-/* =========================================
-   LUXURY BANNER - CONTROLLED HEIGHT
-========================================= */
-
-.luxury-hero-banner {
-    width: 100%;
-    max-width: 2560px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    background: #111;
-}
-
-.luxury-banner-picture {
-    display: block;
-    width: 100%;
-    height: 340px;
-    overflow: hidden;
-}
-
-.luxury-banner-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1);
-    animation: luxuryBannerZoom 12s ease-in-out infinite;
-    will-change: transform;
-}
-
-/* ZOOM ANIMATION */
-
-@keyframes luxuryBannerZoom {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    35%, 55% {
-        transform: scale(1.06);
-    }
-
-    85% {
-        transform: scale(1);
-    }
-}
-
-/* PHONE: 320px - 767px */
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .luxury-banner-picture {
-        height: 550px;
-    }
-}
-
-/* TABLET: 768px - 1024px */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .luxury-banner-picture {
-        height: 450px;
-    }
-}
-
-/* LAPTOP: 1025px - 1599px */
-
-@media (min-width: 1025px) and (max-width: 1599px) {
-    .luxury-banner-picture {
-        height: 82vh;
-    }
-}
-
-/* LARGE SCREEN: 1600px - 2560px */
-
-@media (min-width: 1600px) and (max-width: 2560px) {
-    .luxury-banner-picture {
-        height: 80vh;
-    }
-}
-
-/* REDUCED MOTION */
-
-@media (prefers-reduced-motion: reduce) {
-    .luxury-banner-img {
-        animation: none;
-        transform: none;
-    }
-}
 
 
 
 
 
-
-
-
-
-/* SCROLL REVEAL FIX */
-
-.reveal-left,
-.reveal-right,
-.reveal-bottom {
-    opacity: 1;
-    transform: none;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* LEFT ANIMATION */
-
-.reveal-left.active {
-    animation: revealFromLeft 0.8s ease both;
-}
-
-/* RIGHT ANIMATION */
-
-.reveal-right.active {
-    animation: revealFromRight 0.8s ease both;
-}
-
-/* BOTTOM ANIMATION */
-
-.reveal-bottom.active {
-    animation: revealFromBottom 0.8s ease both;
-}
-
-@keyframes revealFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes revealFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes revealFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ***** */
-
-/* STRONGER SCROLL REVEAL */
-
-.reveal-left,
-.reveal-right,
-.reveal-bottom {
-    opacity: 1;
-    transform: none;
-    animation-duration: 1.2s;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    animation-fill-mode: both;
-}
-
-.reveal-left.active {
-    animation-name: revealFromLeft;
-}
-
-.reveal-right.active {
-    animation-name: revealFromRight;
-}
-
-.reveal-bottom.active {
-    animation-name: revealFromBottom;
-}
-
-/* LEFT TO RIGHT */
-
-@keyframes revealFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-120px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* RIGHT TO LEFT */
-
-@keyframes revealFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(120px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* BOTTOM TO TOP */
-
-@keyframes revealFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* MOBILE */
-
-@media (max-width: 767px) {
-    .reveal-left,
-    .reveal-right,
-    .reveal-bottom {
-        animation-duration: 1s;
-    }
-
-    @keyframes revealFromLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-65px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes revealFromRight {
-        from {
-            opacity: 0;
-            transform: translateX(65px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes revealFromBottom {
-        from {
-            opacity: 0;
-            transform: translateY(60px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-}
-
-/* ********** */
 
 
 /* WEDDING LAYOUT WEDDING PAGE START */
@@ -9690,20 +9201,6 @@ JEWELERY PAGE START */
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
-
-    opacity: 0;
-    transform: translateX(65px);
-
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s ease;
-}
-
-/* RIGHT TO LEFT SCROLL REVEAL */
-
-.wedding-newsletter-content.wedding-reveal-active {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 /* HEADING */
@@ -9911,13 +9408,6 @@ JEWELERY PAGE START */
         font-size: 17px;
     }
 
-    .wedding-newsletter-content {
-        transform: translateX(45px);
-    }
-
-    .wedding-newsletter-content.wedding-reveal-active {
-        transform: translateX(0);
-    }
 }
 
 /* REDUCED MOTION ACCESSIBILITY */
@@ -9952,11 +9442,6 @@ JEWELERY PAGE START */
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
-        transform: translateX(35px);
-    }
-
-    .wedding-newsletter-content.wedding-reveal-active {
-        transform: translateX(0);
     }
 
     .wedding-newsletter-title {
@@ -10120,15 +9605,6 @@ JEWELERY PAGE START */
         max-width: 100%;
         margin: 0 auto;
         text-align: center;
-        opacity: 0;
-        transform: translateX(35px);
-        transition: opacity 0.7s ease,
-                    transform 0.7s ease;
-    }
-
-    .wedding-newsletter-content.wedding-reveal-active {
-        opacity: 1;
-        transform: translateX(0);
     }
 
     .wedding-newsletter-title {
@@ -10239,3 +9715,44 @@ JEWELERY PAGE START */
     }
 }
 
+
+
+
+
+
+/* Base styles for all reveal directions */
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Initial offsets before they animate */
+.reveal-up {
+    transform: translateY(50px);
+}
+
+.reveal-down {
+    transform: translateY(-50px);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+/* Active state added by JavaScript when scrolled into view */
+.reveal-up.active,
+.reveal-down.active,
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}

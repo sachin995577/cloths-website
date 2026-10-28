@@ -421,6 +421,9 @@ let fashionSlideTimer;
 ================================================== */
 
 function showFashionSlide(index) {
+    if (!fashionSlides.length) {
+        return;
+    }
 
     fashionSlides.forEach((slide) => {
         slide.classList.remove("active");
@@ -432,9 +435,15 @@ function showFashionSlide(index) {
     });
 
 
-    fashionSlides[index].classList.add("active");
+    const slide = fashionSlides[index];
+    if (!slide) {
+        return;
+    }
+    slide.classList.add("active");
 
-    fashionDots[index].classList.add("active");
+    if (fashionDots[index]) {
+        fashionDots[index].classList.add("active");
+    }
 
 
     fashionCurrentSlide = index;
@@ -497,9 +506,10 @@ fashionDots.forEach((dot) => {
    START SLIDER
 ================================================== */
 
-showFashionSlide(0);
-
-startFashionSlider();
+if (fashionSlides.length) {
+    showFashionSlide(0);
+    startFashionSlider();
+}
 
 
 
@@ -705,94 +715,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const section = document.querySelector(".bestseller-section");
-
-    if (!section) {
-        console.log("Error: .bestseller-section nahi mila");
-        return;
-    }
-
-    const heading = section.querySelector(".bestseller-heading");
-    const cards = section.querySelectorAll(".bestseller-card");
-
-    const elements = [];
-
-    if (heading) {
-        elements.push(heading);
-    }
-
-    cards.forEach(function (card) {
-        elements.push(card);
-    });
-
-    if (!elements.length) return;
-
-    section.classList.add("reveal-enabled");
-
-    if (!("IntersectionObserver" in window)) {
-        elements.forEach(function (element) {
-            element.classList.add("reveal-visible");
-        });
-        return;
-    }
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("reveal-visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.05,
-        rootMargin: "0px 0px -30px 0px"
-    });
-
-    elements.forEach(function (element, index) {
-        element.style.transitionDelay = (index * 80) + "ms";
-        observer.observe(element);
-    });
-
-});
-
 // SCROLL REVEAL START
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(
-        ".bestseller-carousel .bestseller-card"
-    );
+// document.addEventListener("DOMContentLoaded", function () {
+//     const cards = document.querySelectorAll(
+//         ".bestseller-carousel .bestseller-card"
+//     );
 
-    if (!cards.length) return;
+//     if (!cards.length) return;
 
-    /* Phone par text ko hide nahi karna */
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        return;
-    }
+//     /* Phone par text ko hide nahi karna */
+//     if (window.matchMedia("(max-width: 767px)").matches) {
+//         return;
+//     }
 
-    document.documentElement.classList.add("bestseller-reveal-ready");
+//     document.documentElement.classList.add("bestseller-reveal-ready");
 
-    const observer = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("bestseller-revealed");
-                obs.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+//     const observer = new IntersectionObserver(function (entries, obs) {
+//         entries.forEach(function (entry) {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add("bestseller-revealed");
+//                 obs.unobserve(entry.target);
+//             }
+//         });
+//     }, {
+//         threshold: 0.1
+//     });
 
-    cards.forEach(function (card) {
-        const heading = card.querySelector("h3");
-        const price = card.querySelector(".bestseller-price");
+//     cards.forEach(function (card) {
+//         const heading = card.querySelector("h3");
+//         const price = card.querySelector(".bestseller-price");
 
-        if (heading) observer.observe(heading);
-        if (price) observer.observe(price);
-    });
-});
+//         if (heading) observer.observe(heading);
+//         if (price) observer.observe(price);
+//     });
+// });
 
 
 // SCROLL REVEAL END
@@ -832,6 +790,9 @@ function getDesignerVisibleCount() {
 /* UPDATE CAROUSEL */
 
 function updateDesignerCarousel() {
+    if (!designerTrack || !designerCards.length) {
+        return;
+    }
 
     const visibleCount = getDesignerVisibleCount();
 
@@ -860,30 +821,34 @@ function updateDesignerCarousel() {
 
 /* NEXT */
 
-designerNext.addEventListener("click", function () {
+if (designerNext) {
+    designerNext.addEventListener("click", function () {
 
-    const visibleCount = getDesignerVisibleCount();
+        const visibleCount = getDesignerVisibleCount();
 
-    const maxIndex = designerCards.length - visibleCount;
+        const maxIndex = designerCards.length - visibleCount;
 
-    if (designerIndex < maxIndex) {
-        designerIndex++;
-        updateDesignerCarousel();
-    }
+        if (designerIndex < maxIndex) {
+            designerIndex++;
+            updateDesignerCarousel();
+        }
 
-});
+    });
+}
 
 
 /* PREVIOUS */
 
-designerPrev.addEventListener("click", function () {
+if (designerPrev) {
+    designerPrev.addEventListener("click", function () {
 
-    if (designerIndex > 0) {
-        designerIndex--;
-        updateDesignerCarousel();
-    }
+        if (designerIndex > 0) {
+            designerIndex--;
+            updateDesignerCarousel();
+        }
 
-});
+    });
+}
 
 
 /* RESIZE */
@@ -905,32 +870,6 @@ window.addEventListener("load", function () {
 // DESIGNER SPORTLIGHT END CAROUSEL
 
 
-// 6 IMAGE WEDDING START ANIMATION
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const headings = document.querySelectorAll(".occasion-title");
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("occasion-reveal-active");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    headings.forEach(function (heading) {
-        observer.observe(heading);
-    });
-});
-
-//  6 IMAGE WEDDING END ANIMATION
-
-
-
 // INSTAGRAM SECTION START
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -940,6 +879,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const nextBtn = document.querySelector(".jx-instagram-next");
     const prevBtn = document.querySelector(".jx-instagram-prev");
+
+    if (!track || !nextBtn || !prevBtn || !cards.length) {
+        return;
+    }
 
     let currentIndex = 0;
     let autoSlide;
@@ -1105,32 +1048,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// animation start juxaofficial
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const text = document.querySelector("p.juxar-reveal-text");
-
-    if (!text) return;
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("juxar-reveal-active");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    observer.observe(text);
-});
-
-// animation start juxaoffical end
-
-
 // INSTAGRAM SECTION END
 
   
@@ -1184,91 +1101,94 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+
+
+
    
     // VIDEO KE NICHE TEXT WALA ANIAMTION SCROLL REVEAL START
 
-    (function () {
+//     (function () {
 
-    function initWatchBuyReveal() {
+//     function initWatchBuyReveal() {
 
-        const items = document.querySelectorAll(".watch-buy-info");
+//         const items = document.querySelectorAll(".watch-buy-info");
 
-        if (!items.length) {
-            return;
-        }
+//         if (!items.length) {
+//             return;
+//         }
 
-        // Purane observers ya classes ke bina initial state
-        items.forEach(function (item) {
-            item.classList.remove("wb-reveal-active");
-        });
+//         // Purane observers ya classes ke bina initial state
+//         items.forEach(function (item) {
+//             item.classList.remove("wb-reveal-active");
+//         });
 
-        if (!("IntersectionObserver" in window)) {
-            items.forEach(function (item) {
-                item.classList.add("wb-reveal-active");
-            });
-            return;
-        }
+//         if (!("IntersectionObserver" in window)) {
+//             items.forEach(function (item) {
+//                 item.classList.add("wb-reveal-active");
+//             });
+//             return;
+//         }
 
-        const observer = new IntersectionObserver(function (entries) {
+//         const observer = new IntersectionObserver(function (entries) {
 
-            entries.forEach(function (entry) {
+//             entries.forEach(function (entry) {
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("wb-reveal-active");
-                    observer.unobserve(entry.target);
-                }
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add("wb-reveal-active");
+//                     observer.unobserve(entry.target);
+//                 }
 
-            });
+//             });
 
-        }, {
-            threshold: 0,
-            rootMargin: "0px 0px -40px 0px"
-        });
+//         }, {
+//             threshold: 0,
+//             rootMargin: "0px 0px -40px 0px"
+//         });
 
-        items.forEach(function (item) {
-            observer.observe(item);
-        });
-    }
+//         items.forEach(function (item) {
+//             observer.observe(item);
+//         });
+//     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener(
-            "DOMContentLoaded",
-            initWatchBuyReveal
-        );
-    } else {
-        initWatchBuyReveal();
-    }
+//     if (document.readyState === "loading") {
+//         document.addEventListener(
+//             "DOMContentLoaded",
+//             initWatchBuyReveal
+//         );
+//     } else {
+//         initWatchBuyReveal();
+//     }
 
-})();
+// })();
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    const elements = document.querySelectorAll(
-        ".watch-buy-section img, .watch-buy-section .watch-buy-info"
-    );
+//     const elements = document.querySelectorAll(
+//         ".watch-buy-section img, .watch-buy-section .watch-buy-info"
+//     );
 
-    const observer = new IntersectionObserver(function (entries) {
+//     const observer = new IntersectionObserver(function (entries) {
 
-        entries.forEach(function (entry) {
+//         entries.forEach(function (entry) {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("wb-reveal-active");
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add("wb-reveal-active");
 
-                // Har element sirf ek baar animate hoga
-                observer.unobserve(entry.target);
-            }
+//                 // Har element sirf ek baar animate hoga
+//                 observer.unobserve(entry.target);
+//             }
 
-        });
+//         });
 
-    }, {
-        threshold: 0.1
-    });
+//     }, {
+//         threshold: 0.1
+//     });
 
-    elements.forEach(function (element) {
-        observer.observe(element);
-    });
+//     elements.forEach(function (element) {
+//         observer.observe(element);
+//     });
 
-});
+// });
 
 
     // VIDEO KE NICHE TEXT WALA ANIAMTION SCROLL REVEAL END 
@@ -1278,52 +1198,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // FOUR SCROLL REVEAL START
 
-(function () {
+// (function () {
 
-    function initStatsReveal() {
+//     function initStatsReveal() {
 
-        const items = document.querySelectorAll(
-            ".stats-container .stat-item"
-        );
+//         const items = document.querySelectorAll(
+//             ".stats-container .stat-item"
+//         );
 
-        if (!items.length) return;
+//         if (!items.length) return;
 
-        if (!("IntersectionObserver" in window)) {
-            items.forEach(function (item) {
-                item.classList.add("stats-show");
-            });
-            return;
-        }
+//         if (!("IntersectionObserver" in window)) {
+//             items.forEach(function (item) {
+//                 item.classList.add("stats-show");
+//             });
+//             return;
+//         }
 
-        const observer = new IntersectionObserver(function (entries) {
+//         const observer = new IntersectionObserver(function (entries) {
 
-            entries.forEach(function (entry) {
+//             entries.forEach(function (entry) {
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("stats-show");
-                    observer.unobserve(entry.target);
-                }
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add("stats-show");
+//                     observer.unobserve(entry.target);
+//                 }
 
-            });
+//             });
 
-        }, {
-            threshold: 0.1
-        });
+//         }, {
+//             threshold: 0.1
+//         });
 
-        items.forEach(function (item, index) {
-            item.style.transitionDelay = (index * 100) + "ms";
-            observer.observe(item);
-        });
+//         items.forEach(function (item, index) {
+//             item.style.transitionDelay = (index * 100) + "ms";
+//             observer.observe(item);
+//         });
 
-    }
+//     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initStatsReveal);
-    } else {
-        initStatsReveal();
-    }
+//     if (document.readyState === "loading") {
+//         document.addEventListener("DOMContentLoaded", initStatsReveal);
+//     } else {
+//         initStatsReveal();
+//     }
 
-})();
+// })();
 
 // FOUR SCROLL REVEAL END
 
@@ -1901,93 +1821,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // OUR BRAND ANIMATION SCROLL REVEAL IMG START
 
-(function () {
+// (function () {
 
-    function initBrandImages() {
-        const images = document.querySelectorAll(
-            ".clothing-brand-card img"
-        );
+//     function initBrandImages() {
+//         const images = document.querySelectorAll(
+//             ".clothing-brand-card img"
+//         );
 
-        if (!images.length) return;
+//         if (!images.length) return;
 
-        if (!("IntersectionObserver" in window)) {
-            images.forEach(function (img) {
-                img.classList.add("brand-img-show");
-            });
-            return;
-        }
+//         if (!("IntersectionObserver" in window)) {
+//             images.forEach(function (img) {
+//                 img.classList.add("brand-img-show");
+//             });
+//             return;
+//         }
 
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("brand-img-show");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.05
-        });
+//         const observer = new IntersectionObserver(function (entries) {
+//             entries.forEach(function (entry) {
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add("brand-img-show");
+//                     observer.unobserve(entry.target);
+//                 }
+//             });
+//         }, {
+//             threshold: 0.05
+//         });
 
-        images.forEach(function (img) {
-            observer.observe(img);
-        });
-    }
+//         images.forEach(function (img) {
+//             observer.observe(img);
+//         });
+//     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initBrandImages);
-    } else {
-        initBrandImages();
-    }
+//     if (document.readyState === "loading") {
+//         document.addEventListener("DOMContentLoaded", initBrandImages);
+//     } else {
+//         initBrandImages();
+//     }
 
-})();
+// })();
 
 // OUR BRAND ANIAMTION SCROLL REVEAL IMG END
 
  
  
-// FOOTER START
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const footerElements = document.querySelectorAll(
-        ".jx-footer a, .jx-footer p"
-    );
-
-    if (!("IntersectionObserver" in window)) {
-        footerElements.forEach(function (element) {
-            element.classList.add("jx-reveal-active");
-        });
-        return;
-    }
-
-    const footerObserver = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("jx-reveal-active");
-                } else {
-                    entry.target.classList.remove("jx-reveal-active");
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.1,
-            rootMargin: "0px 0px -30px 0px"
-        }
-    );
-
-    footerElements.forEach(function (element) {
-        footerObserver.observe(element);
-    });
-
-});
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
@@ -1996,25 +1873,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const backTop = document.getElementById("jxBackTop");
 
-    window.addEventListener("scroll", function () {
+    if (backTop) {
+        window.addEventListener("scroll", function () {
 
-        if (window.scrollY > 250) {
-            backTop.classList.add("show");
-        } else {
-            backTop.classList.remove("show");
-        }
+            if (window.scrollY > 250) {
+                backTop.classList.add("show");
+            } else {
+                backTop.classList.remove("show");
+            }
 
-    });
-
-
-    backTop.addEventListener("click", function () {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
         });
 
-    });
+
+        backTop.addEventListener("click", function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+    }
 
 
     /* =====================================================
@@ -2027,6 +1906,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput =
         document.getElementById("jxEmailInput");
 
+    if (!newsletterForm || !emailInput) {
+        return;
+    }
 
     /* Placeholder automatically disappears on focus */
 
@@ -2093,71 +1975,71 @@ document.addEventListener("DOMContentLoaded", function () {
    PRODUCT / CLOTH NAMES EXCLUDED
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    const headingElements = document.querySelectorAll(
-        ".fashion-banner-content h1, " +
-        ".bestseller-heading, " +
-        ".designer-heading, " +
-        ".occasion-heading, " +
-        ".jx-instagram-heading h2, " +
-        ".clothing-brands-title, " +
-        ".cloth-video-title, " +
-        ".jx-footer-column h3"
-    );
+//     const headingElements = document.querySelectorAll(
+//         ".fashion-banner-content h1, " +
+//         ".bestseller-heading, " +
+//         ".designer-heading, " +
+//         ".occasion-heading, " +
+//         ".jx-instagram-heading h2, " +
+//         ".clothing-brands-title, " +
+//         ".cloth-video-title, " +
+//         ".jx-footer-column h3"
+//     );
 
-    if (!headingElements.length) {
-        return;
-    }
+//     if (!headingElements.length) {
+//         return;
+//     }
 
-    headingElements.forEach(function (heading) {
-        heading.classList.add("heading-scroll-reveal");
-    });
-
-
-    /* =====================================================
-       INTERSECTION OBSERVER
-       ===================================================== */
-
-    if ("IntersectionObserver" in window) {
-
-        const headingObserver = new IntersectionObserver(
-            function (entries, observer) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "heading-scroll-show"
-                        );
-
-                        observer.unobserve(entry.target);
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            }
-        );
+//     headingElements.forEach(function (heading) {
+//         heading.classList.add("heading-scroll-reveal");
+//     });
 
 
-        headingElements.forEach(function (heading) {
-            headingObserver.observe(heading);
-        });
+//     /* =====================================================
+//        INTERSECTION OBSERVER
+//        ===================================================== */
 
-    } else {
+//     if ("IntersectionObserver" in window) {
 
-        headingElements.forEach(function (heading) {
-            heading.classList.add("heading-scroll-show");
-        });
+//         const headingObserver = new IntersectionObserver(
+//             function (entries, observer) {
 
-    }
+//                 entries.forEach(function (entry) {
 
-});
+//                     if (entry.isIntersecting) {
+
+//                         entry.target.classList.add(
+//                             "heading-scroll-show"
+//                         );
+
+//                         observer.unobserve(entry.target);
+//                     }
+
+//                 });
+
+//             },
+//             {
+//                 threshold: 0.1,
+//                 rootMargin: "0px 0px -50px 0px"
+//             }
+//         );
+
+
+//         headingElements.forEach(function (heading) {
+//             headingObserver.observe(heading);
+//         });
+
+//     } else {
+
+//         headingElements.forEach(function (heading) {
+//             heading.classList.add("heading-scroll-show");
+//         });
+
+//     }
+
+// });
 
 // SCROLL REVEAL SECTION ALL HEADING SECTION END'
 
@@ -2407,4 +2289,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all elements with any of the reveal classes
+    const revealTargets = document.querySelectorAll(".reveal-up, .reveal-down, .reveal-left, .reveal-right");
 
+    if (!revealTargets.length) {
+        return;
+    }
+
+    // Fallback for browsers that don't support IntersectionObserver
+    if (!("IntersectionObserver" in window)) {
+        revealTargets.forEach(function (element) {
+            element.classList.add("active");
+        });
+        return;
+    }
+
+    const observerOptions = {
+        threshold: 0.1, // Triggers when 10% of the element is visible
+        rootMargin: "0px 0px -50px 0px" // Triggers slightly before it enters the viewport
+    };
+
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            // Add the active class to trigger CSS transition
+            entry.target.classList.add("active");
+            
+            // Stop observing once the animation has triggered
+            observer.unobserve(entry.target);
+        });
+    }, observerOptions);
+
+    revealTargets.forEach(function (element) {
+        revealObserver.observe(element);
+    });
+});

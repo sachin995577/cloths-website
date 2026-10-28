@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- FONT AWESOME KA LINK -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
@@ -670,60 +674,6 @@
 
 
 
-    
-
-    
-   
-<!-- =========================================
-     LUXURY WATCH BANNER START
-========================================= -->
-
-<section class="luxury-hero-banner">
-
-    <picture class="luxury-banner-picture">
-
-        <!-- PHONE: 320px - 767px -->
-        <source
-            media="(min-width: 320px) and (max-width: 767px)"
-            srcset="image-folder/women-jewelery-banner.png"
-        >
-
-        <!-- TABLET: 768px - 1024px -->
-        <source
-            media="(min-width: 768px) and (max-width: 1024px)"
-            srcset="image-folder/jewelery-img-tablet.png"
-        >
-
-        <!-- LAPTOP: 1025px - 1599px -->
-        <source
-            media="(min-width: 1025px) and (max-width: 1599px)"
-            srcset="https://hazoorilaljewellers.com/wp-content/uploads/2026/09/Diamond-1536x610-1.jpg"
-        >
-
-        <!-- LARGE SCREEN: 1600px - 2560px -->
-        <source
-            media="(min-width: 1600px) and (max-width: 2560px)"
-            srcset="image-folder/jewelery-big-device.png"
-        >
-
-        <!-- DEFAULT BANNER IMAGE -->
-        <img
-            src="images/luxury-banner.jpg"
-            alt="Premium luxury watch collection"
-            class="luxury-banner-img"
-        >
-
-    </picture>
-
-</section>
-
-<!-- =========================================
-     LUXURY WATCH BANNER END
-========================================= -->
-
- 
-
-
 
 
     
@@ -736,7 +686,7 @@
     <div class="match-category-container">
 
         <div class="match-category-heading">
-            <p>SHOP BY CATEGORIES</p>
+            <p class="reveal-left">SHOP BY CATEGORIES</p>
         </div>
 
         <div class="match-category-grid">
@@ -891,7 +841,7 @@
 
             <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
 
-            <h2>NOSE PIN</h2>
+            <h2 class="reveal-left">NOSE PIN</h2>
 
             <!-- <p class="heading-text">
                 Discover our latest collection of stylish and comfortable
@@ -1166,7 +1116,7 @@
 
             <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
 
-            <h2>MANGALSUTRA</h2>
+            <h2 class="reveal-left">MANGALSUTRA</h2>
 
             <!-- <p class="heading-text">
                 Discover our latest collection of stylish and comfortable
@@ -1438,7 +1388,7 @@
 
             <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
 
-            <h2>BRACELET</h2>
+            <h2 class="reveal-left">BRACELET</h2>
 
             <!-- <p class="heading-text">
                 Discover our latest collection of stylish and comfortable
@@ -1708,7 +1658,7 @@
 
             <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
 
-            <h2>CHAINS</h2>
+            <h2 class="reveal-left">CHAINS</h2>
 
             <!-- <p class="heading-text">
                 Discover our latest collection of stylish and comfortable
@@ -1982,7 +1932,7 @@
 
             <!-- <p class="small-heading">TRENDING COLLECTION</p> -->
 
-            <h2>FINGER RINGS</h2>
+            <h2 class="reveal-left">FINGER RINGS</h2>
 
             <!-- <p class="heading-text">
                 Discover our latest collection of stylish and comfortable
@@ -2273,7 +2223,7 @@
         </div>
 
         <!-- RIGHT CONTENT -->
-        <div class="jewel-help-content scroll-reveal reveal-right">
+        <div class="jewel-help-content scroll-reveal reveal-right reveal-left">
 
             <h2>Need help in choosing the best Jewellery?</h2>
 
@@ -2535,34 +2485,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-(function () {
-    function initReveal() {
-        const elements = document.querySelectorAll(".scroll-reveal");
-
-        if (!elements.length) return;
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.05
-        });
-
-        elements.forEach(function (element) {
-            observer.observe(element);
-        });
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initReveal);
-    } else {
-        initReveal();
-    }
-})();
 </script>
 
 
