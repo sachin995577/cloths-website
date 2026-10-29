@@ -655,6 +655,17 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+     transition:
+        background-color 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        color 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    
+}
+.popup-icon:hover{
+    background-color: black;
+    color:white;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+    
 }
 
 .popup-icon i {
@@ -670,6 +681,8 @@ a{
     margin-bottom: 12px;
     text-align: center;
     font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .popup-box p {
@@ -678,7 +691,9 @@ a{
     text-align: center;
     line-height: 1.7;
     font-size: 13px;
-    color: #666666;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 
@@ -699,6 +714,16 @@ a{
     padding: 11px 13px;
     background: #f7f7f7;
     font-size: 13px;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+      transition: background-color
+       0.6s ease, color 0.6s ease;
+    
+}
+.popup-content-list div:hover{
+     background-color: black;
+     color:white;
+     
 }
 
 .popup-content-list i {
@@ -760,6 +785,8 @@ a{
 .popup-main-btn {
     background: #111111;
     color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .popup-main-btn:hover {
@@ -770,6 +797,8 @@ a{
 .popup-secondary-btn {
     background: #ffffff;
     color: #111111;
+     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .popup-secondary-btn:hover {
@@ -1255,6 +1284,7 @@ a{
         gap: 15px;
         margin: 0 10px;
         overflow: hidden;
+       
     }
 
     .desktop-menu a {
@@ -2030,6 +2060,7 @@ a{
 .profile-popup {
     background: #ffffff;
     color: #111111;
+
 }
 /* SEARCH BOX */
 .search-box {
@@ -2045,6 +2076,8 @@ a{
     /* background: #ffffff !important; */
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 480;
 }
 
 .search-box input:focus {
@@ -2141,6 +2174,9 @@ a{
     display: block;
     object-fit: cover;
     object-position: center;
+     filter: brightness(1.1);
+    
+   
 }
 
 
@@ -2298,6 +2334,7 @@ a{
 
     .fashion-banner-slide img {
         object-position: center;
+        filter: brightness(1.1);
     }
 
 
@@ -3070,7 +3107,7 @@ a{
     }
 
     .designer-heading {
-        font-size: 18px;
+        font-size: 17px;
         margin-top: -5px;
         margin-bottom: 13px;
     }
@@ -4750,7 +4787,7 @@ stats-container {
 
 .watch-buy-info span {
     display: block;
-    color:black;
+    color:#FF4D24;
     font-size: 14px;
      font-family: 'Montserrat', sans-serif;
     font-weight: 550;
@@ -5077,7 +5114,7 @@ stats-container {
     font-size: 14px;
     line-height: 1.7;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .cloth-newsletter-form {
@@ -5104,12 +5141,17 @@ stats-container {
     background: rgba(25, 25, 25, 0.55);
     color: #ffffff;
     font-size: 14px;
+
     transition:
         border-color 0.25s ease,
         background-color 0.25s ease,
         box-shadow 0.25s ease;
-        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-weight: 520;
+        /* font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520; */
+
+      font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
+    letter-spacing: 1.1px;
         
         
 }
@@ -5138,14 +5180,17 @@ stats-container {
     background: #ffffff;
     color: #333333;
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 1.1px;
     cursor: pointer;
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
         border-color 0.3s ease;
-          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-weight: 520;
+          /* font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 520; */
+      font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
+     letter-spacing: 1.1px;
 }
 
 .cloth-newsletter-button:hover {
@@ -5357,7 +5402,7 @@ stats-container {
     padding: 65px 6% 25px;
 
     color: #ffffff;
-    background: #101010;
+     background-color: #111111c9;
 
     background-image:
         linear-gradient(
@@ -5365,7 +5410,7 @@ stats-container {
             rgba(3, 3, 3, 0.74)
             
         ),
-        url("https://riactive.in/cdn/shop/files/Bottoms_Banner.png?v=1781767933&width=2000");
+        url("");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -5766,7 +5811,7 @@ stats-container {
     }
 
     .luxury-footer-navigation a {
-        font-size: 9px;
+        font-size: 7px;
         letter-spacing: -0.1px;
     }
 
@@ -8123,6 +8168,8 @@ JEWELERY PAGE START */
         background 0.35s ease,
         color 0.35s ease,
         border-color 0.35s ease;
+        font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
 }
 
 /* BUTTON UNDERLINE */
@@ -9770,7 +9817,41 @@ JEWELERY PAGE START */
     transform: translate(0, 0);
 }
 
-.sachin-singh{
-    font-size: 10px;
-    text-align: center;
+
+/* *** */
+
+/* FOOTER ICON FIX - PHONE ONLY */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .luxury-fashion-footer .luxury-footer-social {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .luxury-fashion-footer .luxury-footer-social a {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .luxury-fashion-footer .luxury-footer-social a i,
+    .luxury-fashion-footer .luxury-footer-social a svg {
+        display: inline-block !important;
+        font-size: 13px;
+        color: #ffffff !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
 }
+
+/* ****** */
