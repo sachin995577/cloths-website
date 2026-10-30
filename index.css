@@ -742,8 +742,10 @@ a{
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    color: #555555;
+    color:black;
     font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .cart-number {
@@ -2956,11 +2958,13 @@ a{
     margin: 0;
     color: #fff;
     text-align: center;
-    font-size: 22px;
+    font-size: 15px;
     line-height: 1.2;
     z-index: 2;
-    font-family: 'Montserrat', sans-serif; font-weight: 600;
-    
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+   
 }
 
 
@@ -3897,7 +3901,7 @@ font-family: 'Montserrat', sans-serif;
 
 @media (max-width: 380px) {
     .occasion-section .occasion-grid {
-        grid-template-rows: 230px 175px 175px 175px 150px !important;
+        grid-template-rows: 312px 164px 150px 220px 200px !important;
         gap: 10px !important;
     }
 }
@@ -3949,7 +3953,7 @@ font-family: 'Montserrat', sans-serif;
 
 @media (min-width: 1025px) {
     .occasion-section .occasion-grid {
-        height: 480px !important;
+        height: 560px !important;
     }
 }
 
@@ -3958,7 +3962,7 @@ font-family: 'Montserrat', sans-serif;
 @media (min-width: 768px) and (max-width: 1024px) {
     .occasion-section .occasion-grid {
         height: auto !important;
-        grid-template-rows: 230px 170px 170px 150px !important;
+        grid-template-rows: 270px 290px 435px 480px !important;
     }
 }
 
@@ -3967,7 +3971,7 @@ font-family: 'Montserrat', sans-serif;
 @media (max-width: 767px) {
     .occasion-section .occasion-grid {
         height: auto !important;
-        grid-template-rows: 190px 160px 160px 160px 125px !important;
+        grid-template-rows: 350px 237px 190px 250px 270px !important;
         gap: 10px !important;
     }
 }
@@ -3976,9 +3980,15 @@ font-family: 'Montserrat', sans-serif;
 
 @media (max-width: 380px) {
     .occasion-section .occasion-grid {
-        grid-template-rows: 175px 145px 145px 145px 115px !important;
+        grid-template-rows: 312px 200px 150px 220px 230px !important;
     }
 }
+
+
+
+
+
+
 
 
 /* ==================================================
@@ -4398,8 +4408,10 @@ stats-container {
     /* Label Text Style */
     .stat-label {
       font-size: 10px;
-      color: #555555;
-       font-family: 'Montserrat', sans-serif; font-weight: 500;
+      color: black;
+     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
       
      
     }
@@ -4437,7 +4449,7 @@ stats-container {
       }
 
       .stat-label {
-        font-size: 10px;
+        font-size: 15px;
       }
     }
 
@@ -5612,7 +5624,7 @@ stats-container {
     margin: 0;
 
     color: #bdbdbd;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.9;
     letter-spacing: 0.8px;
 
@@ -5700,8 +5712,8 @@ stats-container {
     }
 
     .luxury-footer-navigation a {
-        font-size: 12px;
-        letter-spacing: 0;
+        font-size: 14px;
+        letter-spacing: 2;
     }
 
     .luxury-footer-social {
@@ -5735,7 +5747,7 @@ stats-container {
 
     .luxury-footer-brand img {
         width: 140px;
-        height: 50px;
+        height: 62px;
 
         margin: 0 auto;
         object-position: center;
@@ -5786,7 +5798,7 @@ stats-container {
     }
 
     .luxury-footer-copyright p {
-        font-size: 10px;
+        font-size: 13px;
         letter-spacing: 0.4px;
     }
 }
@@ -5807,11 +5819,11 @@ stats-container {
     }
 
     .luxury-footer-navigation {
-        gap: 13px;
+        gap: 11px;
     }
 
     .luxury-footer-navigation a {
-        font-size: 7px;
+        font-size: 8px;
         letter-spacing: -0.1px;
     }
 
@@ -5876,6 +5888,24 @@ stats-container {
     }
 }
 
+/* *** */
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .luxury-fashion-footer .luxury-footer-navigation a {
+        font-size: 10px !important;
+        letter-spacing: 0 !important;
+    }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 425.98px) {
+    .luxury-fashion-footer .luxury-footer-navigation a {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+    }
+}
+
+/* ***** */
 
 
 
@@ -9846,7 +9876,7 @@ JEWELERY PAGE START */
     .luxury-fashion-footer .luxury-footer-social a i,
     .luxury-fashion-footer .luxury-footer-social a svg {
         display: inline-block !important;
-        font-size: 13px;
+        font-size: 18px;
         color: #ffffff !important;
         visibility: visible !important;
         opacity: 1 !important;
