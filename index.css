@@ -9885,3 +9885,27 @@ JEWELERY PAGE START */
 }
 
 /* ****** */
+
+
+/* DEFAULT: TABLET + DESKTOP */
+.phone-product-title {
+    display: none !important;
+}
+
+.desktop-product-title {
+    display: block !important;
+}
+
+
+/* PHONE: 320px TO 767px */
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .phone-product-title {
+        display: block !important;
+    }
+
+    .desktop-product-title {
+        display: none !important;
+    }
+
+}

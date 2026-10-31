@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,155 +10,179 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- FONT AWESOME KA LINK -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
+
 <body>
 
 
 
 
 
-    
-<!-- ==================================================
+
+    <!-- ==================================================
      NAVBAR
 ================================================== -->
 
-<header class="main-navbar">
+    <header class="main-navbar">
 
-    <div class="navbar-container">
+        <div class="navbar-container">
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              LOGO
         ================================================== -->
 
-        <a href="#" class="brand-logo">
+            <a href="#" class="brand-logo">
 
-            <img
-                src="image-folder/chanel-logo.png"
-                alt="WatchStore Logo"
-            >
+                <img src="image-folder/chanel-logo.png" alt="WatchStore Logo">
 
-        </a>
+            </a>
 
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              DESKTOP MENU
              EXACT CENTER
         ================================================== -->
 
-        <nav class="desktop-menu desktop-menu-center">
+            <nav class="desktop-menu desktop-menu-center">
 
-            <a href="index.html">HOME</a>
+                <a href="index.html">HOME</a>
 
-            <a href="womens.html">WOMENS</a>
+                <a href="womens.html">WOMENS</a>
 
-             <a href="mens.html">MENS</a>
+                <a href="mens.html">MENS</a>
 
-            <a href="kids.html">KIDS</a>
+                <a href="kids.html">KIDS</a>
 
-            <a href="jewellery.html">JEWELLERY</a>
+                <a href="jewellery.html">JEWELLERY</a>
 
-            <a href="wedding.html">WEDDING</a>
+                <a href="wedding.html">WEDDING</a>
 
-             <a href="bra.html">BRA</a>
+                <a href="bra.html">BRA</a>
 
-        </nav>
-
-
-        <!-- ==================================================
-             DESKTOP ACTIONS
-        ================================================== -->
-
-        <div class="desktop-actions">
+            </nav>
 
 
             <!-- ==================================================
+             DESKTOP ACTIONS
+        ================================================== -->
+
+            <div class="desktop-actions">
+
+
+                <!-- ==================================================
                  SEARCH
                  NO POPUP
             ================================================== -->
 
-            <div class="search-box">
+                <div class="search-box">
 
-                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                    <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search"
-                    autocomplete="off"
-                >
+                    <input type="text" id="searchInput" placeholder="Search" autocomplete="off">
+
+                </div>
+
+
+
+                <!-- ==================================================
+                 INFORMATION POPUP
+            ================================================== -->
+
+                <button class="nav-icon" type="button" data-popup="infoPopup" aria-label="Information">
+
+                    <i class="fa-regular fa-circle-question"></i>
+
+                </button>
+
+
+
+                <!-- ==================================================
+                 WISHLIST POPUP
+            ================================================== -->
+
+                <button class="nav-icon" type="button" data-popup="wishlistPopup" aria-label="Wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+
+                <!-- ==================================================
+                 CART POPUP
+            ================================================== -->
+
+                <button class="nav-icon cart-icon" type="button" data-popup="cartPopup" aria-label="Cart">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="cart-count">0</span>
+
+                </button>
+
+
+
+                <!-- ==================================================
+                 PROFILE POPUP
+            ================================================== -->
+
+                <button class="nav-icon" type="button" data-popup="profilePopup" aria-label="Profile">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </button>
+
 
             </div>
 
 
 
             <!-- ==================================================
-                 INFORMATION POPUP
-            ================================================== -->
+             HAMBURGER
+             ONLY 320px - 768px
+        ================================================== -->
 
-            <button
-                class="nav-icon"
-                type="button"
-                data-popup="infoPopup"
-                aria-label="Information"
-            >
+            <button class="hamburger" id="openMenu" type="button" aria-label="Open Menu">
 
-                <i class="fa-regular fa-circle-question"></i>
+                <i class="fa-solid fa-bars"></i>
 
             </button>
 
 
+        </div>
 
-            <!-- ==================================================
-                 WISHLIST POPUP
-            ================================================== -->
-
-            <button
-                class="nav-icon"
-                type="button"
-                data-popup="wishlistPopup"
-                aria-label="Wishlist"
-            >
-
-                <i class="fa-regular fa-heart"></i>
-
-            </button>
+    </header>
 
 
 
-            <!-- ==================================================
-                 CART POPUP
-            ================================================== -->
+    <!-- ==================================================
+     MOBILE / TABLET MENU
+     ONLY 320px - 768px
+================================================== -->
 
-            <button
-                class="nav-icon cart-icon"
-                type="button"
-                data-popup="cartPopup"
-                aria-label="Cart"
-            >
-
-                <i class="fa-solid fa-bag-shopping"></i>
-
-                <span class="cart-count">0</span>
-
-            </button>
+    <aside class="mobile-menu" id="mobileMenu">
 
 
+        <!-- ==================================================
+         MOBILE HEADER
+    ================================================== -->
 
-            <!-- ==================================================
-                 PROFILE POPUP
-            ================================================== -->
+        <div class="mobile-menu-header">
 
-            <button
-                class="nav-icon"
-                type="button"
-                data-popup="profilePopup"
-                aria-label="Profile"
-            >
 
-                <i class="fa-regular fa-user"></i>
+            <a href="#" class="mobile-logo">
+
+                <img src="image-folder/chanel-logo.png" alt="WatchStore Logo">
+
+            </a>
+
+
+            <button class="mobile-close" id="closeMenu" type="button" aria-label="Close Menu">
+
+                <i class="fa-solid fa-xmark"></i>
 
             </button>
 
@@ -167,83 +192,16 @@
 
 
         <!-- ==================================================
-             HAMBURGER
-             ONLY 320px - 768px
-        ================================================== -->
-
-        <button
-            class="hamburger"
-            id="openMenu"
-            type="button"
-            aria-label="Open Menu"
-        >
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-
-    </div>
-
-</header>
-
-
-
-<!-- ==================================================
-     MOBILE / TABLET MENU
-     ONLY 320px - 768px
-================================================== -->
-
-<aside
-    class="mobile-menu"
-    id="mobileMenu"
->
-
-
-    <!-- ==================================================
-         MOBILE HEADER
-    ================================================== -->
-
-    <div class="mobile-menu-header">
-
-
-        <a href="#" class="mobile-logo">
-
-            <img
-                src="image-folder/chanel-logo.png"
-                alt="WatchStore Logo"
-            >
-
-        </a>
-
-
-        <button
-            class="mobile-close"
-            id="closeMenu"
-            type="button"
-            aria-label="Close Menu"
-        >
-
-            <i class="fa-solid fa-xmark"></i>
-
-        </button>
-
-
-    </div>
-
-
-
-    <!-- ==================================================
          MOBILE NAV
     ================================================== -->
 
-    <nav class="mobile-nav">
+        <nav class="mobile-nav">
 
-           <a href="index.html">HOME</a>
+            <a href="index.html">HOME</a>
 
             <a href="womens.html">WOMENS</a>
 
-             <a href="mens.html">MENS</a>
+            <a href="mens.html">MENS</a>
 
             <a href="kids.html">KIDS</a>
 
@@ -251,112 +209,96 @@
 
             <a href="wedding.html">WEDDING</a>
 
-             <a href="bra.html">BRA</a>
-        
-
-    </nav>
+            <a href="bra.html">BRA</a>
 
 
+        </nav>
 
-    <!-- ==================================================
-         MOBILE ACTIONS
-    ================================================== -->
-
-    <div class="mobile-actions">
 
 
         <!-- ==================================================
+         MOBILE ACTIONS
+    ================================================== -->
+
+        <div class="mobile-actions">
+
+
+            <!-- ==================================================
              MOBILE SEARCH
              NO POPUP
         ================================================== -->
 
-        <div class="mobile-search-box">
+            <div class="mobile-search-box">
 
-            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
 
-            <input
-                type="text"
-                placeholder="Search"
-                autocomplete="off"
-            >
+                <input type="text" placeholder="Search" autocomplete="off">
 
-        </div>
+            </div>
 
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              INFORMATION
         ================================================== -->
 
-        <button
-            class="mobile-action"
-            type="button"
-            data-popup="infoPopup"
-        >
+            <button class="mobile-action" type="button" data-popup="infoPopup">
 
-            <span class="mobile-action-icon">
+                <span class="mobile-action-icon">
 
-                <i class="fa-regular fa-circle-question"></i>
+                    <i class="fa-regular fa-circle-question"></i>
 
-            </span>
+                </span>
 
-            <span>Information</span>
+                <span>Information</span>
 
-        </button>
+            </button>
 
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              WISHLIST
         ================================================== -->
 
-        <button
-            class="mobile-action"
-            type="button"
-            data-popup="wishlistPopup"
-        >
+            <button class="mobile-action" type="button" data-popup="wishlistPopup">
 
-            <span class="mobile-action-icon">
+                <span class="mobile-action-icon">
 
-                <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i>
 
-            </span>
+                </span>
 
-            <span>Wishlist</span>
+                <span>Wishlist</span>
 
-        </button>
+            </button>
 
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              CART
         ================================================== -->
 
-        <button
-            class="mobile-action"
-            type="button"
-            data-popup="cartPopup"
-        >
+            <button class="mobile-action" type="button" data-popup="cartPopup">
 
-            <span class="mobile-action-icon mobile-cart-icon">
+                <span class="mobile-action-icon mobile-cart-icon">
 
-                <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
 
-                <span class="mobile-cart-count">0</span>
+                    <span class="mobile-cart-count">0</span>
 
-            </span>
+                </span>
 
-            <span>Cart</span>
+                <span>Cart</span>
 
-        </button>
+            </button>
 
 
 
-        <!-- ==================================================
+            <!-- ==================================================
              PROFILE
         ================================================== -->
 
-        <!-- <button
+            <!-- <button
             class="mobile-action"
             type="button"
             data-popup="profilePopup"
@@ -373,309 +315,263 @@
         </button> -->
 
 
-    </div>
+        </div>
 
-</aside>
+    </aside>
 
 
 
-<!-- ==================================================
+    <!-- ==================================================
      POPUP OVERLAY
 ================================================== -->
 
-<div
-    class="popup-overlay"
-    id="popupOverlay"
-></div>
+    <div class="popup-overlay" id="popupOverlay"></div>
 
 
 
-<!-- ==================================================
+    <!-- ==================================================
      INFORMATION POPUP
 ================================================== -->
 
-<div
-    class="popup-box"
-    id="infoPopup"
->
+    <div class="popup-box" id="infoPopup">
 
 
-    <button
-        class="popup-close"
-        type="button"
-        aria-label="Close"
-    >
+        <button class="popup-close" type="button" aria-label="Close">
 
-        <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
 
-    </button>
+        </button>
 
 
 
-    <div class="popup-icon">
+        <div class="popup-icon">
 
-        <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-regular fa-circle-question"></i>
+
+        </div>
+
+
+
+        <h2>Information</h2>
+
+
+
+        <p>
+            Discover premium watches, elegant designs and
+            timeless collections made for every occasion.
+        </p>
+
+
+
+        <div class="popup-content-list">
+
+
+            <div>
+
+                <i class="fa-solid fa-truck"></i>
+
+                <span>Fast Delivery</span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>Secure Payment</span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                <span>Easy Returns</span>
+
+            </div>
+
+
+        </div>
 
     </div>
 
 
 
-    <h2>Information</h2>
-
-
-
-    <p>
-        Discover premium watches, elegant designs and
-        timeless collections made for every occasion.
-    </p>
-
-
-
-    <div class="popup-content-list">
-
-
-        <div>
-
-            <i class="fa-solid fa-truck"></i>
-
-            <span>Fast Delivery</span>
-
-        </div>
-
-
-        <div>
-
-            <i class="fa-solid fa-shield-halved"></i>
-
-            <span>Secure Payment</span>
-
-        </div>
-
-
-        <div>
-
-            <i class="fa-solid fa-rotate-left"></i>
-
-            <span>Easy Returns</span>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
-<!-- ==================================================
+    <!-- ==================================================
      WISHLIST POPUP
 ================================================== -->
 
-<div
-    class="popup-box"
-    id="wishlistPopup"
->
+    <div class="popup-box" id="wishlistPopup">
 
 
-    <button
-        class="popup-close"
-        type="button"
-        aria-label="Close"
-    >
+        <button class="popup-close" type="button" aria-label="Close">
 
-        <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
 
-    </button>
+        </button>
 
 
 
-    <div class="popup-icon">
+        <div class="popup-icon">
 
-        <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
+
+        </div>
+
+
+
+        <h2>Your Wishlist</h2>
+
+
+
+        <p>
+            Your wishlist is currently empty.
+            Add your favourite watches here.
+        </p>
+
+
+
+        <button class="popup-main-btn" type="button">
+
+            Explore Watches
+
+        </button>
+
 
     </div>
 
 
 
-    <h2>Your Wishlist</h2>
-
-
-
-    <p>
-        Your wishlist is currently empty.
-        Add your favourite watches here.
-    </p>
-
-
-
-    <button
-        class="popup-main-btn"
-        type="button"
-    >
-
-        Explore Watches
-
-    </button>
-
-
-</div>
-
-
-
-<!-- ==================================================
+    <!-- ==================================================
      CART POPUP
 ================================================== -->
 
-<div
-    class="popup-box"
-    id="cartPopup"
->
+    <div class="popup-box" id="cartPopup">
 
 
-    <button
-        class="popup-close"
-        type="button"
-        aria-label="Close"
-    >
+        <button class="popup-close" type="button" aria-label="Close">
 
-        <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
 
-    </button>
+        </button>
 
 
 
-    <div class="popup-icon">
+        <div class="popup-icon">
 
-        <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+
+        </div>
+
+
+
+        <h2>Your Cart</h2>
+
+
+
+        <p>
+            Your shopping bag is currently empty.
+        </p>
+
+
+
+        <div class="empty-cart">
+
+            <span class="cart-number">0</span>
+
+            <span>Items in your cart</span>
+
+        </div>
+
+
+
+        <button class="popup-main-btn" type="button">
+
+            Continue Shopping
+
+        </button>
+
 
     </div>
 
 
 
-    <h2>Your Cart</h2>
-
-
-
-    <p>
-        Your shopping bag is currently empty.
-    </p>
-
-
-
-    <div class="empty-cart">
-
-        <span class="cart-number">0</span>
-
-        <span>Items in your cart</span>
-
-    </div>
-
-
-
-    <button
-        class="popup-main-btn"
-        type="button"
-    >
-
-        Continue Shopping
-
-    </button>
-
-
-</div>
-
-
-
-<!-- ==================================================
+    <!-- ==================================================
      PROFILE POPUP
 ================================================== -->
 
-<div
-    class="popup-box"
-    id="profilePopup"
->
+    <div class="popup-box" id="profilePopup">
 
 
-    <button
-        class="popup-close"
-        type="button"
-        aria-label="Close"
-    >
+        <button class="popup-close" type="button" aria-label="Close">
 
-        <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
 
-    </button>
+        </button>
 
 
 
-    <div class="popup-icon">
+        <div class="popup-icon">
 
-        <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-user"></i>
+
+        </div>
+
+
+
+        <h2>My Account</h2>
+
+
+
+        <p>
+            Login to manage your account, orders and
+            favourite watches.
+        </p>
+
+
+
+        <div class="profile-buttons">
+
+
+            <button class="popup-main-btn" type="button">
+
+                Login
+
+            </button>
+
+
+
+            <button class="popup-secondary-btn" type="button">
+
+                Create Account
+
+            </button>
+
+
+
+            <button class="popup-secondary-btn" type="button">
+
+                My Orders
+
+            </button>
+
+
+        </div>
 
     </div>
-
-
-
-    <h2>My Account</h2>
-
-
-
-    <p>
-        Login to manage your account, orders and
-        favourite watches.
-    </p>
-
-
-
-    <div class="profile-buttons">
-
-
-        <button
-            class="popup-main-btn"
-            type="button"
-        >
-
-            Login
-
-        </button>
-
-
-
-        <button
-            class="popup-secondary-btn"
-            type="button"
-        >
-
-            Create Account
-
-        </button>
-
-
-
-        <button
-            class="popup-secondary-btn"
-            type="button"
-        >
-
-            My Orders
-
-        </button>
-
-
-    </div>
-
-</div>
 
 
     <!-- NAVBAR END -->
 
 
 
-   
 
 
 
-     <!-- WOMEN PAGE ALL CODE START -->
+
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -710,15 +606,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-cute-girl-img.jxl"
+                    <img class="product-image first-image" src="image-folder/women-cute-girl-img.jxl"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-second-cute-girl-img.jxl"
+                    <img class="product-image second-image" src="image-folder/women-second-cute-girl-img.jxl"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -749,18 +641,27 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
+              
 
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE T-SHIRT PINK</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE T-SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE T-SHIRT PINK
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 1,575.00 </span>
+                        <span class="old-price">Rs. 1,575.00</span>
                         <span class="new-price">₹1,102.50</span>
                     </p>
 
                 </div>
+
 
             </article>
 
@@ -774,14 +675,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-third-girl-img.webp"
+                    <img class="product-image first-image" src="image-folder/women-third-girl-img.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-four-girl-img.webp"
+                    <img class="product-image second-image" src="image-folder/women-four-girl-img.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">10% OFF</span>
@@ -809,9 +706,18 @@
                 </div>
 
 
+
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE T-SHIRT YELLOW</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE T-SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE T-SHIRT YELLOW
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs. 1,699.00</span>
@@ -832,14 +738,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-five-girl-img.webp"
+                    <img class="product-image first-image" src="image-folder/women-five-girl-img.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-six-girl-img.webp"
+                    <img class="product-image second-image" src="image-folder/women-six-girl-img.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">15% OFF</span>
@@ -869,10 +771,18 @@
 
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE T-SHIRT RED</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE T-SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE T-SHIRT RED
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 2,999.00 </span>
+                        <span class="old-price">Rs. 2,999.00</span>
                         <span class="new-price">₹2,549.15</span>
                     </p>
 
@@ -890,14 +800,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-seven-girl-img.webp"
+                    <img class="product-image first-image" src="image-folder/women-seven-girl-img.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-eight-girl-img.webp"
+                    <img class="product-image second-image" src="image-folder/women-eight-girl-img.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">50% OFF</span>
@@ -927,7 +833,15 @@
 
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE T-SHIRT BLUE</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE T-SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE T-SHIRT BLUE
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs. 1,499.00</span>
@@ -947,7 +861,7 @@
     <!-- WOMEN PAGE ALL CODE END -->
 
 
-      <!-- WOMEN PAGE ALL CODE START -->
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -982,15 +896,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-nine-girl-img.jxl"
+                    <img class="product-image first-image" src="image-folder/women-nine-girl-img.jxl"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-ten-girl-img.jxl"
+                    <img class="product-image second-image" src="image-folder/women-ten-girl-img.jxl"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -1021,14 +931,21 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
 
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE SHIRT BLACK</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE SHIRT BLACK
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 1,575.00 </span>
+                        <span class="old-price">Rs. 1,575.00</span>
                         <span class="new-price">₹1,102.50</span>
                     </p>
 
@@ -1046,14 +963,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-eleven-girl-img.jxl"
+                    <img class="product-image first-image" src="image-folder/women-eleven-girl-img.jxl"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-twelve-girl-img.jxl"
+                    <img class="product-image second-image" src="image-folder/women-twelve-girl-img.jxl"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">10% OFF</span>
@@ -1081,9 +994,18 @@
                 </div>
 
 
+
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE SHIRT YELLOW</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE SHIRT YELLOW
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs. 1,699.00</span>
@@ -1104,14 +1026,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-13-girl-img.webp"
+                    <img class="product-image first-image" src="image-folder/women-13-girl-img.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-fourtyen-girl-img.jxl"
+                    <img class="product-image second-image" src="image-folder/women-fourtyen-girl-img.jxl"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">15% OFF</span>
@@ -1139,12 +1057,21 @@
                 </div>
 
 
+
                 <div class="product-details">
 
-                    <h3>FLYING MACHINE SHIRT PINK</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        FLYING MACHINE SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        FLYING MACHINE SHIRT PINK
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 2,999.00 </span>
+                        <span class="old-price">Rs. 2,999.00</span>
                         <span class="new-price">₹2,549.15</span>
                     </p>
 
@@ -1162,14 +1089,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-fiftyen-girl-img.webp"
+                    <img class="product-image first-image" src="image-folder/women-fiftyen-girl-img.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-sixtyen-girl-img.webp"
+                    <img class="product-image second-image" src="image-folder/women-sixtyen-girl-img.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">50% OFF</span>
@@ -1197,13 +1120,32 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>WOMEN BLACK RIB V-NECK T-SHIRT</h3>
 
                     <p>
                         <span class="old-price">Rs. 1,499.00</span>
                         <span class="new-price">₹7,49.05</span>
+                    </p>
+
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        WOMEN RIB V-NECK T-SHIRT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        WOMEN BLACK RIB V-NECK T-SHIRT
+                    </h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,575.00</span>
+                        <span class="new-price">₹1,102.50</span>
                     </p>
 
                 </div>
@@ -1253,15 +1195,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-first-cords.jpg"
+                    <img class="product-image first-image" src="image-folder/women-first-cords.jpg"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-second-coords.jpg"
+                    <img class="product-image second-image" src="image-folder/women-second-coords.jpg"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -1292,14 +1230,21 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
 
                 <div class="product-details">
 
-                    <h3>RED PRINTED CO-ORD SET</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        RED PRINTE CO-ORD SET
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        RED PRINT CO-ORD SET PLANE
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 2,600.00  </span>
+                        <span class="old-price">Rs. 2,600.00</span>
                         <span class="new-price">₹2,080.00</span>
                     </p>
 
@@ -1317,14 +1262,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-third-coords.webp"
+                    <img class="product-image first-image" src="image-folder/women-third-coords.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-four-coords.webp"
+                    <img class="product-image second-image" src="image-folder/women-four-coords.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">25% OFF</span>
@@ -1352,12 +1293,21 @@
                 </div>
 
 
+
                 <div class="product-details">
 
-                    <h3>AMOR GREEN CO-ORD SET</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        AMOR GREEN CO-ORD SET
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        AMOR GREEN PRINT CO-ORD SET
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs. 4,600.00 </span>
+                        <span class="old-price">Rs. 4,600.00</span>
                         <span class="new-price">₹3,450.00</span>
                     </p>
 
@@ -1375,14 +1325,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-five-coords.webp"
+                    <img class="product-image first-image" src="image-folder/women-five-coords.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-six-coords.webp"
+                    <img class="product-image second-image" src="image-folder/women-six-coords.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">10% OFF</span>
@@ -1410,16 +1356,33 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>BLUE GEORGETTA CO-ORD SET</h3>
 
                     <p>
-                        <span class="old-price">Rs. 1,850.00  </span>
+                        <span class="old-price">Rs. 1,850.00 </span>
                         <span class="new-price">₹1,650.00</span>
                     </p>
 
-                </div>
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        BLUE GEORGETTA CO-ORDS
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        BLUE GEORGETTA CO-ORD SET
+                    </h3>
+
+                    <p>
+                        <span class="old-price">Rs. 1,850.00</span>
+                        <span class="new-price">₹1,650.00</span>
+                    </p>
 
             </article>
 
@@ -1433,14 +1396,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-seven-coords.webp"
+                    <img class="product-image first-image" src="image-folder/women-seven-coords.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-eight-coords.webp"
+                    <img class="product-image second-image" src="image-folder/women-eight-coords.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">15% OFF</span>
@@ -1468,9 +1427,28 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>YELLOW INDO WESTERN CO-ORDS </h3>
+
+                    <p>
+                        <span class="old-price">Rs. 3,999.00</span>
+                        <span class="new-price">₹3,399.15</span>
+                    </p>
+
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        YELLOW CO-ORDS SETS
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        YELLOW CO-ORDS SETS PARTYWEAR
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs. 3,999.00</span>
@@ -1492,7 +1470,7 @@
 
 
 
-      <!-- WOMEN PAGE ALL CODE START -->
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -1527,15 +1505,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-first-saree.webp"
+                    <img class="product-image first-image" src="image-folder/women-first-saree.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-second-saree.webp"
+                    <img class="product-image second-image" src="image-folder/women-second-saree.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -1566,11 +1540,17 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
-
                 <div class="product-details">
 
-                    <h3>BLACK CHIFFON SAREE</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        BLACK CHIFFON SAREE
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        BLACK CHIFFON SAREE PARTYWEAR
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs 14,999</span>
@@ -1591,14 +1571,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-third-saree.webp"
+                    <img class="product-image first-image" src="image-folder/women-third-saree.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-four-saree.webp"
+                    <img class="product-image second-image" src="image-folder/women-four-saree.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">75% OFF</span>
@@ -1626,13 +1602,22 @@
                 </div>
 
 
+
                 <div class="product-details">
 
-                    <h3>HEAVY BRIDAL SAREE</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        HEAVY SAREE GOLDEN
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        HEAVY SAREE GOLDEN FOR ORANGE
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs. 12,480.92</span>
-                        <span class="new-price"> ₹3,120.00</span>
+                        <span class="new-price">₹3,120.00</span>
                     </p>
 
                 </div>
@@ -1649,14 +1634,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-five-saree.webp"
+                    <img class="product-image first-image" src="image-folder/women-five-saree.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-six-saree.webp"
+                    <img class="product-image second-image" src="image-folder/women-six-saree.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">45% OFF</span>
@@ -1684,12 +1665,22 @@
                 </div>
 
 
+
+
                 <div class="product-details">
 
-                    <h3>SHREYA BANARSI SAREE</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        SHREYA BANARSI SAREE
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        SHREYA BANARSI SAREE TEAL GREEN
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs 7,300.00 </span>
+                        <span class="old-price">Rs 7,300.00</span>
                         <span class="new-price">₹4,015.00</span>
                     </p>
 
@@ -1707,14 +1698,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-seven-saree.webp"
+                    <img class="product-image first-image" src="image-folder/women-seven-saree.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-eight-saree.webp"
+                    <img class="product-image second-image" src="image-folder/women-eight-saree.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">25 OFF</span>
@@ -1742,9 +1729,28 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>MIMOSA SILK SAREE</h3>
+
+                    <p>
+                        <span class="old-price">Rs.1899.00</span>
+                        <span class="new-price">₹1,424.25</span>
+                    </p>
+
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        MIMOSA SILK SAREE
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        MIMOSA SILK SAREE BOTTLE GREEN
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.1899.00</span>
@@ -1767,8 +1773,8 @@
 
 
 
-    
-      <!-- WOMEN PAGE ALL CODE START -->
+
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -1803,15 +1809,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-first-lehenga.jpg"
+                    <img class="product-image first-image" src="image-folder/women-first-lehenga.jpg"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-second-leheng.jpg"
+                    <img class="product-image second-image" src="image-folder/women-second-leheng.jpg"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -1842,11 +1844,19 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
+
 
                 <div class="product-details">
 
-                    <h3>WINE SILK LEHENGA SET</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        WINE SILK LEHENGA SET
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        WINE SILK LEHENGA SET PURPLE
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs 7,449</span>
@@ -1867,14 +1877,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-third-lehenga.webp"
+                    <img class="product-image first-image" src="image-folder/women-third-lehenga.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-four--lehenga.webp"
+                    <img class="product-image second-image" src="image-folder/women-four--lehenga.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">80% OFF</span>
@@ -1902,9 +1908,28 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>RAMA WEDDING WEAR LEHENGA</h3>
+
+                    <p>
+                        <span class="old-price">Rs.24,540.00</span>
+                        <span class="new-price">₹4,908.00</span>
+                    </p>
+
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        RAMA WEDDING LEHENGA
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                        RAMA WEDDING PARTY WEAR GREEN
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.24,540.00</span>
@@ -1925,14 +1950,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-five-lehenga.webp"
+                    <img class="product-image first-image" src="image-folder/women-five-lehenga.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-six-lehenga.webp"
+                    <img class="product-image second-image" src="image-folder/women-six-lehenga.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">40% OFF</span>
@@ -1960,12 +1981,21 @@
                 </div>
 
 
+                
                 <div class="product-details">
 
-                    <h3>PARTY FUNCTION  LEHENGA</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                        ROYAL BRIDAL LEHENGA
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                      ROYAL BRIDAL LEHENGA MAROON
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs 5,800,00 </span>
+                        <span class="old-price">Rs 5,800,00</span>
                         <span class="new-price">₹3,480.00</span>
                     </p>
 
@@ -1983,14 +2013,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-seven-lehenga.webp"
+                    <img class="product-image first-image" src="image-folder/women-seven-lehenga.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-eight-lehenga.webp"
+                    <img class="product-image second-image" src="image-folder/women-eight-lehenga.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">10% OFF</span>
@@ -2018,13 +2044,22 @@
                 </div>
 
 
-                <div class="product-details">
 
-                    <h3>NET LEHENGA PARTYWEAR</h3>
+                 <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                      BLUSH LEHENGA BRIDE
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                      EMBROIDERED BRIDAL LEHENGA PINK
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs.29,695.00</span>
-                        <span class="new-price">₹26,725.05</span>
+                        <span class="old-price">Rs 5,800,00</span>
+                        <span class="new-price">₹3,480.00</span>
                     </p>
 
                 </div>
@@ -2042,8 +2077,8 @@
 
 
 
-    
-      <!-- WOMEN PAGE ALL CODE START -->
+
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -2078,15 +2113,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-first-suit.webp"
+                    <img class="product-image first-image" src="image-folder/women-first-suit.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-second-suit.webp"
+                    <img class="product-image second-image" src="image-folder/women-second-suit.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -2117,11 +2148,19 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
+               
 
                 <div class="product-details">
 
-                    <h3>SARA MAROON COTTON SUIT</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                     BEAUTIFUL FLORAL SUIT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                      BEAUTIFUL FLORAL PRINTS SUIT
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs 1,499.00</span>
@@ -2142,14 +2181,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-third-suit.webp"
+                    <img class="product-image first-image" src="image-folder/women-third-suit.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-four-suit.webp"
+                    <img class="product-image second-image" src="image-folder/women-four-suit.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">55% OFF</span>
@@ -2177,9 +2212,19 @@
                 </div>
 
 
+              
+
                 <div class="product-details">
 
-                    <h3>PINK BANDHANI COTTON SUIT</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                    PINK BANDHANI SUIT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                     PINK BANDHANI COTTON SUIT
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.4,600.00</span>
@@ -2200,14 +2245,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-five-suit.webp"
+                    <img class="product-image first-image" src="image-folder/women-five-suit.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-six-suit.webp"
+                    <img class="product-image second-image" src="image-folder/women-six-suit.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">50% OFF</span>
@@ -2235,13 +2276,25 @@
                 </div>
 
 
+        
+
+            
+
                 <div class="product-details">
 
-                    <h3>PARTY FUNCTION  LEHENGA</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                    PINK BANDHANI SUIT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                     PINK BANDHANI COTTON SUIT
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs 3,200,00 </span>
-                        <span class="new-price">₹ 1,600.00</span>
+                        <span class="old-price">Rs.4,600.00</span>
+                        <span class="new-price">₹2,300.00</span>
                     </p>
 
                 </div>
@@ -2258,14 +2311,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/women-seven-suit.webp"
+                    <img class="product-image first-image" src="image-folder/women-seven-suit.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/women-eight-suit.webp"
+                    <img class="product-image second-image" src="image-folder/women-eight-suit.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">40% OFF</span>
@@ -2293,9 +2342,19 @@
                 </div>
 
 
+               
+
                 <div class="product-details">
 
-                    <h3>GULABHAR HANDWORK SUIT</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                   GULABHAR PRINT SUIT
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                    GULABHAR HANDWORK PRINT SUIT
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.6,450.00</span>
@@ -2316,9 +2375,9 @@
 
 
 
-    
-    
-      <!-- WOMEN PAGE ALL CODE START -->
+
+
+    <!-- WOMEN PAGE ALL CODE START -->
 
     <section class="tshirt-section">
 
@@ -2353,15 +2412,11 @@
                 <div class="tshirt-image-box">
 
                     <!-- FIRST IMAGE -->
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/indowestern-first.webp"
+                    <img class="product-image first-image" src="image-folder/indowestern-first.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SECOND IMAGE -->
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/indowestern-second.webp"
+                    <img class="product-image second-image" src="image-folder/indowestern-second.webp"
                         alt="Street Queen T-Shirt">
 
                     <!-- SALE -->
@@ -2392,11 +2447,19 @@
                 </div>
 
 
-                <!-- PRODUCT DETAILS -->
+               
 
-                <div class="product-details">
+                 <div class="product-details">
 
-                    <h3>INDOWESTERN DRESSES FOR WEDDING</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                      INDOWESTERN DRESS 
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                      INDOWESTERN DRESSES FOR WEDDING
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs 1,499.00</span>
@@ -2417,14 +2480,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/indowestern-third.webp"
+                    <img class="product-image first-image" src="image-folder/indowestern-third.webp"
                         alt="My World T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/indowestern-four.webp"
+                    <img class="product-image second-image" src="image-folder/indowestern-four.webp"
                         alt="My World T-Shirt">
 
                     <span class="sale-badge">55% OFF</span>
@@ -2452,9 +2511,19 @@
                 </div>
 
 
+                
+
                 <div class="product-details">
 
-                    <h3>ARIES LUXURIOUS WESTERN BLACK</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                       LUXURIOUS WESTERN
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                      ARIES LUXURIOUS WESTERN BLACK
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.4,600.00</span>
@@ -2475,14 +2544,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/indowestern-five.webp"
+                    <img class="product-image first-image" src="image-folder/indowestern-five.webp"
                         alt="Girls Swag T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/indowestern-six.webp"
+                    <img class="product-image second-image" src="image-folder/indowestern-six.webp"
                         alt="Girls Swag T-Shirt">
 
                     <span class="sale-badge">50% OFF</span>
@@ -2510,12 +2575,22 @@
                 </div>
 
 
+               
+
                 <div class="product-details">
 
-                    <h3>FESTIVE PARTY INDOWESTERN DRESS</h3>
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                      FESTIVE INDOWESTERN
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                     FESTIVE PARTY INDOWESTERN
+                    </h3>
 
                     <p>
-                        <span class="old-price">Rs 3,200,00 </span>
+                        <span class="old-price">Rs 3,200,00</span>
                         <span class="new-price">₹ 1,600.00</span>
                     </p>
 
@@ -2533,14 +2608,10 @@
 
                 <div class="tshirt-image-box">
 
-                    <img
-                        class="product-image first-image"
-                        src="image-folder/indowestern-seven.webp"
+                    <img class="product-image first-image" src="image-folder/indowestern-seven.webp"
                         alt="Wildcats T-Shirt">
 
-                    <img
-                        class="product-image second-image"
-                        src="image-folder/indowestern-eight.webp"
+                    <img class="product-image second-image" src="image-folder/indowestern-eight.webp"
                         alt="Wildcats T-Shirt">
 
                     <span class="sale-badge">40% OFF</span>
@@ -2568,9 +2639,28 @@
                 </div>
 
 
-                <div class="product-details">
+                <!-- <div class="product-details">
 
                     <h3>INDOWESTERN DESIGNER GOWN CANDADA</h3>
+
+                    <p>
+                        <span class="old-price">Rs.6,450.00</span>
+                        <span class="new-price">₹.3,870.00</span>
+                    </p>
+
+                </div> -->
+
+                <div class="product-details">
+
+                    <!-- PHONE HEADING -->
+                    <h3 class="phone-product-title">
+                     INDOWESTERN GOWN
+                    </h3>
+
+                    <!-- TABLET + DESKTOP HEADING -->
+                    <h3 class="desktop-product-title">
+                     INDOWESTERN DESIGNER GOWN CANDADA
+                    </h3>
 
                     <p>
                         <span class="old-price">Rs.6,450.00</span>
@@ -2590,111 +2680,95 @@
     <!-- WOMEN PAGE ALL CODE END -->
 
 
-    
-      
-    
-   
- 
+
+
+
+
+
     <!-- ================= FOOTER START ================= -->
 
-    
 
-<footer class="luxury-fashion-footer">
 
-    <!-- TOP FOOTER -->
-    <div class="luxury-footer-top">
+    <footer class="luxury-fashion-footer">
 
-        <!-- LOGO -->
-        <div class="luxury-footer-brand">
-            <a href="index.html">
-                <img class="reveal-up" src="image-folder/chanel-logo.png"
-                     alt="Fashion Logo">
-            </a>
+        <!-- TOP FOOTER -->
+        <div class="luxury-footer-top">
 
-            <!-- <p>YOUR STYLE, YOUR STATEMENT</p> -->
+            <!-- LOGO -->
+            <div class="luxury-footer-brand">
+                <a href="index.html">
+                    <img class="reveal-up" src="image-folder/chanel-logo.png" alt="Fashion Logo">
+                </a>
+
+                <!-- <p>YOUR STYLE, YOUR STATEMENT</p> -->
+            </div>
+
+            <!-- NAVIGATION: ALL IN ONE ROW -->
+            <nav class="luxury-footer-navigation reveal-up">
+
+                <a href="index.html">HOME</a>
+                <a href="womens.html">WOMENS</a>
+                <a href="mens.html">MENS</a>
+                <a href="kids.html">KIDS</a>
+                <a href="jewellery.html">JEWELLERY</a>
+                <a href="wedding.html">WEDDING</a>
+                <a href="bra.html">BRA</a>
+
+            </nav>
+
         </div>
 
-        <!-- NAVIGATION: ALL IN ONE ROW -->
-        <nav class="luxury-footer-navigation reveal-up">
+        <!-- DIVIDER -->
+        <div class="luxury-footer-divider"></div>
 
-            <a href="index.html">HOME</a>
-            <a href="womens.html">WOMENS</a>
-            <a href="mens.html">MENS</a>
-            <a href="kids.html">KIDS</a>
-            <a href="jewellery.html">JEWELLERY</a>
-            <a href="wedding.html">WEDDING</a>
-            <a href="bra.html">BRA</a>
+        <!-- SOCIAL ICONS -->
+        <div class="luxury-footer-social reveal-up">
 
-        </nav>
+            <a href="https://wa.me/9955776194" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
 
-    </div>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-    <!-- DIVIDER -->
-    <div class="luxury-footer-divider"></div>
+            <a href="https://www.youtube.com/@sachinrajputsingh3368" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
 
-    <!-- SOCIAL ICONS -->
-    <div class="luxury-footer-social reveal-up">
-
-        <a href="https://wa.me/9955776194"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-        <a href="https://x.com/"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Twitter X">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-         <a href="https://www.youtube.com/@sachinrajputsingh3368"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-    </a>
-
-        <a href="https://instagram.com/star_sachin_rajput?cplk=MXFvcHB3MWo0ODF6Yg%3D%3D"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-       
-<!-- BIR MANDIR LOCATION -->
-  
-<a href="https://www.google.com/maps/search/?api=1&query=Shankar+Ji+Shiv+Mandir+Bir+Village+Dhanarua+Patna+Bihar"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Shankar Ji Mandir, Bir Village">
-
-    <i class="fa-solid fa-location-dot"></i>
-
-</a>
+            <a href="https://instagram.com/star_sachin_rajput?cplk=MXFvcHB3MWo0ODF6Yg%3D%3D" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
 
 
-<!-- PHONE ICON -->
-<a href="tel:+919955776194"
-   class="luxury-footer-phone"
-   aria-label="Call 9955776194"
-   title="9955776194">
+            <!-- BIR MANDIR LOCATION -->
 
-    <i class="fa-solid fa-phone"></i>
+            <a href="https://www.google.com/maps/search/?api=1&query=Shankar+Ji+Shiv+Mandir+Bir+Village+Dhanarua+Patna+Bihar"
+                target="_blank" rel="noopener noreferrer" aria-label="Shankar Ji Mandir, Bir Village">
 
-</a>
+                <i class="fa-solid fa-location-dot"></i>
 
-  
-    </div>
+            </a>
 
-    <!-- COPYRIGHT -->
-    <div class="luxury-footer-copyright">
-        <p>©Hallmark channel 2026-27 Designed by- Sachin-Rajput</p>
-    </div>
 
-</footer>
+            <!-- PHONE ICON -->
+            <a href="tel:+919955776194" class="luxury-footer-phone" aria-label="Call 9955776194" title="9955776194">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="luxury-footer-copyright">
+            <p>©Hallmark channel 2026-27 Designed by- Sachin-Rajput</p>
+        </div>
+
+    </footer>
 
     <!-- ================= FOOTER END ================= -->
 
@@ -2702,11 +2776,12 @@
 
 
 
-  <script src="index.js">
-     
-  </script>
+    <script src="index.js">
 
-   
-    
+    </script>
+
+
+
 </body>
+
 </html>
